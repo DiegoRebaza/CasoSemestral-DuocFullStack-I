@@ -1,38 +1,9 @@
-Para cumplir con una arquitectura de 10 microservicios desacoplados, comunicación interna y seguridad, te faltan las piezas clave que "pegan" todo el sistema.
-Aquí tienes las dependencias esenciales para facilitarte la vida según tus requisitos:
-## 1. Para la Infraestructura (Spring Cloud)
-Como el proyecto exige un API Gateway y comunicación entre servicios, estas son obligatorias:
-
-* Eureka Discovery Client: Para que cada microservicio se registre y el Gateway sepa dónde encontrarlos sin usar IPs fijas.
-* Eureka Server: (Solo para el microservicio que actúe como registro).
-* Spring Cloud Gateway: Para centralizar las rutas de tus 10 microservicios en una sola URL de entrada.
-* OpenFeign: Es mucho más fácil de usar que WebClient para comunicación síncrona. Solo defines una interfaz y Spring hace la magia de llamar al otro microservicio.
-* 
-
-## 2. Para la Seguridad y Autenticación
-El requisito pide encriptación y tokens de sesión:
-
-* Spring Security: La base para manejar roles y permisos.
-* jjwt (Java JWT): Para generar y validar los tokens de sesión (JSON Web Tokens) que viajarán entre el Gateway y los microservicios.
-* 
-
-## 3. Para la Productividad y Estándares
-
-* ModelMapper o MapStruct: Te ahorrarán cientos de líneas de código al pasar datos de tus Entidades (Base de datos) a tus DTOs (lo que envías por la API). Es vital para el desacoplamiento que pide el documento.
-* Spring Boot DevTools: Para que el proyecto se reinicie solo cada vez que guardes un cambio.
-* Spring Doc OpenAPI (Swagger UI): Te genera automáticamente una página web para probar tus endpoints. Con 10 microservicios, documentar a mano sería un caos.
-* 
-
-## 4. Para Pruebas (Requisito EA3)
-
-* JUnit 5 & Mockito: Vienen por defecto en spring-boot-starter-test, pero asegúrate de usarlas para simular la base de datos y probar la lógica de negocio sin depender de otros servicios.
-
-## Resumen de lo que deberías buscar en start.spring.io:
-
-   1. Eureka Discovery Client
-   2. Gateway (solo para el servicio Gateway)
-   3. OpenFeign
-   4. Spring Security
-   5. Spring Boot DevTools
-   6. SpringDoc OpenAPI UI (dependencia externa muy recomendada)
-
+1. Lombok
+2. Spring Data JPA
+3. MySQL Driver
+4. Spring Web
+5. Validation
+6. Gateway
+7. Eureka Discovery Client
+8. Spring Boot DevTools
+9. ModelMapper
