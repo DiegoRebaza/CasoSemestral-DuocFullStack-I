@@ -14,8 +14,7 @@ import io.jsonwebtoken.security.Keys;
 @Service
 public class JwtService {
 
-    // Clave para poder mostrar el proyecto
-    private final Key key = Keys.hmacShaKeyFor("mbappe_dictador_del_real_madrid".getBytes());
+    private final Key key = Keys.hmacShaKeyFor("ac3dag36g581b1d59f84g2g9fa5g561hh7fa3d7c".getBytes());
 
     // Clave para proyecto final 
     // private final Key key = Keys.hmacShaKeyFor("ac3dag36g581b1d59f84g2g9fa5g561hh7fa3d7c".getBytes());

@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.bravatta.auth.service.UserService;
 
 @RestController
-@RequestMapping("/auth")
+@RequestMapping("/api/auth")
 public class AuthController {
 
     @Autowired
