@@ -1,44 +1,44 @@
 package com.bravatta.compra.model;
 
-import java.time.LocalDateTime;
-
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.PrePersist;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Table(name = "compras")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-
 public class Compra {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
-    private String productoId;
-
-    @Column(nullable = false)
-    private Integer cantidad;
+    @Column(name = "fecha_compra")
+    private LocalDateTime fechaCompra;
 
     @Column(nullable = false)
     private Double total;
 
-    private LocalDateTime fechaCompra;
+    @Column(name = "cliente_id", nullable = false)
+    private Long clienteId;
+
+    @Column(nullable = false, length = 50)
+    private String estado;
+
+    @OneToMany(mappedBy = "compra", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<DetalleCompra> detalles;
 
     @PrePersist
-    protected void onCreate(){
+    protected void onCreate() {
         this.fechaCompra = LocalDateTime.now();
+        if (this.estado == null) {
+            this.estado = "PENDIENTE";
+        }
     }
-    
-
 }

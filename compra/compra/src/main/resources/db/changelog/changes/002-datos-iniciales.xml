@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="002" author="equipo">
+
+        <insert tableName="compras">
+            <column name="fecha_compra" value="2025-01-15 10:30:00"/>
+            <column name="total" value="15500.00"/>
+            <column name="cliente_id" value="1"/>
+            <column name="estado" value="COMPLETADA"/>
+        </insert>
+
+        <insert tableName="compras">
+            <column name="fecha_compra" value="2025-01-16 14:00:00"/>
+            <column name="total" value="8200.00"/>
+            <column name="cliente_id" value="2"/>
+            <column name="estado" value="PENDIENTE"/>
+        </insert>
+
+        <insert tableName="detalle_compras">
+            <column name="compra_id" value="1"/>
+            <column name="producto_id" value="1"/>
+            <column name="cantidad" value="3"/>
+            <column name="precio_unitario" value="2500.00"/>
+            <column name="subtotal" value="7500.00"/>
+        </insert>
+
+        <insert tableName="detalle_compras">
+            <column name="compra_id" value="1"/>
+            <column name="producto_id" value="2"/>
+            <column name="cantidad" value="2"/>
+            <column name="precio_unitario" value="4000.00"/>
+            <column name="subtotal" value="8000.00"/>
+        </insert>
+
+    </changeSet>
+
+</databaseChangeLog>
