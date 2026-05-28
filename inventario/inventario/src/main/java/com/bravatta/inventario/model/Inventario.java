@@ -1,18 +1,10 @@
 package com.bravatta.inventario.model;
 
-import java.time.LocalDateTime;
-
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.PrePersist;
-import jakarta.persistence.PreUpdate;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "inventario")
@@ -25,19 +17,21 @@ public class Inventario {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
-    private String productoId;     
+    
+    @Column(name = "producto_id", nullable = false, unique = true)
+    private Long productoId;
 
-    @Column(nullable = false)
-    private Integer stockDisponible; 
+    @Column(name = "stock_disponible", nullable = false)
+    private Integer stockDisponible;
 
-    @Column(nullable = false)
-    private Integer stockMinimo;     
+    @Column(name = "stock_minimo", nullable = false)
+    private Integer stockMinimo;
 
+    @Column(name = "ultima_actualizacion")
     private LocalDateTime ultimaActualizacion;
 
     @PrePersist
-    @PreUpdate 
+    @PreUpdate
     protected void onUpdate() {
         this.ultimaActualizacion = LocalDateTime.now();
     }

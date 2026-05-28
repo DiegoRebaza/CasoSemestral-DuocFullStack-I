@@ -1,21 +1,14 @@
 package com.bravatta.inventario.repository;
 
-import java.util.List;
-import java.util.Optional;
-
+import com.bravatta.inventario.model.Inventario;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.bravatta.inventario.model.Inventario;
+import java.util.List;
+import java.util.Optional;
 
 @Repository
 public interface InventarioRepository extends JpaRepository<Inventario, Long> {
-
-    // Busca un producto específico por su productoId
-    // Lo usa descontarStock() en el Service
-    Optional<Inventario> findByProductoId(String productoId);
-
-    // Busca todos los productos con stock bajo
-    // Útil para saber qué necesita reabastecerse
+    Optional<Inventario> findByProductoId(Long productoId); // Ahora recibe Long
     List<Inventario> findByStockDisponibleLessThan(Integer cantidad);
 }

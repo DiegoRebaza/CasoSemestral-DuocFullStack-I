@@ -1,4 +1,4 @@
-package com.bravatta.compra.exception; // Ajusta según el proyecto
+package com.bravatta.inventario.exception; // Ajusta según el proyecto
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
