@@ -1,108 +1,141 @@
 package com.bravatta.inventario.service;
 
 import com.bravatta.inventario.dto.InventarioDTO;
+import com.bravatta.inventario.exception.BadRequestException;
+import com.bravatta.inventario.exception.ResourceNotFoundException;
 import com.bravatta.inventario.model.Inventario;
 import com.bravatta.inventario.repository.InventarioRepository;
-
+import jakarta.transaction.Transactional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class InventarioService {
 
-    private static final Logger logger = LoggerFactory.getLogger(InventarioService.class);
+    private static final Logger log = LoggerFactory.getLogger(InventarioService.class);
 
-    @Autowired
-    private InventarioRepository inventarioRepository;
+    private final InventarioRepository inventarioRepository;
 
-    @Autowired
-    private RestTemplate restTemplate;
-
-  
-    private final String PRODUCTO_SERVICE_URL = "http://localhost:8084/api/productos/";
-
-    public List<Inventario> obtenerTodos() {
-        logger.info("Obteniendo todos los registros de inventario");
-        return inventarioRepository.findAll();
+    public InventarioService(InventarioRepository inventarioRepository) {
+        this.inventarioRepository = inventarioRepository;
     }
 
-    public Inventario obtenerPorId(Long id) {
-        return inventarioRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Inventario no encontrado con ID: " + id));
-    }
-
+    // CREAR
     @Transactional
-    public Inventario crearInventario(InventarioDTO dto) {
-        logger.info("Creando inventario para el producto ID: {}", dto.getProductoId());
+    public InventarioDTO crearInventario(InventarioDTO dto) {
+        log.info("Iniciando creación de inventario para productoId: {}", dto.getProductoId());
 
-        
         if (inventarioRepository.findByProductoId(dto.getProductoId()).isPresent()) {
-            throw new RuntimeException("Ya existe un inventario para el producto ID: " + dto.getProductoId());
+            log.warn("Ya existe inventario para productoId: {}", dto.getProductoId());
+            throw new BadRequestException("Ya existe un inventario para el producto ID: "
+                    + dto.getProductoId());
         }
 
-        
-        try {
-            Object productoJson = restTemplate.getForObject(PRODUCTO_SERVICE_URL + dto.getProductoId(), Object.class);
-            if (productoJson == null) {
-                throw new RuntimeException("El producto no existe en el sistema.");
-            }
-        } catch (Exception e) {
-            logger.error("Error al validar existencia del producto: {}", e.getMessage());
-            throw new RuntimeException("El producto ID " + dto.getProductoId() + " no es válido o el servicio Producto no responde.");
-        }
+        Inventario inventario = dto.toModel();
+        Inventario inventarioGuardado = inventarioRepository.save(inventario);
 
-        Inventario inventario = new Inventario();
-        inventario.setProductoId(dto.getProductoId());
-        inventario.setStockDisponible(dto.getStockDisponible());
-        inventario.setStockMinimo(dto.getStockMinimo());
-
-        Inventario nuevo = inventarioRepository.save(inventario);
-        logger.info("Inventario creado exitosamente con ID: {}", nuevo.getId());
-        return nuevo;
+        log.info("Inventario creado exitosamente con ID: {}", inventarioGuardado.getIdInventario());
+        return InventarioDTO.fromModel(inventarioGuardado);
     }
 
+    // LISTAR
+    public List<InventarioDTO> listar() {
+        log.info("Consultando todos los registros de inventario...");
+        List<Inventario> inventarios = inventarioRepository.findAll();
+        log.info("Se encontraron {} registros de inventario.", inventarios.size());
+        return inventarios.stream()
+                .map(InventarioDTO::fromModel)
+                .collect(Collectors.toList());
+    }
+
+    // OBTENER POR ID
+    public InventarioDTO obtenerPorId(Long id) {
+        log.info("Buscando inventario con ID: {}", id);
+        Inventario inventario = inventarioRepository.findById(id)
+                .orElseThrow(() -> {
+                    log.warn("Inventario no encontrado, ID: {}", id);
+                    return new ResourceNotFoundException("Inventario no encontrado con ID: " + id);
+                });
+        return InventarioDTO.fromModel(inventario);
+    }
+
+    // ACTUALIZAR
     @Transactional
-    public Inventario actualizarInventario(Long id, InventarioDTO dto) {
-        Inventario existente = obtenerPorId(id);
-        
+    public InventarioDTO actualizarInventario(Long id, InventarioDTO dto) {
+        log.info("Iniciando actualización del inventario con ID: {}", id);
+
+        Inventario existente = inventarioRepository.findById(id)
+                .orElseThrow(() -> {
+                    log.warn("Inventario no encontrado para actualización, ID: {}", id);
+                    return new ResourceNotFoundException("Inventario no encontrado con ID: " + id);
+                });
+
         existente.setStockDisponible(dto.getStockDisponible());
         existente.setStockMinimo(dto.getStockMinimo());
-        
-        logger.info("Inventario actualizado para el ID: {}", id);
-        return inventarioRepository.save(existente);
+
+        Inventario actualizado = inventarioRepository.save(existente);
+        log.info("Inventario con ID {} actualizado exitosamente.", actualizado.getIdInventario());
+        return InventarioDTO.fromModel(actualizado);
     }
 
-    public void eliminarInventario(Long id) {
-        Inventario inventario = obtenerPorId(id);
-        inventarioRepository.delete(inventario);
-        logger.info("Inventario eliminado correctamente, ID: {}", id);
-    }
-
-    
+    // ELIMINAR
     @Transactional
-    public Inventario descontarStock(Long productoId, Integer cantidad) {
+    public void eliminarInventario(Long id) {
+        log.info("Iniciando eliminación del inventario con ID: {}", id);
+
+        if (!inventarioRepository.existsById(id)) {
+            log.warn("Intento de eliminar inventario inexistente, ID: {}", id);
+            throw new ResourceNotFoundException("Inventario no encontrado con ID: " + id);
+        }
+
+        inventarioRepository.deleteById(id);
+        log.info("Inventario con ID {} eliminado exitosamente.", id);
+    }
+
+    // DESCONTAR STOCK
+    @Transactional
+    public InventarioDTO descontarStock(Long productoId, Integer cantidad) {
+        log.info("Descontando {} unidades del stock para productoId: {}", cantidad, productoId);
+
         Inventario inventario = inventarioRepository.findByProductoId(productoId)
-                .orElseThrow(() -> new RuntimeException("No hay inventario para el producto ID: " + productoId));
+                .orElseThrow(() -> {
+                    log.warn("No hay inventario para productoId: {}", productoId);
+                    return new ResourceNotFoundException("No hay inventario para el producto ID: "
+                            + productoId);
+                });
 
         if (inventario.getStockDisponible() < cantidad) {
-            throw new RuntimeException("Stock insuficiente. Disponible: " + inventario.getStockDisponible() + ", Pedido: " + cantidad);
+            log.warn("Stock insuficiente para productoId: {}. Disponible: {}, Solicitado: {}",
+                    productoId, inventario.getStockDisponible(), cantidad);
+            throw new BadRequestException("Stock insuficiente. Disponible: "
+                    + inventario.getStockDisponible() + ", Solicitado: " + cantidad);
         }
 
         inventario.setStockDisponible(inventario.getStockDisponible() - cantidad);
-        logger.info("Stock descontado. Nuevo stock para producto ID {}: {}", productoId, inventario.getStockDisponible());
-        return inventarioRepository.save(inventario);
+        Inventario actualizado = inventarioRepository.save(inventario);
+
+        log.info("Stock actualizado. Nuevo stock para productoId {}: {}",
+                productoId, actualizado.getStockDisponible());
+        return InventarioDTO.fromModel(actualizado);
     }
 
-    
-    public List<Inventario> obtenerStockBajo(Integer cantidad) {
-        logger.info("Buscando productos con stock menor a: {}", cantidad);
-        return inventarioRepository.findByStockDisponibleLessThan(cantidad);
+    // STOCK BAJO
+    public List<InventarioDTO> obtenerStockBajo(Integer cantidad) {
+        log.info("Buscando productos con stock menor a: {}", cantidad);
+        List<Inventario> bajos = inventarioRepository.findByStockDisponibleLessThan(cantidad);
+        log.info("Se encontraron {} productos con stock bajo.", bajos.size());
+        return bajos.stream()
+                .map(InventarioDTO::fromModel)
+                .collect(Collectors.toList());
+    }
+
+    // VERIFICAR EXISTENCIA (para otros microservicios)
+    public boolean existePorId(Long id) {
+        log.info("Verificando existencia del inventario con ID: {}", id);
+        return inventarioRepository.existsById(id);
     }
 }

@@ -1,0 +1,179 @@
+15:59:06 INFO  Starting ClientesApplication using Java 17.0.5 with PID 25532 (C:\Users\av-alumno\Downloads\CasoSemestral-DuocFullStack-I\clientes\clientes\target\classes started by AV-Alumno in C:\Users\av-alumno\Downloads\CasoSemestral-DuocFullStack-I)
+15:59:06 INFO  No active profile set, falling back to 1 default profile: "default"
+15:59:07 INFO  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+15:59:07 INFO  Finished Spring Data repository scanning in 112 ms. Found 1 JPA repository interface.
+15:59:08 INFO  Tomcat initialized with port 9093 (http)
+15:59:08 INFO  Starting service [Tomcat]
+15:59:08 INFO  Starting Servlet engine: [Apache Tomcat/11.0.21]
+15:59:08 INFO  Root WebApplicationContext: initialization completed in 1775 ms
+15:59:09 INFO  HHH008540: Processing PersistenceUnitInfo [name: default]
+15:59:09 INFO  HHH000001: Hibernate ORM core version 7.2.12.Final
+15:59:09 INFO  No LoadTimeWeaver setup: ignoring JPA class transformer
+15:59:09 INFO  HikariPool-1 - Starting...
+15:59:10 INFO  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@674ed201
+15:59:10 INFO  HikariPool-1 - Start completed.
+15:59:10 WARN  HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+15:59:10 WARN  HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+15:59:10 INFO  HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/bd_cliente?createDatabaseIfNotExist=true&serverTimezone=America/Santiago]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: bd_cliente/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+15:59:10 INFO  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+15:59:10 INFO  Initialized JPA EntityManagerFactory for persistence unit 'default'
+15:59:10 INFO  Hibernate is in classpath; If applicable, HQL parser will be used.
+15:59:13 INFO  Reading resource: db/changelog/changes/001-crear-tablas.sql
+15:59:13 INFO  Creating database changelog table with name: bd_cliente.databasechangelog
+15:59:13 INFO  Reading from bd_cliente.databasechangelog
+15:59:13 INFO  Reading resource: db/changelog/changes/002-insertar-datos.sql
+15:59:13 INFO  Creating snapshot
+15:59:13 INFO  Name 'PK_DATABASECHANGELOGLOCK' ignored for PRIMARY key.
+15:59:13 INFO  Successfully acquired change log lock
+15:59:13 INFO  Using deploymentId: 0430351100
+15:59:13 INFO  Reading from bd_cliente.databasechangelog
+15:59:13 INFO  Running Changeset: db/changelog/changes/001-crear-tablas.sql::1::bravatta
+15:59:13 INFO  Custom SQL executed
+15:59:13 INFO  ChangeSet db/changelog/changes/001-crear-tablas.sql::1::bravatta ran successfully in 25ms
+15:59:13 INFO  Running Changeset: db/changelog/changes/001-crear-tablas.sql::2::bravatta
+15:59:13 INFO  Custom SQL executed
+15:59:13 INFO  ChangeSet db/changelog/changes/001-crear-tablas.sql::2::bravatta ran successfully in 12ms
+15:59:13 INFO  Running Changeset: db/changelog/changes/002-insertar-datos.sql::3::bravatta
+15:59:13 INFO  Custom SQL executed
+15:59:13 INFO  ChangeSet db/changelog/changes/002-insertar-datos.sql::3::bravatta ran successfully in 6ms
+15:59:13 INFO  Running Changeset: db/changelog/changes/002-insertar-datos.sql::4::bravatta
+15:59:13 INFO  Custom SQL executed
+15:59:13 INFO  ChangeSet db/changelog/changes/002-insertar-datos.sql::4::bravatta ran successfully in 5ms
+15:59:13 INFO  UPDATE SUMMARY
+15:59:13 INFO  Run:                          4
+15:59:13 INFO  Previously run:               0
+15:59:13 INFO  Filtered out:                 0
+15:59:13 INFO  -------------------------------
+15:59:13 INFO  Total change sets:            4
+15:59:13 INFO  Update summary generated
+15:59:13 INFO  Update command completed successfully.
+15:59:13 INFO  Liquibase: Update has been successful. Rows affected: 20
+15:59:13 INFO  Successfully released change log lock
+15:59:13 INFO  Command execution complete
+15:59:13 WARN  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+15:59:15 INFO  Tomcat started on port 9093 (http) with context path '/'
+15:59:15 INFO  Started ClientesApplication in 8.766 seconds (process running for 9.358)
+16:03:42 INFO  Starting ClientesApplication using Java 17.0.5 with PID 2820 (C:\Users\av-alumno\Downloads\CasoSemestral-DuocFullStack-I\clientes\clientes\target\classes started by AV-Alumno in C:\Users\av-alumno\Downloads\CasoSemestral-DuocFullStack-I)
+16:03:42 INFO  No active profile set, falling back to 1 default profile: "default"
+16:03:43 INFO  Starting ClientesApplication using Java 17.0.5 with PID 11508 (C:\Users\av-alumno\Downloads\CasoSemestral-DuocFullStack-I\clientes\clientes\target\classes started by AV-Alumno in C:\Users\av-alumno\Downloads\CasoSemestral-DuocFullStack-I)
+16:03:43 INFO  No active profile set, falling back to 1 default profile: "default"
+16:03:43 INFO  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+16:03:44 INFO  Finished Spring Data repository scanning in 208 ms. Found 1 JPA repository interface.
+16:03:45 INFO  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+16:03:45 INFO  Tomcat initialized with port 9093 (http)
+16:03:45 INFO  Starting service [Tomcat]
+16:03:45 INFO  Starting Servlet engine: [Apache Tomcat/11.0.21]
+16:03:45 INFO  Finished Spring Data repository scanning in 190 ms. Found 1 JPA repository interface.
+16:03:45 INFO  Root WebApplicationContext: initialization completed in 3267 ms
+16:03:45 INFO  HHH008540: Processing PersistenceUnitInfo [name: default]
+16:03:46 INFO  HHH000001: Hibernate ORM core version 7.2.12.Final
+16:03:46 INFO  Tomcat initialized with port 9093 (http)
+16:03:46 INFO  Starting service [Tomcat]
+16:03:46 INFO  Starting Servlet engine: [Apache Tomcat/11.0.21]
+16:03:47 INFO  Root WebApplicationContext: initialization completed in 3408 ms
+16:03:47 INFO  No LoadTimeWeaver setup: ignoring JPA class transformer
+16:03:47 INFO  HikariPool-1 - Starting...
+16:03:47 INFO  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@114b2414
+16:03:47 INFO  HikariPool-1 - Start completed.
+16:03:47 WARN  HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+16:03:47 WARN  HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+16:03:47 INFO  HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/bd_cliente?createDatabaseIfNotExist=true&serverTimezone=America/Santiago]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: bd_cliente/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+16:03:47 INFO  HHH008540: Processing PersistenceUnitInfo [name: default]
+16:03:47 INFO  HHH000001: Hibernate ORM core version 7.2.12.Final
+16:03:48 INFO  No LoadTimeWeaver setup: ignoring JPA class transformer
+16:03:48 INFO  HikariPool-1 - Starting...
+16:03:48 INFO  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+16:03:48 INFO  Initialized JPA EntityManagerFactory for persistence unit 'default'
+16:03:48 INFO  Hibernate is in classpath; If applicable, HQL parser will be used.
+16:03:48 INFO  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@28f8ce2e
+16:03:48 INFO  HikariPool-1 - Start completed.
+16:03:48 WARN  HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+16:03:48 WARN  HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+16:03:48 INFO  HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/bd_cliente?createDatabaseIfNotExist=true&serverTimezone=America/Santiago]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: bd_cliente/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+16:03:49 INFO  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+16:03:49 INFO  Initialized JPA EntityManagerFactory for persistence unit 'default'
+16:03:49 INFO  Hibernate is in classpath; If applicable, HQL parser will be used.
+16:03:51 INFO  Reading resource: db/changelog/changes/001-crear-tablas.sql
+16:03:51 INFO  Reading from bd_cliente.databasechangelog
+16:03:51 INFO  Reading resource: db/changelog/changes/002-insertar-datos.sql
+16:03:51 INFO  Database is up to date, no changesets to execute
+16:03:51 INFO  Reading from bd_cliente.databasechangelog
+16:03:51 INFO  UPDATE SUMMARY
+16:03:51 INFO  Run:                          0
+16:03:51 INFO  Previously run:               4
+16:03:51 INFO  Filtered out:                 0
+16:03:51 INFO  -------------------------------
+16:03:51 INFO  Total change sets:            4
+16:03:51 INFO  Update summary generated
+16:03:51 INFO  Command execution complete
+16:03:51 WARN  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+16:03:51 INFO  Reading resource: db/changelog/changes/001-crear-tablas.sql
+16:03:52 INFO  Reading from bd_cliente.databasechangelog
+16:03:52 INFO  Reading resource: db/changelog/changes/002-insertar-datos.sql
+16:03:52 INFO  Database is up to date, no changesets to execute
+16:03:52 INFO  Reading from bd_cliente.databasechangelog
+16:03:52 INFO  UPDATE SUMMARY
+16:03:52 INFO  Run:                          0
+16:03:52 INFO  Previously run:               4
+16:03:52 INFO  Filtered out:                 0
+16:03:52 INFO  -------------------------------
+16:03:52 INFO  Total change sets:            4
+16:03:52 INFO  Update summary generated
+16:03:52 INFO  Command execution complete
+16:03:52 WARN  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+16:03:53 INFO  Tomcat started on port 9093 (http) with context path '/'
+16:03:53 INFO  Started ClientesApplication in 11.777 seconds (process running for 12.307)
+16:03:54 WARN  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+16:03:54 INFO  Closing JPA EntityManagerFactory for persistence unit 'default'
+16:03:54 INFO  HikariPool-1 - Shutdown initiated...
+16:03:54 INFO  HikariPool-1 - Shutdown completed.
+16:03:54 INFO  
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+16:03:54 ERROR 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 9093 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 9093 or configure this application to listen on another port.
+

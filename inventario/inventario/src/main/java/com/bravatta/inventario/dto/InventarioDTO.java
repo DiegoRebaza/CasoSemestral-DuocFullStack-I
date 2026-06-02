@@ -29,7 +29,7 @@ public class InventarioDTO {
 
     public Inventario toModel() {
         return Inventario.builder()
-                .inventarioId(this.inventarioId)
+                .idInventario(this.inventarioId)
                 .productoId(this.productoId)
                 .stockDisponible(this.stockDisponible)
                 .stockMinimo(this.stockMinimo)
@@ -40,7 +40,7 @@ public class InventarioDTO {
         if (inventario == null) return null;
 
         return InventarioDTO.builder()
-                .inventarioId(inventario.getInventarioId())
+                .inventarioId(inventario.getIdInventario())
                 .productoId(inventario.getProductoId())
                 .stockDisponible(inventario.getStockDisponible())
                 .stockMinimo(inventario.getStockMinimo())

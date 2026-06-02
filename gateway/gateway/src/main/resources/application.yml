@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 9090
 
 
 spring:
@@ -19,32 +19,32 @@ spring:
     gateway:
       routes:
         - id: compra
-          uri: http://localhost:8081
+          uri: http://localhost:9091
           predicates:
             - Path=/api/compras/**
 
         - id: inventario
-          uri: http://localhost:8082
+          uri: http://localhost:9092
           predicates:
             - Path=/api/inventario/**
 
         - id: clientes
-          uri: http://localhost:8083
+          uri: http://localhost:9093
           predicates:
             - Path=/api/clientes/**
 
         - id: pagos
-          uri: http://localhost:8084
+          uri: http://localhost:9094
           predicates:
             - Path=/api/pagos/**
 
         - id: producto
-          uri: http://localhost:8085
+          uri: http://localhost:9095
           predicates:
             - Path=/api/producto/**
 
         - id: auth
-          uri: http://localhost:8086
+          uri: http://localhost:9096
           predicates:
             - Path=/api/auth/**
 

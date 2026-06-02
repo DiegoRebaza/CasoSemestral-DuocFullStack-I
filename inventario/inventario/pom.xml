@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.bravatta</groupId>
-	<artifactId>clientes</artifactId>
+	<artifactId>inventario</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name/>
 	<description/>
