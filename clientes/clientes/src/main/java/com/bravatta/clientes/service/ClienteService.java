@@ -7,18 +7,22 @@ import com.bravatta.clientes.model.Cliente;
 import com.bravatta.clientes.model.Direccion;
 import com.bravatta.clientes.repository.ClienteRepository;
 
-import jakarta.transaction.Transactional;
-import lombok.extern.slf4j.Slf4j;
+import org.springframework.transaction.annotation.Transactional;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import org.springframework.stereotype.Service;
-// import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
-@Slf4j
+
 @Service
 public class ClienteService {
     
+
+    private static final Logger log = LoggerFactory.getLogger(ClienteService.class);
     // Creacion de objeto
     private final ClienteRepository clienteRepository;
 

@@ -10,4 +10,5 @@ public class PagosApplication {
 		SpringApplication.run(PagosApplication.class, args);
 	}
 
+	
 }

@@ -1,10 +1,10 @@
-package com.bravatta.producto;
+package com.bravatta.pagos;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ProductoApplicationTests {
+class PagosApplicationTests {
 
 	@Test
 	void contextLoads() {

@@ -1,4 +1,4 @@
-package com.bravatta.clientes.config;
+package com.bravatta.producto.config;
 
 import java.nio.charset.StandardCharsets;
 
