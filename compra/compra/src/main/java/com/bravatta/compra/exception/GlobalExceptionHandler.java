@@ -1,26 +1,65 @@
-package com.bravatta.compra.exception; // Ajusta según el proyecto
+package com.bravatta.compra.exception;
+
+import java.time.OffsetDateTime;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.MethodArgumentNotValidException;
-import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
-import java.util.HashMap;
-import java.util.Map;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
+import org.springframework.web.reactive.function.client.WebClientRequestException;
+import org.springframework.web.reactive.function.client.WebClientResponseException;
 
-@ControllerAdvice
+import jakarta.servlet.http.HttpServletRequest;
+
+@RestControllerAdvice
 public class GlobalExceptionHandler {
-    @ExceptionHandler(MethodArgumentNotValidException.class)
-    public ResponseEntity<Map<String, String>> manejarValidaciones(MethodArgumentNotValidException ex) {
-        Map<String, String> errores = new HashMap<>();
-        ex.getBindingResult().getFieldErrors().forEach(error -> errores.put(error.getField(), error.getDefaultMessage()));
-        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errores);
+
+    @ExceptionHandler(BadRequestException.class)
+    public ResponseEntity<ApiErrorResponse> handleBadRequest(BadRequestException ex,
+            HttpServletRequest request) {
+        return buildResponse(HttpStatus.BAD_REQUEST, ex.getMessage(), request.getRequestURI());
     }
 
-    @ExceptionHandler(RuntimeException.class)
-    public ResponseEntity<Map<String, String>> manejarErroresNegocio(RuntimeException ex) {
-        Map<String, String> error = new HashMap<>();
-        error.put("error", ex.getMessage());
-        return ResponseEntity.status(HttpStatus.CONFLICT).body(error);
+    @ExceptionHandler(ResourceNotFoundException.class)
+    public ResponseEntity<ApiErrorResponse> handleNotFound(ResourceNotFoundException ex,
+            HttpServletRequest request) {
+        return buildResponse(HttpStatus.NOT_FOUND, ex.getMessage(), request.getRequestURI());
+    }
+
+    @ExceptionHandler(WebClientResponseException.class)
+    public ResponseEntity<ApiErrorResponse> handleWebClientResponse(WebClientResponseException ex,
+            HttpServletRequest request) {
+        HttpStatus status = (HttpStatus) ex.getStatusCode();
+        if (status == null) {
+            status = HttpStatus.BAD_GATEWAY;
+        }
+        return buildResponse(status, "Error de comunicación con servicio externo: " + ex.getMessage(),
+                request.getRequestURI());
+    }
+
+    @ExceptionHandler(WebClientRequestException.class)
+    public ResponseEntity<ApiErrorResponse> handleWebClientRequest(WebClientRequestException ex,
+            HttpServletRequest request) {
+        return buildResponse(HttpStatus.BAD_GATEWAY,
+                "No se pudo establecer conexión con el servicio externo: " + ex.getMessage(),
+                request.getRequestURI());
+    }
+
+    @ExceptionHandler(Exception.class)
+    public ResponseEntity<ApiErrorResponse> handleGeneralException(Exception ex, HttpServletRequest request) {
+        return buildResponse(HttpStatus.INTERNAL_SERVER_ERROR,
+                "Ocurrió un error inesperado: " + ex.getMessage(), request.getRequestURI());
+    }
+
+    private ResponseEntity<ApiErrorResponse> buildResponse(HttpStatus status, String message, String path) {
+        ApiErrorResponse error = ApiErrorResponse.builder()
+                .timestamp(OffsetDateTime.now())
+                .status(status.value())
+                .error(status.getReasonPhrase())
+                .message(message)
+                .path(path)
+                .build();
+        return new ResponseEntity<>(error, status);
     }
 }
+

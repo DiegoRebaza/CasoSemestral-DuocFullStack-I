@@ -2,20 +2,20 @@ package com.bravatta.compra.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Entity
-@Table(name = "detalle_compras")
+@Table(name = "detalle_compra")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class DetalleCompra {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @Column(name = "id_detalle_compra")
+    private Long idDetalleCompra;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "compra_id", nullable = false)

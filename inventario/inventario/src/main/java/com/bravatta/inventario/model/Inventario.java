@@ -1,9 +1,7 @@
 package com.bravatta.inventario.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import java.time.LocalDateTime;
 
 @Entity
@@ -15,7 +13,7 @@ public class Inventario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long idInventario;
 
     
     @Column(name = "producto_id", nullable = false, unique = true)

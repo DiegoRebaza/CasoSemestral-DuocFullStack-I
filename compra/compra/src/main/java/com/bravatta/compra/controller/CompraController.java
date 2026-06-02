@@ -1,6 +1,6 @@
 package com.bravatta.compra.controller;
 
-import com.bravatta.compra.dto.CompraRequestDTO;
+import com.bravatta.compra.dto.CompraDTO;
 import com.bravatta.compra.model.Compra;
 import com.bravatta.compra.service.CompraService;
 import jakarta.validation.Valid;
@@ -43,7 +43,7 @@ public class CompraController {
     }
 
     @PostMapping
-    public ResponseEntity<Compra> crearCompra(@Valid @RequestBody CompraRequestDTO compraDTO) {
+    public ResponseEntity<Compra> crearCompra(@Valid @RequestBody CompraDTO compraDTO) {
         Compra nueva = compraService.crearCompra(compraDTO);
         return ResponseEntity.status(HttpStatus.CREATED).body(nueva);
     }
@@ -51,7 +51,7 @@ public class CompraController {
     @PutMapping("/{id}")
     public ResponseEntity<Compra> actualizarCompra(
             @PathVariable Long id,
-            @Valid @RequestBody CompraRequestDTO compraDTO) {
+            @Valid @RequestBody CompraDTO compraDTO) {
         Compra actualizada = compraService.actualizarCompra(id, compraDTO);
         return ResponseEntity.ok(actualizada);
     }

@@ -1,10 +1,7 @@
 package com.bravatta.compra.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
+import lombok.*;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -13,11 +10,13 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class Compra {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @Column(name = "id_compra")
+    private Long idCompra;
 
     @Column(name = "fecha_compra")
     private LocalDateTime fechaCompra;
@@ -25,8 +24,8 @@ public class Compra {
     @Column(nullable = false)
     private Double total;
 
-    @Column(name = "cliente_id", nullable = false)
-    private Long clienteId;
+    @Column(name = "id_cliente", nullable = false)
+    private Long idCliente;
 
     @Column(nullable = false, length = 50)
     private String estado;

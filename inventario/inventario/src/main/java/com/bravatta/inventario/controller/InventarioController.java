@@ -1,6 +1,6 @@
 package com.bravatta.inventario.controller;
 
-import com.bravatta.inventario.dto.InventarioRequestDTO;
+import com.bravatta.inventario.dto.InventarioDTO;
 import com.bravatta.inventario.model.Inventario;
 import com.bravatta.inventario.service.InventarioService;
 import jakarta.validation.Valid;
@@ -35,7 +35,7 @@ public class InventarioController {
     }
 
     @PostMapping
-    public ResponseEntity<Inventario> crearInventario(@Valid @RequestBody InventarioRequestDTO dto) {
+    public ResponseEntity<Inventario> crearInventario(@Valid @RequestBody InventarioDTO dto) {
         Inventario nuevo = inventarioService.crearInventario(dto);
         return ResponseEntity.status(HttpStatus.CREATED).body(nuevo);
     }
@@ -43,7 +43,7 @@ public class InventarioController {
     @PutMapping("/{id}")
     public ResponseEntity<Inventario> actualizarInventario(
             @PathVariable Long id, 
-            @Valid @RequestBody InventarioRequestDTO dto) {
+            @Valid @RequestBody InventarioDTO dto) {
         Inventario actualizado = inventarioService.actualizarInventario(id, dto);
         return ResponseEntity.ok(actualizado);
     }

@@ -1,10 +1,12 @@
 package com.bravatta.inventario.service;
 
-import com.bravatta.inventario.dto.InventarioRequestDTO;
+import com.bravatta.inventario.dto.InventarioDTO;
 import com.bravatta.inventario.model.Inventario;
 import com.bravatta.inventario.repository.InventarioRepository;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -37,7 +39,7 @@ public class InventarioService {
     }
 
     @Transactional
-    public Inventario crearInventario(InventarioRequestDTO dto) {
+    public Inventario crearInventario(InventarioDTO dto) {
         logger.info("Creando inventario para el producto ID: {}", dto.getProductoId());
 
         
@@ -67,7 +69,7 @@ public class InventarioService {
     }
 
     @Transactional
-    public Inventario actualizarInventario(Long id, InventarioRequestDTO dto) {
+    public Inventario actualizarInventario(Long id, InventarioDTO dto) {
         Inventario existente = obtenerPorId(id);
         
         existente.setStockDisponible(dto.getStockDisponible());
