@@ -1,0 +1,47 @@
+14:57:55 INFO  Starting PagosApplication using Java 25.0.1 with PID 13000 (D:\Programacion\VisualCode\3. Tercer semestre\Parte 1 Proyecto Semestral\CasoSemestral-DuocFullStack-I\pagos\pagos\target\classes started by diego in D:\Programacion\VisualCode\3. Tercer semestre\Parte 1 Proyecto Semestral\CasoSemestral-DuocFullStack-I\pagos\pagos)
+14:57:55 INFO  No active profile set, falling back to 1 default profile: "default"
+14:57:56 INFO  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+14:57:56 INFO  Finished Spring Data repository scanning in 233 ms. Found 1 JPA repository interface.
+14:57:57 INFO  Tomcat initialized with port 9094 (http)
+14:57:57 INFO  Starting service [Tomcat]
+14:57:57 INFO  Starting Servlet engine: [Apache Tomcat/11.0.21]
+14:57:57 INFO  Root WebApplicationContext: initialization completed in 2440 ms
+14:57:58 INFO  HHH008540: Processing PersistenceUnitInfo [name: default]
+14:57:58 INFO  HHH000001: Hibernate ORM core version 7.2.12.Final
+14:57:58 INFO  No LoadTimeWeaver setup: ignoring JPA class transformer
+14:57:58 INFO  HikariPool-1 - Starting...
+14:57:59 INFO  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6fdc2db6
+14:57:59 INFO  HikariPool-1 - Start completed.
+14:57:59 WARN  HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+14:57:59 WARN  HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+14:57:59 INFO  HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/bd_pagos?createDatabaseIfNotExist=true&serverTimezone=America/Santiago]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: bd_pagos/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+14:58:00 INFO  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+14:58:00 INFO  Initialized JPA EntityManagerFactory for persistence unit 'default'
+14:58:00 INFO  Hibernate is in classpath; If applicable, HQL parser will be used.
+14:58:02 INFO  Reading resource: db/changelog/changes/001-crear-tablas.sql
+14:58:02 INFO  Reading from bd_pagos.databasechangelog
+14:58:02 INFO  Reading resource: db/changelog/changes/002-datos-iniciales.sql
+14:58:02 INFO  Database is up to date, no changesets to execute
+14:58:02 INFO  Reading from bd_pagos.databasechangelog
+14:58:02 INFO  UPDATE SUMMARY
+14:58:02 INFO  Run:                          0
+14:58:02 INFO  Previously run:               2
+14:58:02 INFO  Filtered out:                 0
+14:58:02 INFO  -------------------------------
+14:58:02 INFO  Total change sets:            2
+14:58:02 INFO  Update summary generated
+14:58:02 INFO  Command execution complete
+14:58:02 WARN  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+14:58:03 INFO  Tomcat started on port 9094 (http) with context path '/'
+14:58:03 INFO  Started PagosApplication in 9.023 seconds (process running for 10.945)

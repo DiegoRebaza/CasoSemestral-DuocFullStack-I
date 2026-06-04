@@ -1,35 +1,12 @@
 @echo off
-echo ========================================
-echo   Iniciando microservicios Bravatta...
-echo ========================================
+set ROOT=%~dp0
 
-echo.
-echo [1/6] Iniciando Gateway (puerto 9090)...
-start "Gateway" cmd /k "cd /d "%~dp0gateway" && .\mvnw spring-boot:run"
-timeout /t 10 /nobreak > nul
+start "servicio-clientes" cmd /k "cd /d "%ROOT%clientes\clientes" && call mvnw spring-boot:run"
+start "servicio-compra" cmd /k "cd /d "%ROOT%compra\compra" && call mvnw spring-boot:run"
+start "servicio-inventario" cmd /k "cd /d "%ROOT%inventario\inventario" && call mvnw spring-boot:run"
+start "servicio-pagos" cmd /k "cd /d "%ROOT%pagos\pagos" && call mvnw spring-boot:run"
+start "servicio-producto" cmd /k "cd /d "%ROOT%producto\producto" && call mvnw spring-boot:run"
+timeout /t 15
+start "servicio-gateway" cmd /k "cd /d "%ROOT%gateway\gateway" && call mvnw spring-boot:run"
 
-echo [2/6] Iniciando Clientes (puerto 9093)...
-start "Clientes" cmd /k "cd /d "%~dp0clientes" && .\mvnw spring-boot:run"
-timeout /t 5 /nobreak > nul
-
-echo [3/6] Iniciando Producto (puerto 9095)...
-start "Producto" cmd /k "cd /d "%~dp0producto" && .\mvnw spring-boot:run"
-timeout /t 5 /nobreak > nul
-
-echo [4/6] Iniciando Inventario (puerto 9092)...
-start "Inventario" cmd /k "cd /d "%~dp0inventario" && .\mvnw spring-boot:run"
-timeout /t 5 /nobreak > nul
-
-echo [5/6] Iniciando Pagos (puerto 9094)...
-start "Pagos" cmd /k "cd /d "%~dp0pagos" && .\mvnw spring-boot:run"
-timeout /t 5 /nobreak > nul
-
-echo [6/6] Iniciando Compra (puerto 9091)...
-start "Compra" cmd /k "cd /d "%~dp0compra" && .\mvnw spring-boot:run"
-
-echo.
-echo ========================================
-echo   Todos los servicios iniciados.
-echo   Revisa cada ventana para confirmar.
-echo ========================================
-pause
+echo Todos los servicios iniciados!
