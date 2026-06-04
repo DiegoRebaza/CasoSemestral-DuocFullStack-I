@@ -40,7 +40,7 @@ public class SecurityConfig {
     public ReactiveJwtDecoder jwtDecoder() {
         SecretKeySpec key = new SecretKeySpec(
             secret.getBytes(StandardCharsets.UTF_8),
-            "HmacSHA256"
+            "HmacSHA512"
         );
         return NimbusReactiveJwtDecoder.withSecretKey(key).build();
     }
