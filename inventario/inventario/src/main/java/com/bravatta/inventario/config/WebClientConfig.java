@@ -1,4 +1,4 @@
-package com.bravatta.compra.config;
+package com.bravatta.inventario.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -8,13 +8,13 @@ import org.springframework.web.reactive.function.client.WebClient;
 @Configuration
 public class WebClientConfig {
 
-    @Value("${gateway.url}")
-    private String gatewayUrl;
+    @Value("${producto.service.url}")
+    private String productoServiceUrl;
 
     @Bean
     public WebClient webClient() {
         return WebClient.builder()
-                .baseUrl(gatewayUrl)
+                .baseUrl(productoServiceUrl)
                 .build();
     }
 }

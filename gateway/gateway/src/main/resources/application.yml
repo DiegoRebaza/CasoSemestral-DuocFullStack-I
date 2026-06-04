@@ -9,12 +9,6 @@ spring:
   application:
     name: gateway
 
-  security:
-    oauth2:
-      resourceserver:
-        jwt:
-          secret-key: ac3dag36g581b1d59f84g2g9fa5g561hh7fa3d7c
-
   cloud:
     gateway:
       routes:

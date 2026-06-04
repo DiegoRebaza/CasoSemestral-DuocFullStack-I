@@ -1,5 +1,6 @@
 package com.bravatta.inventario.service;
 
+import com.bravatta.inventario.client.ProductoClientService;
 import com.bravatta.inventario.dto.InventarioDTO;
 import com.bravatta.inventario.exception.BadRequestException;
 import com.bravatta.inventario.exception.ResourceNotFoundException;
@@ -19,15 +20,22 @@ public class InventarioService {
     private static final Logger log = LoggerFactory.getLogger(InventarioService.class);
 
     private final InventarioRepository inventarioRepository;
+    private final ProductoClientService productoClientService;
 
-    public InventarioService(InventarioRepository inventarioRepository) {
+    public InventarioService(InventarioRepository inventarioRepository, ProductoClientService productoClientService) {
         this.inventarioRepository = inventarioRepository;
+        this.productoClientService = productoClientService;
     }
 
     // CREAR
     @Transactional
     public InventarioDTO crearInventario(InventarioDTO dto) {
         log.info("Iniciando creación de inventario para productoId: {}", dto.getProductoId());
+
+        if (!productoClientService.existeProducto(dto.getProductoId())) {
+            log.warn("Producto no encontrado en microservicio, productoId: {}", dto.getProductoId());
+            throw new BadRequestException("El producto con ID " + dto.getProductoId() + " no existe");
+        }
 
         if (inventarioRepository.findByProductoId(dto.getProductoId()).isPresent()) {
             log.warn("Ya existe inventario para productoId: {}", dto.getProductoId());
@@ -73,6 +81,11 @@ public class InventarioService {
                     log.warn("Inventario no encontrado para actualización, ID: {}", id);
                     return new ResourceNotFoundException("Inventario no encontrado con ID: " + id);
                 });
+
+        if (!productoClientService.existeProducto(dto.getProductoId())) {
+            log.warn("Producto no encontrado en microservicio, productoId: {}", dto.getProductoId());
+            throw new BadRequestException("El producto con ID " + dto.getProductoId() + " no existe");
+        }
 
         existente.setStockDisponible(dto.getStockDisponible());
         existente.setStockMinimo(dto.getStockMinimo());
