@@ -47,9 +47,10 @@ public class CompraService {
 
         // Validar cada producto y calcular total
         for (DetalleCompra detalle : compra.getDetalles()) {
-            productoClient.validarExistencia(detalle.getProductoId());
+            // Obtenemos el precio
+            Double precioReal = productoClient.obtenerPrecio(detalle.getProductoId());
 
-            detalle.setPrecioUnitario(1000.0); // Precio simulado según requerimiento
+            detalle.setPrecioUnitario(precioReal); 
             double subtotal = detalle.getCantidad() * detalle.getPrecioUnitario();
             detalle.setSubtotal(subtotal);
             totalCompra += subtotal;

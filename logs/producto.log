@@ -1,0 +1,66 @@
+14:55:11 INFO  Starting ProductoApplication using Java 17.0.5 with PID 22468 (C:\Users\av-alumno\Downloads\SCF\CasoSemestral-DuocFullStack-I\producto\producto\target\classes started by AV-Alumno in C:\Users\av-alumno\Downloads\SCF\CasoSemestral-DuocFullStack-I)
+14:55:11 INFO  No active profile set, falling back to 1 default profile: "default"
+14:55:12 INFO  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+14:55:12 INFO  Finished Spring Data repository scanning in 274 ms. Found 1 JPA repository interface.
+14:55:13 INFO  Tomcat initialized with port 9095 (http)
+14:55:13 INFO  Starting service [Tomcat]
+14:55:13 INFO  Starting Servlet engine: [Apache Tomcat/11.0.21]
+14:55:13 INFO  Root WebApplicationContext: initialization completed in 2739 ms
+14:55:14 INFO  HHH008540: Processing PersistenceUnitInfo [name: default]
+14:55:14 INFO  HHH000001: Hibernate ORM core version 7.2.12.Final
+14:55:15 INFO  No LoadTimeWeaver setup: ignoring JPA class transformer
+14:55:15 INFO  HikariPool-1 - Starting...
+14:55:15 INFO  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@308c65e0
+14:55:15 INFO  HikariPool-1 - Start completed.
+14:55:15 WARN  HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+14:55:15 WARN  HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+14:55:15 INFO  HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/bd_producto?createDatabaseIfNotExist=true&serverTimezone=America/Santiago]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: bd_producto/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+14:55:16 INFO  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+14:55:16 INFO  Initialized JPA EntityManagerFactory for persistence unit 'default'
+14:55:16 INFO  Hibernate is in classpath; If applicable, HQL parser will be used.
+14:55:18 INFO  Reading resource: db/changelog/changes/001-crear-tablas.sql
+14:55:19 INFO  Reading from bd_producto.databasechangelog
+14:55:19 INFO  Reading resource: db/changelog/changes/002-datos-iniciales.sql
+14:55:19 INFO  Database is up to date, no changesets to execute
+14:55:19 INFO  Reading from bd_producto.databasechangelog
+14:55:19 INFO  UPDATE SUMMARY
+14:55:19 INFO  Run:                          0
+14:55:19 INFO  Previously run:               2
+14:55:19 INFO  Filtered out:                 0
+14:55:19 INFO  -------------------------------
+14:55:19 INFO  Total change sets:            2
+14:55:19 INFO  Update summary generated
+14:55:19 INFO  Command execution complete
+14:55:19 WARN  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+14:55:19 WARN  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+14:55:19 INFO  Closing JPA EntityManagerFactory for persistence unit 'default'
+14:55:19 INFO  HikariPool-1 - Shutdown initiated...
+14:55:19 INFO  HikariPool-1 - Shutdown completed.
+14:55:19 INFO  
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+14:55:19 ERROR 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 9095 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 9095 or configure this application to listen on another port.
+

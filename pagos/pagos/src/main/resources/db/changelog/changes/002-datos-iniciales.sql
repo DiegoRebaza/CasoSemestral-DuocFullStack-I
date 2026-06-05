@@ -2,13 +2,13 @@
 
 -- changeset bravatta:2 labels:seed comment:Insertar 10 registros en tabla transaccion
 INSERT INTO transaccion (monto, metodo_pago, id_transaccion_externa) VALUES
-(15000,  'WEBPAY',       'TXN-2024-000001'),
-(32500,  'WEBPAY',       'TXN-2024-000002'),
-(8900,   'TRANSFERENCIA','TXN-2024-000003'),
-(47000,  'DEBITO',       'TXN-2024-000004'),
-(12300,  'CREDITO',      'TXN-2024-000005'),
-(5500,   'EFECTIVO',     'TXN-2024-000006'),
-(99000,  'WEBPAY',       'TXN-2024-000007'),
-(21000,  'TRANSFERENCIA','TXN-2024-000008'),
-(63400,  'DEBITO',       'TXN-2024-000009'),
-(18750,  'CREDITO',      'TXN-2024-000010');
+(5200.00,  'WEBPAY',        'TXN-2026-000001'),
+(11000.00, 'WEBPAY',        'TXN-2026-000002'),
+(2500.00,  'TRANSFERENCIA', 'TXN-2026-000003'),
+(7200.00,  'DEBITO',        'TXN-2026-000004'),
+(16800.00, 'CREDITO',       'TXN-2026-000005'),
+(12500.00, 'EFECTIVO',      'TXN-2026-000006'),
+(4800.00,  'WEBPAY',        'TXN-2026-000007'),
+(3000.00,  'TRANSFERENCIA', 'TXN-2026-000008'),
+(6000.00,  'DEBITO',        'TXN-2026-000009'),
+(13000.00, 'CREDITO',       'TXN-2026-000010');
