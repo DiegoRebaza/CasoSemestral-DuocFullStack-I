@@ -564,3 +564,5 @@ Caused by: java.net.ConnectException: Connection refused: getsockopt
 15:37:29 INFO  Verificando existencia del cliente con ID: 1
 15:38:54 INFO  GET /api/clientes/4/exists - Comprobando existencia de cliente
 15:38:54 INFO  Verificando existencia del cliente con ID: 4
+15:41:15 INFO  Starting ClientesApplication using Java 24.0.2 with PID 11856 (C:\Users\av-alumno\Downloads\SCF\CasoSemestral-DuocFullStack-I\clientes\clientes\target\classes started by AV-Alumno in C:\Users\av-alumno\Downloads\SCF\CasoSemestral-DuocFullStack-I\clientes\clientes)
+15:41:15 INFO  No active profile set, falling back to 1 default profile: "default"
