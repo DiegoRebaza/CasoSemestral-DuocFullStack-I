@@ -42,5 +42,17 @@ spring:
           predicates:
             - Path=/api/auth/**
 
+        - id: recomendaciones
+          uri: http://localhost:9098
+          predicates:
+            - Path=/api/recomendaciones/**
+
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    enabled: true
+    path: /doc/swagger-ui.html
+
 
 
