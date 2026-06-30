@@ -1,24 +1,23 @@
-14:57:56 INFO  Starting InventarioApplication using Java 25.0.1 with PID 53016 (D:\Programacion\VisualCode\3. Tercer semestre\Parte 1 Proyecto Semestral\CasoSemestral-DuocFullStack-I\inventario\inventario\target\classes started by diego in D:\Programacion\VisualCode\3. Tercer semestre\Parte 1 Proyecto Semestral\CasoSemestral-DuocFullStack-I\inventario\inventario)
-14:57:56 INFO  No active profile set, falling back to 1 default profile: "default"
-14:57:57 INFO  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-14:57:57 INFO  Finished Spring Data repository scanning in 270 ms. Found 1 JPA repository interface.
-14:57:58 INFO  Tomcat initialized with port 9092 (http)
-14:57:58 INFO  Starting service [Tomcat]
-14:57:58 INFO  Starting Servlet engine: [Apache Tomcat/11.0.21]
-14:57:58 INFO  Root WebApplicationContext: initialization completed in 2014 ms
-14:57:58 INFO  HHH008540: Processing PersistenceUnitInfo [name: default]
-14:57:58 INFO  HHH000001: Hibernate ORM core version 7.2.12.Final
-14:57:59 INFO  No LoadTimeWeaver setup: ignoring JPA class transformer
-14:57:59 INFO  HikariPool-1 - Starting...
-14:57:59 INFO  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3a5ce4b8
-14:57:59 INFO  HikariPool-1 - Start completed.
-14:57:59 WARN  HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
-14:57:59 WARN  HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-14:57:59 INFO  HHH10001005: Database info:
+00:02:13 INFO  Starting InventarioApplication using Java 25 with PID 27164 (D:\FinalShit\CasoSemestral-DuocFullStack-I\inventario\inventario\target\classes started by Matt in D:\FinalShit\CasoSemestral-DuocFullStack-I\inventario\inventario)
+00:02:13 INFO  No active profile set, falling back to 1 default profile: "default"
+00:02:14 INFO  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+00:02:14 INFO  Finished Spring Data repository scanning in 120 ms. Found 1 JPA repository interface.
+00:02:15 INFO  Tomcat initialized with port 9092 (http)
+00:02:15 INFO  Starting service [Tomcat]
+00:02:15 INFO  Starting Servlet engine: [Apache Tomcat/11.0.21]
+00:02:15 INFO  Root WebApplicationContext: initialization completed in 1695 ms
+00:02:15 INFO  HHH008540: Processing PersistenceUnitInfo [name: default]
+00:02:15 INFO  HHH000001: Hibernate ORM core version 7.2.12.Final
+00:02:16 INFO  No LoadTimeWeaver setup: ignoring JPA class transformer
+00:02:16 INFO  HikariPool-1 - Starting...
+00:02:16 INFO  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@37c37d67
+00:02:16 INFO  HikariPool-1 - Start completed.
+00:02:16 WARN  HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+00:02:17 INFO  HHH10001005: Database info:
 	Database JDBC URL [jdbc:mysql://localhost:3306/bd_inventario?createDatabaseIfNotExist=true&serverTimezone=America/Santiago]
 	Database driver: MySQL Connector/J
 	Database dialect: MySQLDialect
-	Database version: 5.5.5
+	Database version: 8.4.3
 	Default catalog/schema: bd_inventario/undefined
 	Autocommit mode: undefined/unknown
 	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
@@ -26,261 +25,45 @@
 	Pool: DataSourceConnectionProvider
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-14:58:00 INFO  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-14:58:00 INFO  Initialized JPA EntityManagerFactory for persistence unit 'default'
-14:58:00 INFO  Hibernate is in classpath; If applicable, HQL parser will be used.
-14:58:02 INFO  Reading resource: db/changelog/changes/001-crea-tablas.sql
-14:58:02 INFO  Reading from bd_inventario.databasechangelog
-14:58:02 INFO  Reading resource: db/changelog/changes/002-datos-iniciales.sql
-14:58:03 INFO  Database is up to date, no changesets to execute
-14:58:03 INFO  Reading from bd_inventario.databasechangelog
-14:58:03 INFO  UPDATE SUMMARY
-14:58:03 INFO  Run:                          0
-14:58:03 INFO  Previously run:               2
-14:58:03 INFO  Filtered out:                 0
-14:58:03 INFO  -------------------------------
-14:58:03 INFO  Total change sets:            2
-14:58:03 INFO  Update summary generated
-14:58:03 INFO  Command execution complete
-14:58:03 WARN  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-14:58:03 INFO  Tomcat started on port 9092 (http) with context path '/'
-14:58:03 INFO  Started InventarioApplication in 8.365 seconds (process running for 9.541)
-14:13:44 INFO  Starting InventarioApplication using Java 24.0.2 with PID 12704 (C:\Users\av-alumno\Downloads\SCF\CasoSemestral-DuocFullStack-I\inventario\inventario\target\classes started by AV-Alumno in C:\Users\av-alumno\Downloads\SCF\CasoSemestral-DuocFullStack-I\inventario\inventario)
-14:13:44 INFO  No active profile set, falling back to 1 default profile: "default"
-14:13:46 INFO  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-14:13:46 INFO  Finished Spring Data repository scanning in 383 ms. Found 1 JPA repository interface.
-14:13:48 INFO  Tomcat initialized with port 9092 (http)
-14:13:48 INFO  Starting service [Tomcat]
-14:13:48 INFO  Starting Servlet engine: [Apache Tomcat/11.0.21]
-14:13:48 INFO  Root WebApplicationContext: initialization completed in 3992 ms
-14:13:48 INFO  HHH008540: Processing PersistenceUnitInfo [name: default]
-14:13:49 INFO  HHH000001: Hibernate ORM core version 7.2.12.Final
-14:13:50 INFO  No LoadTimeWeaver setup: ignoring JPA class transformer
-14:13:50 INFO  HikariPool-1 - Starting...
-14:13:51 WARN  HHH000247: ErrorCode: 0, SQLState: 08S01
-14:13:51 WARN  Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-14:13:51 WARN  HHH100046: Could not obtain connection to query JDBC database metadata
-org.hibernate.exception.JDBCConnectionException: Unable to obtain isolated JDBC connection [Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
-	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:80)
-	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:34)
-	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:115)
-	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:101)
-	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:51)
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:366)
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironment(JdbcEnvironmentInitiator.java:143)
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:120)
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:80)
-	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:133)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:260)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:235)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:212)
-	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44)
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:251)
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:203)
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:172)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1392)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.populateSessionFactoryBuilder(EntityManagerFactoryBuilderImpl.java:1472)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1454)
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:93)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:443)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:436)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:411)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:419)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621)
-	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
-	at com.bravatta.inventario.InventarioApplication.main(InventarioApplication.java:10)
-Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:165)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:55)
-	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:840)
-	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416)
-	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237)
-	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
-	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144)
-	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:373)
-	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:210)
-	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488)
-	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:576)
-	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:97)
-	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
-	at org.hibernate.engine.jdbc.connections.internal.DataSourceConnectionProvider.getConnection(DataSourceConnectionProvider.java:137)
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:508)
-	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:48)
-	... 37 common frames omitted
-Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:95)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:140)
-	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:156)
-	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:79)
-	at com.mysql.cj.NativeSession.connect(NativeSession.java:142)
-	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:964)
-	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828)
-	... 50 common frames omitted
-Caused by: java.net.ConnectException: Connection refused: getsockopt
-	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
-	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:628)
-	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:533)
-	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:583)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:282)
-	at java.base/java.net.Socket.connect(Socket.java:665)
-	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:144)
-	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:53)
-	... 53 common frames omitted
-14:13:51 WARN  HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-14:13:51 INFO  HHH10001005: Database info:
-	Database JDBC URL [undefined/unknown]
-	Database driver: undefined/unknown
-	Database dialect: MySQLDialect
-	Database version: 8.0
-	Default catalog/schema: unknown/unknown
-	Autocommit mode: undefined/unknown
-	Isolation level: NONE [default NONE]
-	JDBC fetch size: undefined/unknown
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-14:13:52 INFO  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-14:13:52 INFO  Initialized JPA EntityManagerFactory for persistence unit 'default'
-14:13:53 INFO  Hibernate is in classpath; If applicable, HQL parser will be used.
-14:13:53 INFO  HikariPool-1 - Starting...
-14:13:54 WARN  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [com/bravatta/inventario/config/LiquibaseConfig.class]: liquibase.exception.DatabaseException: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-14:13:54 INFO  Closing JPA EntityManagerFactory for persistence unit 'default'
-14:13:54 INFO  Stopping service [Tomcat]
-14:13:54 INFO  
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-14:13:54 ERROR Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [com/bravatta/inventario/config/LiquibaseConfig.class]: liquibase.exception.DatabaseException: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1817)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1218)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1184)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1121)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:994)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621)
-	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
-	at com.bravatta.inventario.InventarioApplication.main(InventarioApplication.java:10)
-Caused by: liquibase.exception.LiquibaseException: liquibase.exception.DatabaseException: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:289)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813)
-	... 18 common frames omitted
-Caused by: liquibase.exception.DatabaseException: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at liquibase.integration.spring.SpringLiquibase.lambda$afterPropertiesSet$0(SpringLiquibase.java:281)
-	at liquibase.Scope.lambda$child$0(Scope.java:241)
-	at liquibase.Scope.child(Scope.java:250)
-	at liquibase.Scope.child(Scope.java:240)
-	at liquibase.Scope.child(Scope.java:219)
-	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:272)
-	... 20 common frames omitted
-Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:165)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:55)
-	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:840)
-	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416)
-	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237)
-	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
-	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144)
-	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:373)
-	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:210)
-	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488)
-	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:576)
-	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:97)
-	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
-	at liquibase.integration.spring.SpringLiquibase.lambda$afterPropertiesSet$0(SpringLiquibase.java:276)
-	... 25 common frames omitted
-Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:95)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:140)
-	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:156)
-	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:79)
-	at com.mysql.cj.NativeSession.connect(NativeSession.java:142)
-	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:964)
-	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828)
-	... 36 common frames omitted
-Caused by: java.net.ConnectException: Connection refused: getsockopt
-	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
-	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:628)
-	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:533)
-	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:583)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:282)
-	at java.base/java.net.Socket.connect(Socket.java:665)
-	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:144)
-	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:53)
-	... 39 common frames omitted
-14:16:53 INFO  Starting InventarioApplication using Java 24.0.2 with PID 6872 (C:\Users\av-alumno\Downloads\SCF\CasoSemestral-DuocFullStack-I\inventario\inventario\target\classes started by AV-Alumno in C:\Users\av-alumno\Downloads\SCF\CasoSemestral-DuocFullStack-I\inventario\inventario)
-14:16:53 INFO  No active profile set, falling back to 1 default profile: "default"
-14:16:55 INFO  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-14:16:56 INFO  Finished Spring Data repository scanning in 321 ms. Found 1 JPA repository interface.
-14:16:57 INFO  Tomcat initialized with port 9092 (http)
-14:16:57 INFO  Starting service [Tomcat]
-14:16:57 INFO  Starting Servlet engine: [Apache Tomcat/11.0.21]
-14:16:57 INFO  Root WebApplicationContext: initialization completed in 3202 ms
-14:16:57 INFO  HHH008540: Processing PersistenceUnitInfo [name: default]
-14:16:57 INFO  HHH000001: Hibernate ORM core version 7.2.12.Final
-14:16:58 INFO  No LoadTimeWeaver setup: ignoring JPA class transformer
-14:16:58 INFO  HikariPool-1 - Starting...
-14:16:59 INFO  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4e1a3d5a
-14:16:59 INFO  HikariPool-1 - Start completed.
-14:16:59 WARN  HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
-14:16:59 WARN  HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-14:16:59 INFO  HHH10001005: Database info:
+00:02:18 INFO  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+00:02:18 INFO  Initialized JPA EntityManagerFactory for persistence unit 'default'
+00:02:18 INFO  Hibernate is in classpath; If applicable, HQL parser will be used.
+00:02:20 INFO  Reading resource: db/changelog/changes/001-crea-tablas.sql
+00:02:20 INFO  Reading from bd_inventario.databasechangelog
+00:02:20 INFO  Reading resource: db/changelog/changes/002-datos-iniciales.sql
+00:02:20 INFO  Database is up to date, no changesets to execute
+00:02:20 INFO  Reading from bd_inventario.databasechangelog
+00:02:20 INFO  UPDATE SUMMARY
+00:02:20 INFO  Run:                          0
+00:02:20 INFO  Previously run:               2
+00:02:20 INFO  Filtered out:                 0
+00:02:20 INFO  -------------------------------
+00:02:20 INFO  Total change sets:            2
+00:02:20 INFO  Update summary generated
+00:02:20 INFO  Command execution complete
+00:02:20 WARN  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+00:02:21 INFO  Tomcat started on port 9092 (http) with context path '/'
+00:02:21 INFO  Started InventarioApplication in 8.021 seconds (process running for 8.604)
+00:51:19 INFO  Starting InventarioApplication using Java 25 with PID 43980 (D:\FinalShit\CasoSemestral-DuocFullStack-I\inventario\inventario\target\classes started by Matt in D:\FinalShit\CasoSemestral-DuocFullStack-I\inventario\inventario)
+00:51:19 INFO  No active profile set, falling back to 1 default profile: "default"
+00:51:20 INFO  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+00:51:20 INFO  Finished Spring Data repository scanning in 147 ms. Found 1 JPA repository interface.
+00:51:21 INFO  Tomcat initialized with port 9092 (http)
+00:51:21 INFO  Starting service [Tomcat]
+00:51:21 INFO  Starting Servlet engine: [Apache Tomcat/11.0.21]
+00:51:21 INFO  Root WebApplicationContext: initialization completed in 1791 ms
+00:51:21 INFO  HHH008540: Processing PersistenceUnitInfo [name: default]
+00:51:21 INFO  HHH000001: Hibernate ORM core version 7.2.12.Final
+00:51:22 INFO  No LoadTimeWeaver setup: ignoring JPA class transformer
+00:51:22 INFO  HikariPool-1 - Starting...
+00:51:22 INFO  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@229749f0
+00:51:22 INFO  HikariPool-1 - Start completed.
+00:51:22 WARN  HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+00:51:22 INFO  HHH10001005: Database info:
 	Database JDBC URL [jdbc:mysql://localhost:3306/bd_inventario?createDatabaseIfNotExist=true&serverTimezone=America/Santiago]
 	Database driver: MySQL Connector/J
 	Database dialect: MySQLDialect
-	Database version: 5.5.5
+	Database version: 8.4.3
 	Default catalog/schema: bd_inventario/undefined
 	Autocommit mode: undefined/unknown
 	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
@@ -288,59 +71,45 @@ Caused by: java.net.ConnectException: Connection refused: getsockopt
 	Pool: DataSourceConnectionProvider
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-14:17:01 INFO  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-14:17:01 INFO  Initialized JPA EntityManagerFactory for persistence unit 'default'
-14:17:02 INFO  Hibernate is in classpath; If applicable, HQL parser will be used.
-14:17:04 INFO  Reading resource: db/changelog/changes/001-crea-tablas.sql
-14:17:04 INFO  Creating database changelog table with name: bd_inventario.databasechangelog
-14:17:04 INFO  Reading from bd_inventario.databasechangelog
-14:17:04 INFO  Reading resource: db/changelog/changes/002-datos-iniciales.sql
-14:17:04 INFO  Creating snapshot
-14:17:04 INFO  Name 'PK_DATABASECHANGELOGLOCK' ignored for PRIMARY key.
-14:17:04 INFO  Successfully acquired change log lock
-14:17:04 INFO  Using deploymentId: 0683422569
-14:17:04 INFO  Reading from bd_inventario.databasechangelog
-14:17:05 INFO  Running Changeset: db/changelog/changes/001-crea-tablas.sql::1::bravatta
-14:17:05 INFO  Custom SQL executed
-14:17:05 INFO  ChangeSet db/changelog/changes/001-crea-tablas.sql::1::bravatta ran successfully in 68ms
-14:17:05 INFO  Running Changeset: db/changelog/changes/002-datos-iniciales.sql::2::bravatta
-14:17:05 INFO  Custom SQL executed
-14:17:05 INFO  ChangeSet db/changelog/changes/002-datos-iniciales.sql::2::bravatta ran successfully in 29ms
-14:17:05 INFO  UPDATE SUMMARY
-14:17:05 INFO  Run:                          2
-14:17:05 INFO  Previously run:               0
-14:17:05 INFO  Filtered out:                 0
-14:17:05 INFO  -------------------------------
-14:17:05 INFO  Total change sets:            2
-14:17:05 INFO  Update summary generated
-14:17:05 INFO  Update command completed successfully.
-14:17:05 INFO  Liquibase: Update has been successful. Rows affected: 10
-14:17:05 INFO  Successfully released change log lock
-14:17:05 INFO  Command execution complete
-14:17:05 WARN  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-14:17:06 INFO  Tomcat started on port 9092 (http) with context path '/'
-14:17:06 INFO  Started InventarioApplication in 13.274 seconds (process running for 14.742)
-14:54:03 INFO  Starting InventarioApplication using Java 24.0.2 with PID 23104 (C:\Users\av-alumno\Downloads\SCF\CasoSemestral-DuocFullStack-I\inventario\inventario\target\classes started by AV-Alumno in C:\Users\av-alumno\Downloads\SCF\CasoSemestral-DuocFullStack-I\inventario\inventario)
-14:54:03 INFO  No active profile set, falling back to 1 default profile: "default"
-14:54:05 INFO  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-14:54:06 INFO  Finished Spring Data repository scanning in 431 ms. Found 1 JPA repository interface.
-14:54:07 INFO  Tomcat initialized with port 9092 (http)
-14:54:07 INFO  Starting service [Tomcat]
-14:54:07 INFO  Starting Servlet engine: [Apache Tomcat/11.0.21]
-14:54:07 INFO  Root WebApplicationContext: initialization completed in 3563 ms
-14:54:07 INFO  HHH008540: Processing PersistenceUnitInfo [name: default]
-14:54:07 INFO  HHH000001: Hibernate ORM core version 7.2.12.Final
-14:54:09 INFO  No LoadTimeWeaver setup: ignoring JPA class transformer
-14:54:09 INFO  HikariPool-1 - Starting...
-14:54:10 INFO  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6aaa678d
-14:54:10 INFO  HikariPool-1 - Start completed.
-14:54:10 WARN  HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
-14:54:10 WARN  HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-14:54:10 INFO  HHH10001005: Database info:
+00:51:23 INFO  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+00:51:23 INFO  Initialized JPA EntityManagerFactory for persistence unit 'default'
+00:51:23 INFO  Hibernate is in classpath; If applicable, HQL parser will be used.
+00:51:25 INFO  Reading resource: db/changelog/changes/001-crea-tablas.sql
+00:51:26 INFO  Reading from bd_inventario.databasechangelog
+00:51:26 INFO  Reading resource: db/changelog/changes/002-datos-iniciales.sql
+00:51:26 INFO  Database is up to date, no changesets to execute
+00:51:26 INFO  Reading from bd_inventario.databasechangelog
+00:51:26 INFO  UPDATE SUMMARY
+00:51:26 INFO  Run:                          0
+00:51:26 INFO  Previously run:               2
+00:51:26 INFO  Filtered out:                 0
+00:51:26 INFO  -------------------------------
+00:51:26 INFO  Total change sets:            2
+00:51:26 INFO  Update summary generated
+00:51:26 INFO  Command execution complete
+00:51:26 WARN  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+00:51:27 INFO  Tomcat started on port 9092 (http) with context path '/'
+00:51:27 INFO  Started InventarioApplication in 8.1 seconds (process running for 8.769)
+00:59:10 INFO  Starting InventarioApplication using Java 25 with PID 23384 (D:\FinalShit\CasoSemestral-DuocFullStack-I\inventario\inventario\target\classes started by Matt in D:\FinalShit\CasoSemestral-DuocFullStack-I\inventario\inventario)
+00:59:10 INFO  No active profile set, falling back to 1 default profile: "default"
+00:59:11 INFO  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+00:59:11 INFO  Finished Spring Data repository scanning in 113 ms. Found 1 JPA repository interface.
+00:59:11 INFO  Tomcat initialized with port 9092 (http)
+00:59:11 INFO  Starting service [Tomcat]
+00:59:11 INFO  Starting Servlet engine: [Apache Tomcat/11.0.21]
+00:59:11 INFO  Root WebApplicationContext: initialization completed in 1467 ms
+00:59:11 INFO  HHH008540: Processing PersistenceUnitInfo [name: default]
+00:59:11 INFO  HHH000001: Hibernate ORM core version 7.2.12.Final
+00:59:12 INFO  No LoadTimeWeaver setup: ignoring JPA class transformer
+00:59:12 INFO  HikariPool-1 - Starting...
+00:59:12 INFO  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4ba1c1a2
+00:59:12 INFO  HikariPool-1 - Start completed.
+00:59:12 WARN  HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+00:59:12 INFO  HHH10001005: Database info:
 	Database JDBC URL [jdbc:mysql://localhost:3306/bd_inventario?createDatabaseIfNotExist=true&serverTimezone=America/Santiago]
 	Database driver: MySQL Connector/J
 	Database dialect: MySQLDialect
-	Database version: 5.5.5
+	Database version: 8.4.3
 	Default catalog/schema: bd_inventario/undefined
 	Autocommit mode: undefined/unknown
 	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
@@ -348,59 +117,45 @@ Caused by: java.net.ConnectException: Connection refused: getsockopt
 	Pool: DataSourceConnectionProvider
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-14:54:12 INFO  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-14:54:12 INFO  Initialized JPA EntityManagerFactory for persistence unit 'default'
-14:54:12 INFO  Hibernate is in classpath; If applicable, HQL parser will be used.
-14:54:15 INFO  Reading resource: db/changelog/changes/001-crea-tablas.sql
-14:54:15 INFO  Creating database changelog table with name: bd_inventario.databasechangelog
-14:54:15 INFO  Reading from bd_inventario.databasechangelog
-14:54:15 INFO  Reading resource: db/changelog/changes/002-datos-iniciales.sql
-14:54:15 INFO  Creating snapshot
-14:54:15 INFO  Name 'PK_DATABASECHANGELOGLOCK' ignored for PRIMARY key.
-14:54:15 INFO  Successfully acquired change log lock
-14:54:15 INFO  Using deploymentId: 0685653231
-14:54:15 INFO  Reading from bd_inventario.databasechangelog
-14:54:15 INFO  Running Changeset: db/changelog/changes/001-crea-tablas.sql::1::bravatta
-14:54:15 INFO  Custom SQL executed
-14:54:15 INFO  ChangeSet db/changelog/changes/001-crea-tablas.sql::1::bravatta ran successfully in 38ms
-14:54:15 INFO  Running Changeset: db/changelog/changes/002-datos-iniciales.sql::2::bravatta
-14:54:15 INFO  Custom SQL executed
-14:54:15 INFO  ChangeSet db/changelog/changes/002-datos-iniciales.sql::2::bravatta ran successfully in 12ms
-14:54:15 INFO  UPDATE SUMMARY
-14:54:15 INFO  Run:                          2
-14:54:15 INFO  Previously run:               0
-14:54:15 INFO  Filtered out:                 0
-14:54:15 INFO  -------------------------------
-14:54:15 INFO  Total change sets:            2
-14:54:15 INFO  Update summary generated
-14:54:15 INFO  Update command completed successfully.
-14:54:15 INFO  Liquibase: Update has been successful. Rows affected: 10
-14:54:15 INFO  Successfully released change log lock
-14:54:15 INFO  Command execution complete
-14:54:16 WARN  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-14:54:16 INFO  Tomcat started on port 9092 (http) with context path '/'
-14:54:16 INFO  Started InventarioApplication in 14.104 seconds (process running for 15.835)
-14:57:05 INFO  Starting InventarioApplication using Java 24.0.2 with PID 22396 (C:\Users\av-alumno\Downloads\SCF\CasoSemestral-DuocFullStack-I\inventario\inventario\target\classes started by AV-Alumno in C:\Users\av-alumno\Downloads\SCF\CasoSemestral-DuocFullStack-I\inventario\inventario)
-14:57:05 INFO  No active profile set, falling back to 1 default profile: "default"
-14:57:07 INFO  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-14:57:08 INFO  Finished Spring Data repository scanning in 410 ms. Found 1 JPA repository interface.
-14:57:09 INFO  Tomcat initialized with port 9092 (http)
-14:57:09 INFO  Starting service [Tomcat]
-14:57:09 INFO  Starting Servlet engine: [Apache Tomcat/11.0.21]
-14:57:09 INFO  Root WebApplicationContext: initialization completed in 3851 ms
-14:57:09 INFO  HHH008540: Processing PersistenceUnitInfo [name: default]
-14:57:10 INFO  HHH000001: Hibernate ORM core version 7.2.12.Final
-14:57:11 INFO  No LoadTimeWeaver setup: ignoring JPA class transformer
-14:57:11 INFO  HikariPool-1 - Starting...
-14:57:11 INFO  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@35af52dc
-14:57:11 INFO  HikariPool-1 - Start completed.
-14:57:11 WARN  HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
-14:57:11 WARN  HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-14:57:11 INFO  HHH10001005: Database info:
+00:59:13 INFO  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+00:59:13 INFO  Initialized JPA EntityManagerFactory for persistence unit 'default'
+00:59:14 INFO  Hibernate is in classpath; If applicable, HQL parser will be used.
+00:59:15 INFO  Reading resource: db/changelog/changes/001-crea-tablas.sql
+00:59:15 INFO  Reading from bd_inventario.databasechangelog
+00:59:15 INFO  Reading resource: db/changelog/changes/002-datos-iniciales.sql
+00:59:16 INFO  Database is up to date, no changesets to execute
+00:59:16 INFO  Reading from bd_inventario.databasechangelog
+00:59:16 INFO  UPDATE SUMMARY
+00:59:16 INFO  Run:                          0
+00:59:16 INFO  Previously run:               2
+00:59:16 INFO  Filtered out:                 0
+00:59:16 INFO  -------------------------------
+00:59:16 INFO  Total change sets:            2
+00:59:16 INFO  Update summary generated
+00:59:16 INFO  Command execution complete
+00:59:16 WARN  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+00:59:16 INFO  Tomcat started on port 9092 (http) with context path '/'
+00:59:16 INFO  Started InventarioApplication in 7.108 seconds (process running for 7.744)
+01:33:56 INFO  Starting InventarioApplication using Java 25 with PID 44588 (D:\FinalShit\CasoSemestral-DuocFullStack-I\inventario\inventario\target\classes started by Matt in D:\FinalShit\CasoSemestral-DuocFullStack-I\inventario\inventario)
+01:33:56 INFO  No active profile set, falling back to 1 default profile: "default"
+01:33:57 INFO  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+01:33:57 INFO  Finished Spring Data repository scanning in 153 ms. Found 1 JPA repository interface.
+01:33:57 INFO  Tomcat initialized with port 9092 (http)
+01:33:57 INFO  Starting service [Tomcat]
+01:33:57 INFO  Starting Servlet engine: [Apache Tomcat/11.0.21]
+01:33:57 INFO  Root WebApplicationContext: initialization completed in 1514 ms
+01:33:57 INFO  HHH008540: Processing PersistenceUnitInfo [name: default]
+01:33:58 INFO  HHH000001: Hibernate ORM core version 7.2.12.Final
+01:33:58 INFO  No LoadTimeWeaver setup: ignoring JPA class transformer
+01:33:58 INFO  HikariPool-1 - Starting...
+01:33:58 INFO  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3d57fb9e
+01:33:58 INFO  HikariPool-1 - Start completed.
+01:33:58 WARN  HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+01:33:58 INFO  HHH10001005: Database info:
 	Database JDBC URL [jdbc:mysql://localhost:3306/bd_inventario?createDatabaseIfNotExist=true&serverTimezone=America/Santiago]
 	Database driver: MySQL Connector/J
 	Database dialect: MySQLDialect
-	Database version: 5.5.5
+	Database version: 8.4.3
 	Default catalog/schema: bd_inventario/undefined
 	Autocommit mode: undefined/unknown
 	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
@@ -408,46 +163,45 @@ Caused by: java.net.ConnectException: Connection refused: getsockopt
 	Pool: DataSourceConnectionProvider
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-14:57:13 INFO  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-14:57:13 INFO  Initialized JPA EntityManagerFactory for persistence unit 'default'
-14:57:14 INFO  Hibernate is in classpath; If applicable, HQL parser will be used.
-14:57:16 INFO  Reading resource: db/changelog/changes/001-crea-tablas.sql
-14:57:17 INFO  Reading from bd_inventario.databasechangelog
-14:57:17 INFO  Reading resource: db/changelog/changes/002-datos-iniciales.sql
-14:57:17 INFO  Database is up to date, no changesets to execute
-14:57:17 INFO  Reading from bd_inventario.databasechangelog
-14:57:17 INFO  UPDATE SUMMARY
-14:57:17 INFO  Run:                          0
-14:57:17 INFO  Previously run:               2
-14:57:17 INFO  Filtered out:                 0
-14:57:17 INFO  -------------------------------
-14:57:17 INFO  Total change sets:            2
-14:57:17 INFO  Update summary generated
-14:57:17 INFO  Command execution complete
-14:57:17 WARN  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-14:57:17 INFO  Tomcat started on port 9092 (http) with context path '/'
-14:57:17 INFO  Started InventarioApplication in 13.659 seconds (process running for 15.114)
-15:33:38 INFO  Starting InventarioApplication using Java 24.0.2 with PID 4480 (C:\Users\av-alumno\Downloads\SCF\CasoSemestral-DuocFullStack-I\inventario\inventario\target\classes started by AV-Alumno in C:\Users\av-alumno\Downloads\SCF\CasoSemestral-DuocFullStack-I\inventario\inventario)
-15:33:38 INFO  No active profile set, falling back to 1 default profile: "default"
-15:33:40 INFO  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-15:33:40 INFO  Finished Spring Data repository scanning in 402 ms. Found 1 JPA repository interface.
-15:33:42 INFO  Tomcat initialized with port 9092 (http)
-15:33:42 INFO  Starting service [Tomcat]
-15:33:42 INFO  Starting Servlet engine: [Apache Tomcat/11.0.21]
-15:33:42 INFO  Root WebApplicationContext: initialization completed in 4025 ms
-15:33:42 INFO  HHH008540: Processing PersistenceUnitInfo [name: default]
-15:33:42 INFO  HHH000001: Hibernate ORM core version 7.2.12.Final
-15:33:44 INFO  No LoadTimeWeaver setup: ignoring JPA class transformer
-15:33:44 INFO  HikariPool-1 - Starting...
-15:33:45 INFO  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4cef0747
-15:33:45 INFO  HikariPool-1 - Start completed.
-15:33:45 WARN  HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
-15:33:45 WARN  HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-15:33:45 INFO  HHH10001005: Database info:
+01:33:59 INFO  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+01:33:59 INFO  Initialized JPA EntityManagerFactory for persistence unit 'default'
+01:34:00 INFO  Hibernate is in classpath; If applicable, HQL parser will be used.
+01:34:01 INFO  Reading resource: db/changelog/changes/001-crea-tablas.sql
+01:34:01 INFO  Reading from bd_inventario.databasechangelog
+01:34:01 INFO  Reading resource: db/changelog/changes/002-datos-iniciales.sql
+01:34:02 INFO  Database is up to date, no changesets to execute
+01:34:02 INFO  Reading from bd_inventario.databasechangelog
+01:34:02 INFO  UPDATE SUMMARY
+01:34:02 INFO  Run:                          0
+01:34:02 INFO  Previously run:               2
+01:34:02 INFO  Filtered out:                 0
+01:34:02 INFO  -------------------------------
+01:34:02 INFO  Total change sets:            2
+01:34:02 INFO  Update summary generated
+01:34:02 INFO  Command execution complete
+01:34:02 WARN  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+01:34:02 INFO  Tomcat started on port 9092 (http) with context path '/'
+01:34:02 INFO  Started InventarioApplication in 7.168 seconds (process running for 7.708)
+01:38:34 INFO  Starting InventarioApplication using Java 25 with PID 27736 (D:\FinalShit\CasoSemestral-DuocFullStack-I\inventario\inventario\target\classes started by Matt in D:\FinalShit\CasoSemestral-DuocFullStack-I\inventario\inventario)
+01:38:34 INFO  No active profile set, falling back to 1 default profile: "default"
+01:38:36 INFO  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+01:38:36 INFO  Finished Spring Data repository scanning in 167 ms. Found 1 JPA repository interface.
+01:38:36 INFO  Tomcat initialized with port 9092 (http)
+01:38:36 INFO  Starting service [Tomcat]
+01:38:36 INFO  Starting Servlet engine: [Apache Tomcat/11.0.21]
+01:38:37 INFO  Root WebApplicationContext: initialization completed in 1984 ms
+01:38:37 INFO  HHH008540: Processing PersistenceUnitInfo [name: default]
+01:38:37 INFO  HHH000001: Hibernate ORM core version 7.2.12.Final
+01:38:37 INFO  No LoadTimeWeaver setup: ignoring JPA class transformer
+01:38:37 INFO  HikariPool-1 - Starting...
+01:38:38 INFO  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@229749f0
+01:38:38 INFO  HikariPool-1 - Start completed.
+01:38:38 WARN  HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+01:38:38 INFO  HHH10001005: Database info:
 	Database JDBC URL [jdbc:mysql://localhost:3306/bd_inventario?createDatabaseIfNotExist=true&serverTimezone=America/Santiago]
 	Database driver: MySQL Connector/J
 	Database dialect: MySQLDialect
-	Database version: 5.5.5
+	Database version: 8.4.3
 	Default catalog/schema: bd_inventario/undefined
 	Autocommit mode: undefined/unknown
 	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
@@ -455,59 +209,45 @@ Caused by: java.net.ConnectException: Connection refused: getsockopt
 	Pool: DataSourceConnectionProvider
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-15:33:47 INFO  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-15:33:47 INFO  Initialized JPA EntityManagerFactory for persistence unit 'default'
-15:33:48 INFO  Hibernate is in classpath; If applicable, HQL parser will be used.
-15:33:50 INFO  Reading resource: db/changelog/changes/001-crea-tablas.sql
-15:33:50 INFO  Creating database changelog table with name: bd_inventario.databasechangelog
-15:33:50 INFO  Reading from bd_inventario.databasechangelog
-15:33:50 INFO  Reading resource: db/changelog/changes/002-datos-iniciales.sql
-15:33:50 INFO  Creating snapshot
-15:33:50 INFO  Name 'PK_DATABASECHANGELOGLOCK' ignored for PRIMARY key.
-15:33:50 INFO  Successfully acquired change log lock
-15:33:50 INFO  Using deploymentId: 0688028448
-15:33:50 INFO  Reading from bd_inventario.databasechangelog
-15:33:51 INFO  Running Changeset: db/changelog/changes/001-crea-tablas.sql::1::bravatta
-15:33:51 INFO  Custom SQL executed
-15:33:51 INFO  ChangeSet db/changelog/changes/001-crea-tablas.sql::1::bravatta ran successfully in 52ms
-15:33:51 INFO  Running Changeset: db/changelog/changes/002-datos-iniciales.sql::2::bravatta
-15:33:51 INFO  Custom SQL executed
-15:33:51 INFO  ChangeSet db/changelog/changes/002-datos-iniciales.sql::2::bravatta ran successfully in 13ms
-15:33:51 INFO  UPDATE SUMMARY
-15:33:51 INFO  Run:                          2
-15:33:51 INFO  Previously run:               0
-15:33:51 INFO  Filtered out:                 0
-15:33:51 INFO  -------------------------------
-15:33:51 INFO  Total change sets:            2
-15:33:51 INFO  Update summary generated
-15:33:51 INFO  Update command completed successfully.
-15:33:51 INFO  Liquibase: Update has been successful. Rows affected: 10
-15:33:51 INFO  Successfully released change log lock
-15:33:51 INFO  Command execution complete
-15:33:51 WARN  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-15:33:51 INFO  Tomcat started on port 9092 (http) with context path '/'
-15:33:52 INFO  Started InventarioApplication in 15.354 seconds (process running for 16.936)
-15:41:15 INFO  Starting InventarioApplication using Java 24.0.2 with PID 5076 (C:\Users\av-alumno\Downloads\SCF\CasoSemestral-DuocFullStack-I\inventario\inventario\target\classes started by AV-Alumno in C:\Users\av-alumno\Downloads\SCF\CasoSemestral-DuocFullStack-I\inventario\inventario)
-15:41:15 INFO  No active profile set, falling back to 1 default profile: "default"
-15:41:18 INFO  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-15:41:18 INFO  Finished Spring Data repository scanning in 588 ms. Found 1 JPA repository interface.
-15:41:20 INFO  Tomcat initialized with port 9092 (http)
-15:41:20 INFO  Starting service [Tomcat]
-15:41:20 INFO  Starting Servlet engine: [Apache Tomcat/11.0.21]
-15:41:20 INFO  Root WebApplicationContext: initialization completed in 4843 ms
-15:41:21 INFO  HHH008540: Processing PersistenceUnitInfo [name: default]
-15:41:21 INFO  HHH000001: Hibernate ORM core version 7.2.12.Final
-15:41:22 INFO  No LoadTimeWeaver setup: ignoring JPA class transformer
-15:41:22 INFO  HikariPool-1 - Starting...
-15:41:23 INFO  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4e1a3d5a
-15:41:23 INFO  HikariPool-1 - Start completed.
-15:41:23 WARN  HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
-15:41:23 WARN  HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-15:41:23 INFO  HHH10001005: Database info:
+01:38:40 INFO  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+01:38:40 INFO  Initialized JPA EntityManagerFactory for persistence unit 'default'
+01:38:40 INFO  Hibernate is in classpath; If applicable, HQL parser will be used.
+01:38:42 INFO  Reading resource: db/changelog/changes/001-crea-tablas.sql
+01:38:42 INFO  Reading from bd_inventario.databasechangelog
+01:38:42 INFO  Reading resource: db/changelog/changes/002-datos-iniciales.sql
+01:38:42 INFO  Database is up to date, no changesets to execute
+01:38:42 INFO  Reading from bd_inventario.databasechangelog
+01:38:43 INFO  UPDATE SUMMARY
+01:38:43 INFO  Run:                          0
+01:38:43 INFO  Previously run:               2
+01:38:43 INFO  Filtered out:                 0
+01:38:43 INFO  -------------------------------
+01:38:43 INFO  Total change sets:            2
+01:38:43 INFO  Update summary generated
+01:38:43 INFO  Command execution complete
+01:38:43 WARN  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+01:38:43 INFO  Tomcat started on port 9092 (http) with context path '/'
+01:38:43 INFO  Started InventarioApplication in 9.473 seconds (process running for 10.15)
+01:47:31 INFO  Starting InventarioApplication using Java 25 with PID 37600 (D:\FinalShit\CasoSemestral-DuocFullStack-I\inventario\inventario\target\classes started by Matt in D:\FinalShit\CasoSemestral-DuocFullStack-I\inventario\inventario)
+01:47:31 INFO  No active profile set, falling back to 1 default profile: "default"
+01:47:32 INFO  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+01:47:32 INFO  Finished Spring Data repository scanning in 115 ms. Found 1 JPA repository interface.
+01:47:33 INFO  Tomcat initialized with port 9092 (http)
+01:47:33 INFO  Starting service [Tomcat]
+01:47:33 INFO  Starting Servlet engine: [Apache Tomcat/11.0.21]
+01:47:33 INFO  Root WebApplicationContext: initialization completed in 1346 ms
+01:47:33 INFO  HHH008540: Processing PersistenceUnitInfo [name: default]
+01:47:33 INFO  HHH000001: Hibernate ORM core version 7.2.12.Final
+01:47:33 INFO  No LoadTimeWeaver setup: ignoring JPA class transformer
+01:47:33 INFO  HikariPool-1 - Starting...
+01:47:33 INFO  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@48860139
+01:47:33 INFO  HikariPool-1 - Start completed.
+01:47:34 WARN  HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+01:47:34 INFO  HHH10001005: Database info:
 	Database JDBC URL [jdbc:mysql://localhost:3306/bd_inventario?createDatabaseIfNotExist=true&serverTimezone=America/Santiago]
 	Database driver: MySQL Connector/J
 	Database dialect: MySQLDialect
-	Database version: 5.5.5
+	Database version: 8.4.3
 	Default catalog/schema: bd_inventario/undefined
 	Autocommit mode: undefined/unknown
 	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
@@ -515,22 +255,160 @@ Caused by: java.net.ConnectException: Connection refused: getsockopt
 	Pool: DataSourceConnectionProvider
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-15:41:25 INFO  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-15:41:25 INFO  Initialized JPA EntityManagerFactory for persistence unit 'default'
-15:41:26 INFO  Hibernate is in classpath; If applicable, HQL parser will be used.
-15:41:28 INFO  Reading resource: db/changelog/changes/001-crea-tablas.sql
-15:41:29 INFO  Reading from bd_inventario.databasechangelog
-15:41:29 INFO  Reading resource: db/changelog/changes/002-datos-iniciales.sql
-15:41:29 INFO  Database is up to date, no changesets to execute
-15:41:29 INFO  Reading from bd_inventario.databasechangelog
-15:41:29 INFO  UPDATE SUMMARY
-15:41:29 INFO  Run:                          0
-15:41:29 INFO  Previously run:               2
-15:41:29 INFO  Filtered out:                 0
-15:41:29 INFO  -------------------------------
-15:41:29 INFO  Total change sets:            2
-15:41:29 INFO  Update summary generated
-15:41:29 INFO  Command execution complete
-15:41:29 WARN  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-15:41:30 INFO  Tomcat started on port 9092 (http) with context path '/'
-15:41:30 INFO  Started InventarioApplication in 15.975 seconds (process running for 17.752)
+01:47:34 INFO  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+01:47:34 INFO  Initialized JPA EntityManagerFactory for persistence unit 'default'
+01:47:35 INFO  Hibernate is in classpath; If applicable, HQL parser will be used.
+01:47:36 INFO  Reading resource: db/changelog/changes/001-crea-tablas.sql
+01:47:37 INFO  Reading from bd_inventario.databasechangelog
+01:47:37 INFO  Reading resource: db/changelog/changes/002-datos-iniciales.sql
+01:47:37 INFO  Database is up to date, no changesets to execute
+01:47:37 INFO  Reading from bd_inventario.databasechangelog
+01:47:37 INFO  UPDATE SUMMARY
+01:47:37 INFO  Run:                          0
+01:47:37 INFO  Previously run:               2
+01:47:37 INFO  Filtered out:                 0
+01:47:37 INFO  -------------------------------
+01:47:37 INFO  Total change sets:            2
+01:47:37 INFO  Update summary generated
+01:47:37 INFO  Command execution complete
+01:47:37 WARN  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+01:47:37 INFO  Tomcat started on port 9092 (http) with context path '/'
+01:47:37 INFO  Started InventarioApplication in 6.588 seconds (process running for 7.073)
+01:50:39 INFO  Starting InventarioApplication using Java 25 with PID 26804 (D:\FinalShit\CasoSemestral-DuocFullStack-I\inventario\inventario\target\classes started by Matt in D:\FinalShit\CasoSemestral-DuocFullStack-I\inventario\inventario)
+01:50:39 INFO  No active profile set, falling back to 1 default profile: "default"
+01:50:40 INFO  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+01:50:40 INFO  Finished Spring Data repository scanning in 118 ms. Found 1 JPA repository interface.
+01:50:40 INFO  Tomcat initialized with port 9092 (http)
+01:50:40 INFO  Starting service [Tomcat]
+01:50:40 INFO  Starting Servlet engine: [Apache Tomcat/11.0.21]
+01:50:40 INFO  Root WebApplicationContext: initialization completed in 1490 ms
+01:50:40 INFO  HHH008540: Processing PersistenceUnitInfo [name: default]
+01:50:41 INFO  HHH000001: Hibernate ORM core version 7.2.12.Final
+01:50:41 INFO  No LoadTimeWeaver setup: ignoring JPA class transformer
+01:50:41 INFO  HikariPool-1 - Starting...
+01:50:41 INFO  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@229749f0
+01:50:41 INFO  HikariPool-1 - Start completed.
+01:50:41 WARN  HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+01:50:41 INFO  HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/bd_inventario?createDatabaseIfNotExist=true&serverTimezone=America/Santiago]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.4.3
+	Default catalog/schema: bd_inventario/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+01:50:42 INFO  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+01:50:42 INFO  Initialized JPA EntityManagerFactory for persistence unit 'default'
+01:50:42 INFO  Hibernate is in classpath; If applicable, HQL parser will be used.
+01:50:44 INFO  Reading resource: db/changelog/changes/001-crea-tablas.sql
+01:50:44 INFO  Reading from bd_inventario.databasechangelog
+01:50:44 INFO  Reading resource: db/changelog/changes/002-datos-iniciales.sql
+01:50:44 INFO  Database is up to date, no changesets to execute
+01:50:44 INFO  Reading from bd_inventario.databasechangelog
+01:50:44 INFO  UPDATE SUMMARY
+01:50:44 INFO  Run:                          0
+01:50:44 INFO  Previously run:               2
+01:50:44 INFO  Filtered out:                 0
+01:50:44 INFO  -------------------------------
+01:50:44 INFO  Total change sets:            2
+01:50:44 INFO  Update summary generated
+01:50:44 INFO  Command execution complete
+01:50:45 WARN  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+01:50:45 INFO  Tomcat started on port 9092 (http) with context path '/'
+01:50:45 INFO  Started InventarioApplication in 6.892 seconds (process running for 7.458)
+02:01:24 INFO  Starting InventarioApplication using Java 25 with PID 10588 (D:\FinalShit\CasoSemestral-DuocFullStack-I\inventario\inventario\target\classes started by Matt in D:\FinalShit\CasoSemestral-DuocFullStack-I\inventario\inventario)
+02:01:24 INFO  No active profile set, falling back to 1 default profile: "default"
+02:01:25 INFO  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+02:01:25 INFO  Finished Spring Data repository scanning in 129 ms. Found 1 JPA repository interface.
+02:01:26 INFO  Tomcat initialized with port 9092 (http)
+02:01:26 INFO  Starting service [Tomcat]
+02:01:26 INFO  Starting Servlet engine: [Apache Tomcat/11.0.21]
+02:01:26 INFO  Root WebApplicationContext: initialization completed in 1783 ms
+02:01:26 INFO  HHH008540: Processing PersistenceUnitInfo [name: default]
+02:01:26 INFO  HHH000001: Hibernate ORM core version 7.2.12.Final
+02:01:27 INFO  No LoadTimeWeaver setup: ignoring JPA class transformer
+02:01:27 INFO  HikariPool-1 - Starting...
+02:01:27 INFO  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3d57fb9e
+02:01:27 INFO  HikariPool-1 - Start completed.
+02:01:27 WARN  HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+02:01:27 INFO  HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/bd_inventario?createDatabaseIfNotExist=true&serverTimezone=America/Santiago]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.4.3
+	Default catalog/schema: bd_inventario/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+02:01:29 INFO  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+02:01:29 INFO  Initialized JPA EntityManagerFactory for persistence unit 'default'
+02:01:29 INFO  Hibernate is in classpath; If applicable, HQL parser will be used.
+02:01:31 INFO  Reading resource: db/changelog/changes/001-crea-tablas.sql
+02:01:31 INFO  Reading from bd_inventario.databasechangelog
+02:01:31 INFO  Reading resource: db/changelog/changes/002-datos-iniciales.sql
+02:01:31 INFO  Database is up to date, no changesets to execute
+02:01:31 INFO  Reading from bd_inventario.databasechangelog
+02:01:31 INFO  UPDATE SUMMARY
+02:01:31 INFO  Run:                          0
+02:01:31 INFO  Previously run:               2
+02:01:31 INFO  Filtered out:                 0
+02:01:31 INFO  -------------------------------
+02:01:31 INFO  Total change sets:            2
+02:01:31 INFO  Update summary generated
+02:01:31 INFO  Command execution complete
+02:01:32 WARN  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+02:01:32 INFO  Tomcat started on port 9092 (http) with context path '/'
+02:01:32 INFO  Started InventarioApplication in 8.5 seconds (process running for 9.146)
+02:24:20 INFO  Starting InventarioApplication using Java 25 with PID 29756 (D:\FinalShit\CasoSemestral-DuocFullStack-I\inventario\inventario\target\classes started by Matt in D:\FinalShit\CasoSemestral-DuocFullStack-I\inventario\inventario)
+02:24:20 INFO  No active profile set, falling back to 1 default profile: "default"
+02:24:22 INFO  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+02:24:22 INFO  Finished Spring Data repository scanning in 215 ms. Found 1 JPA repository interface.
+02:24:23 INFO  Tomcat initialized with port 9092 (http)
+02:24:23 INFO  Starting service [Tomcat]
+02:24:23 INFO  Starting Servlet engine: [Apache Tomcat/11.0.21]
+02:24:23 INFO  Root WebApplicationContext: initialization completed in 2529 ms
+02:24:23 INFO  HHH008540: Processing PersistenceUnitInfo [name: default]
+02:24:23 INFO  HHH000001: Hibernate ORM core version 7.2.12.Final
+02:24:24 INFO  No LoadTimeWeaver setup: ignoring JPA class transformer
+02:24:24 INFO  HikariPool-1 - Starting...
+02:24:24 INFO  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@229749f0
+02:24:24 INFO  HikariPool-1 - Start completed.
+02:24:24 WARN  HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+02:24:25 INFO  HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/bd_inventario?createDatabaseIfNotExist=true&serverTimezone=America/Santiago]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.4.3
+	Default catalog/schema: bd_inventario/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+02:24:26 INFO  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+02:24:26 INFO  Initialized JPA EntityManagerFactory for persistence unit 'default'
+02:24:26 INFO  Hibernate is in classpath; If applicable, HQL parser will be used.
+02:24:28 INFO  Reading resource: db/changelog/changes/001-crea-tablas.sql
+02:24:28 INFO  Reading from bd_inventario.databasechangelog
+02:24:28 INFO  Reading resource: db/changelog/changes/002-datos-iniciales.sql
+02:24:28 INFO  Database is up to date, no changesets to execute
+02:24:28 INFO  Reading from bd_inventario.databasechangelog
+02:24:28 INFO  UPDATE SUMMARY
+02:24:28 INFO  Run:                          0
+02:24:28 INFO  Previously run:               2
+02:24:28 INFO  Filtered out:                 0
+02:24:28 INFO  -------------------------------
+02:24:28 INFO  Total change sets:            2
+02:24:28 INFO  Update summary generated
+02:24:28 INFO  Command execution complete
+02:24:29 WARN  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+02:24:29 INFO  Tomcat started on port 9092 (http) with context path '/'
+02:24:29 INFO  Started InventarioApplication in 9.626 seconds (process running for 10.403)

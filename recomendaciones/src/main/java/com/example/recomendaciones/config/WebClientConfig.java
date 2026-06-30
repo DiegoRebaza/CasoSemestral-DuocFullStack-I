@@ -8,7 +8,7 @@ import org.springframework.web.reactive.function.client.WebClient;
 @Configuration
 public class WebClientConfig {
 
-    @Value("${api.base-url}")
+    @Value("${gateway.url}")
     private String baseUrl;
 
     // 1. Creamos el Bean del Builder manualmente para que Spring no lo busque a ciegas

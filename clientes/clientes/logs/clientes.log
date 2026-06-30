@@ -1,20 +1,23 @@
-14:55:58 INFO  Starting ClientesApplicationTests using Java 25.0.1 with PID 40136 (started by diego in D:\Programacion\VisualCode\3. Tercer semestre\Parte 1 Proyecto Semestral\CasoSemestral-DuocFullStack-I\clientes\clientes)
-14:55:58 INFO  No active profile set, falling back to 1 default profile: "default"
-14:55:58 INFO  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-14:55:59 INFO  Finished Spring Data repository scanning in 120 ms. Found 1 JPA repository interface.
-14:55:59 INFO  HHH008540: Processing PersistenceUnitInfo [name: default]
-14:55:59 INFO  HHH000001: Hibernate ORM core version 7.2.12.Final
-14:56:00 INFO  No LoadTimeWeaver setup: ignoring JPA class transformer
-14:56:00 INFO  HikariPool-1 - Starting...
-14:56:00 INFO  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@37753b69
-14:56:00 INFO  HikariPool-1 - Start completed.
-14:56:00 WARN  HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
-14:56:00 WARN  HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-14:56:00 INFO  HHH10001005: Database info:
+00:02:13 INFO  Starting ClientesApplication using Java 25 with PID 12456 (D:\FinalShit\CasoSemestral-DuocFullStack-I\clientes\clientes\target\classes started by Matt in D:\FinalShit\CasoSemestral-DuocFullStack-I\clientes\clientes)
+00:02:13 INFO  No active profile set, falling back to 1 default profile: "default"
+00:02:14 INFO  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+00:02:14 INFO  Finished Spring Data repository scanning in 123 ms. Found 1 JPA repository interface.
+00:02:15 INFO  Tomcat initialized with port 9093 (http)
+00:02:15 INFO  Starting service [Tomcat]
+00:02:15 INFO  Starting Servlet engine: [Apache Tomcat/11.0.21]
+00:02:15 INFO  Root WebApplicationContext: initialization completed in 1841 ms
+00:02:15 INFO  HHH008540: Processing PersistenceUnitInfo [name: default]
+00:02:16 INFO  HHH000001: Hibernate ORM core version 7.2.12.Final
+00:02:16 INFO  No LoadTimeWeaver setup: ignoring JPA class transformer
+00:02:16 INFO  HikariPool-1 - Starting...
+00:02:17 INFO  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@35260785
+00:02:17 INFO  HikariPool-1 - Start completed.
+00:02:17 WARN  HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+00:02:17 INFO  HHH10001005: Database info:
 	Database JDBC URL [jdbc:mysql://localhost:3306/bd_cliente?createDatabaseIfNotExist=true&serverTimezone=America/Santiago]
 	Database driver: MySQL Connector/J
 	Database dialect: MySQLDialect
-	Database version: 5.5.5
+	Database version: 8.4.3
 	Default catalog/schema: bd_cliente/undefined
 	Autocommit mode: undefined/unknown
 	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
@@ -22,48 +25,47 @@
 	Pool: DataSourceConnectionProvider
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-14:56:01 INFO  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-14:56:01 INFO  Initialized JPA EntityManagerFactory for persistence unit 'default'
-14:56:01 INFO  Hibernate is in classpath; If applicable, HQL parser will be used.
-14:56:03 INFO  Reading resource: db/changelog/changes/001-crear-tablas.sql
-14:56:03 INFO  Reading from bd_cliente.databasechangelog
-14:56:03 INFO  Reading resource: db/changelog/changes/002-insertar-datos.sql
-14:56:03 INFO  Database is up to date, no changesets to execute
-14:56:03 INFO  Reading from bd_cliente.databasechangelog
-14:56:03 INFO  UPDATE SUMMARY
-14:56:03 INFO  Run:                          0
-14:56:03 INFO  Previously run:               4
-14:56:03 INFO  Filtered out:                 0
-14:56:03 INFO  -------------------------------
-14:56:03 INFO  Total change sets:            4
-14:56:03 INFO  Update summary generated
-14:56:03 INFO  Command execution complete
-14:56:03 WARN  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-14:56:03 INFO  Started ClientesApplicationTests in 6.22 seconds (process running for 7.602)
-14:56:04 INFO  Closing JPA EntityManagerFactory for persistence unit 'default'
-14:56:04 INFO  HikariPool-1 - Shutdown initiated...
-14:56:04 INFO  HikariPool-1 - Shutdown completed.
-14:57:53 INFO  Starting ClientesApplication using Java 25.0.1 with PID 58312 (D:\Programacion\VisualCode\3. Tercer semestre\Parte 1 Proyecto Semestral\CasoSemestral-DuocFullStack-I\clientes\clientes\target\classes started by diego in D:\Programacion\VisualCode\3. Tercer semestre\Parte 1 Proyecto Semestral\CasoSemestral-DuocFullStack-I\clientes\clientes)
-14:57:53 INFO  No active profile set, falling back to 1 default profile: "default"
-14:57:55 INFO  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-14:57:55 INFO  Finished Spring Data repository scanning in 368 ms. Found 1 JPA repository interface.
-14:57:56 INFO  Tomcat initialized with port 9093 (http)
-14:57:56 INFO  Starting service [Tomcat]
-14:57:56 INFO  Starting Servlet engine: [Apache Tomcat/11.0.21]
-14:57:56 INFO  Root WebApplicationContext: initialization completed in 2833 ms
-14:57:56 INFO  HHH008540: Processing PersistenceUnitInfo [name: default]
-14:57:56 INFO  HHH000001: Hibernate ORM core version 7.2.12.Final
-14:57:57 INFO  No LoadTimeWeaver setup: ignoring JPA class transformer
-14:57:57 INFO  HikariPool-1 - Starting...
-14:57:57 INFO  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6ae6d078
-14:57:57 INFO  HikariPool-1 - Start completed.
-14:57:58 WARN  HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
-14:57:58 WARN  HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-14:57:58 INFO  HHH10001005: Database info:
+00:02:18 INFO  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+00:02:18 INFO  Initialized JPA EntityManagerFactory for persistence unit 'default'
+00:02:18 INFO  Hibernate is in classpath; If applicable, HQL parser will be used.
+00:02:20 INFO  Reading resource: db/changelog/changes/001-crear-tablas.sql
+00:02:20 INFO  Reading from bd_cliente.databasechangelog
+00:02:20 INFO  Reading resource: db/changelog/changes/002-insertar-datos.sql
+00:02:20 INFO  Database is up to date, no changesets to execute
+00:02:20 INFO  Reading from bd_cliente.databasechangelog
+00:02:20 INFO  UPDATE SUMMARY
+00:02:20 INFO  Run:                          0
+00:02:20 INFO  Previously run:               4
+00:02:20 INFO  Filtered out:                 0
+00:02:20 INFO  -------------------------------
+00:02:20 INFO  Total change sets:            4
+00:02:20 INFO  Update summary generated
+00:02:20 INFO  Command execution complete
+00:02:20 WARN  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+00:02:21 DEBUG No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+00:02:21 DEBUG Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, OAuth2ProtectedResourceMetadataFilter, BearerTokenAuthenticationFilter, AuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+00:02:21 INFO  Tomcat started on port 9093 (http) with context path '/'
+00:02:21 INFO  Started ClientesApplication in 8.375 seconds (process running for 9.015)
+00:51:24 INFO  Starting ClientesApplication using Java 25 with PID 36216 (D:\FinalShit\CasoSemestral-DuocFullStack-I\clientes\clientes\target\classes started by Matt in D:\FinalShit\CasoSemestral-DuocFullStack-I\clientes\clientes)
+00:51:24 INFO  No active profile set, falling back to 1 default profile: "default"
+00:51:25 INFO  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+00:51:25 INFO  Finished Spring Data repository scanning in 145 ms. Found 1 JPA repository interface.
+00:51:26 INFO  Tomcat initialized with port 9093 (http)
+00:51:26 INFO  Starting service [Tomcat]
+00:51:26 INFO  Starting Servlet engine: [Apache Tomcat/11.0.21]
+00:51:26 INFO  Root WebApplicationContext: initialization completed in 2180 ms
+00:51:26 INFO  HHH008540: Processing PersistenceUnitInfo [name: default]
+00:51:26 INFO  HHH000001: Hibernate ORM core version 7.2.12.Final
+00:51:27 INFO  No LoadTimeWeaver setup: ignoring JPA class transformer
+00:51:27 INFO  HikariPool-1 - Starting...
+00:51:27 INFO  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@16cb6f51
+00:51:27 INFO  HikariPool-1 - Start completed.
+00:51:27 WARN  HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+00:51:27 INFO  HHH10001005: Database info:
 	Database JDBC URL [jdbc:mysql://localhost:3306/bd_cliente?createDatabaseIfNotExist=true&serverTimezone=America/Santiago]
 	Database driver: MySQL Connector/J
 	Database dialect: MySQLDialect
-	Database version: 5.5.5
+	Database version: 8.4.3
 	Default catalog/schema: bd_cliente/undefined
 	Autocommit mode: undefined/unknown
 	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
@@ -71,261 +73,72 @@
 	Pool: DataSourceConnectionProvider
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-14:57:59 INFO  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-14:57:59 INFO  Initialized JPA EntityManagerFactory for persistence unit 'default'
-14:57:59 INFO  Hibernate is in classpath; If applicable, HQL parser will be used.
-14:58:01 INFO  Reading resource: db/changelog/changes/001-crear-tablas.sql
-14:58:02 INFO  Reading from bd_cliente.databasechangelog
-14:58:02 INFO  Reading resource: db/changelog/changes/002-insertar-datos.sql
-14:58:02 INFO  Database is up to date, no changesets to execute
-14:58:02 INFO  Reading from bd_cliente.databasechangelog
-14:58:02 INFO  UPDATE SUMMARY
-14:58:02 INFO  Run:                          0
-14:58:02 INFO  Previously run:               4
-14:58:02 INFO  Filtered out:                 0
-14:58:02 INFO  -------------------------------
-14:58:02 INFO  Total change sets:            4
-14:58:02 INFO  Update summary generated
-14:58:02 INFO  Command execution complete
-14:58:02 WARN  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-14:58:02 INFO  Tomcat started on port 9093 (http) with context path '/'
-14:58:02 INFO  Started ClientesApplication in 10.571 seconds (process running for 11.852)
-14:13:43 INFO  Starting ClientesApplication using Java 24.0.2 with PID 11832 (C:\Users\av-alumno\Downloads\SCF\CasoSemestral-DuocFullStack-I\clientes\clientes\target\classes started by AV-Alumno in C:\Users\av-alumno\Downloads\SCF\CasoSemestral-DuocFullStack-I\clientes\clientes)
-14:13:43 INFO  No active profile set, falling back to 1 default profile: "default"
-14:13:45 INFO  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-14:13:45 INFO  Finished Spring Data repository scanning in 527 ms. Found 1 JPA repository interface.
-14:13:47 INFO  Tomcat initialized with port 9093 (http)
-14:13:47 INFO  Starting service [Tomcat]
-14:13:47 INFO  Starting Servlet engine: [Apache Tomcat/11.0.21]
-14:13:47 INFO  Root WebApplicationContext: initialization completed in 4052 ms
-14:13:48 INFO  HHH008540: Processing PersistenceUnitInfo [name: default]
-14:13:48 INFO  HHH000001: Hibernate ORM core version 7.2.12.Final
-14:13:49 INFO  No LoadTimeWeaver setup: ignoring JPA class transformer
-14:13:49 INFO  HikariPool-1 - Starting...
-14:13:50 WARN  HHH000247: ErrorCode: 0, SQLState: 08S01
-14:13:50 WARN  Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-14:13:50 WARN  HHH100046: Could not obtain connection to query JDBC database metadata
-org.hibernate.exception.JDBCConnectionException: Unable to obtain isolated JDBC connection [Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
-	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:80)
-	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:34)
-	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:115)
-	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:101)
-	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:51)
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:366)
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironment(JdbcEnvironmentInitiator.java:143)
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:120)
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:80)
-	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:133)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:260)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:235)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:212)
-	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44)
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:251)
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:203)
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:172)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1392)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.populateSessionFactoryBuilder(EntityManagerFactoryBuilderImpl.java:1472)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1454)
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:93)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:443)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:436)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:411)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:419)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621)
-	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
-	at com.bravatta.clientes.ClientesApplication.main(ClientesApplication.java:10)
-Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:165)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:55)
-	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:840)
-	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416)
-	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237)
-	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
-	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144)
-	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:373)
-	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:210)
-	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488)
-	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:576)
-	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:97)
-	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
-	at org.hibernate.engine.jdbc.connections.internal.DataSourceConnectionProvider.getConnection(DataSourceConnectionProvider.java:137)
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:508)
-	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:48)
-	... 37 common frames omitted
-Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:95)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:140)
-	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:156)
-	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:79)
-	at com.mysql.cj.NativeSession.connect(NativeSession.java:142)
-	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:964)
-	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828)
-	... 50 common frames omitted
-Caused by: java.net.ConnectException: Connection refused: getsockopt
-	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
-	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:628)
-	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:533)
-	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:583)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:282)
-	at java.base/java.net.Socket.connect(Socket.java:665)
-	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:144)
-	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:53)
-	... 53 common frames omitted
-14:13:50 WARN  HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-14:13:50 INFO  HHH10001005: Database info:
-	Database JDBC URL [undefined/unknown]
-	Database driver: undefined/unknown
-	Database dialect: MySQLDialect
-	Database version: 8.0
-	Default catalog/schema: unknown/unknown
-	Autocommit mode: undefined/unknown
-	Isolation level: NONE [default NONE]
-	JDBC fetch size: undefined/unknown
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-14:13:52 INFO  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-14:13:52 INFO  Initialized JPA EntityManagerFactory for persistence unit 'default'
-14:13:52 INFO  Hibernate is in classpath; If applicable, HQL parser will be used.
-14:13:53 INFO  HikariPool-1 - Starting...
-14:13:54 WARN  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [com/bravatta/clientes/config/LiquibaseConfig.class]: liquibase.exception.DatabaseException: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-14:13:54 INFO  Closing JPA EntityManagerFactory for persistence unit 'default'
-14:13:54 INFO  Stopping service [Tomcat]
-14:13:54 INFO  
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-14:13:54 ERROR Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [com/bravatta/clientes/config/LiquibaseConfig.class]: liquibase.exception.DatabaseException: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1817)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1218)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1184)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1121)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:994)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621)
-	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
-	at com.bravatta.clientes.ClientesApplication.main(ClientesApplication.java:10)
-Caused by: liquibase.exception.LiquibaseException: liquibase.exception.DatabaseException: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:289)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813)
-	... 18 common frames omitted
-Caused by: liquibase.exception.DatabaseException: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at liquibase.integration.spring.SpringLiquibase.lambda$afterPropertiesSet$0(SpringLiquibase.java:281)
-	at liquibase.Scope.lambda$child$0(Scope.java:241)
-	at liquibase.Scope.child(Scope.java:250)
-	at liquibase.Scope.child(Scope.java:240)
-	at liquibase.Scope.child(Scope.java:219)
-	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:272)
-	... 20 common frames omitted
-Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:165)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:55)
-	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:840)
-	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416)
-	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237)
-	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
-	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144)
-	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:373)
-	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:210)
-	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488)
-	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:576)
-	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:97)
-	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
-	at liquibase.integration.spring.SpringLiquibase.lambda$afterPropertiesSet$0(SpringLiquibase.java:276)
-	... 25 common frames omitted
-Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:95)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:140)
-	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:156)
-	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:79)
-	at com.mysql.cj.NativeSession.connect(NativeSession.java:142)
-	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:964)
-	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828)
-	... 36 common frames omitted
-Caused by: java.net.ConnectException: Connection refused: getsockopt
-	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
-	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:628)
-	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:533)
-	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:583)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:282)
-	at java.base/java.net.Socket.connect(Socket.java:665)
-	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:144)
-	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:53)
-	... 39 common frames omitted
-14:16:53 INFO  Starting ClientesApplication using Java 24.0.2 with PID 5092 (C:\Users\av-alumno\Downloads\SCF\CasoSemestral-DuocFullStack-I\clientes\clientes\target\classes started by AV-Alumno in C:\Users\av-alumno\Downloads\SCF\CasoSemestral-DuocFullStack-I\clientes\clientes)
-14:16:53 INFO  No active profile set, falling back to 1 default profile: "default"
-14:16:55 INFO  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-14:16:55 INFO  Finished Spring Data repository scanning in 344 ms. Found 1 JPA repository interface.
-14:16:56 INFO  Tomcat initialized with port 9093 (http)
-14:16:56 INFO  Starting service [Tomcat]
-14:16:56 INFO  Starting Servlet engine: [Apache Tomcat/11.0.21]
-14:16:56 INFO  Root WebApplicationContext: initialization completed in 3257 ms
-14:16:57 INFO  HHH008540: Processing PersistenceUnitInfo [name: default]
-14:16:57 INFO  HHH000001: Hibernate ORM core version 7.2.12.Final
-14:16:58 INFO  No LoadTimeWeaver setup: ignoring JPA class transformer
-14:16:58 INFO  HikariPool-1 - Starting...
-14:16:59 INFO  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@18a0721b
-14:16:59 INFO  HikariPool-1 - Start completed.
-14:16:59 WARN  HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
-14:16:59 WARN  HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-14:16:59 INFO  HHH10001005: Database info:
+00:51:28 INFO  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+00:51:28 INFO  Initialized JPA EntityManagerFactory for persistence unit 'default'
+00:51:28 INFO  Hibernate is in classpath; If applicable, HQL parser will be used.
+00:51:30 INFO  Reading resource: db/changelog/changes/001-crear-tablas.sql
+00:51:30 INFO  Reading from bd_cliente.databasechangelog
+00:51:30 INFO  Reading resource: db/changelog/changes/002-insertar-datos.sql
+00:51:30 INFO  Database is up to date, no changesets to execute
+00:51:30 INFO  Reading from bd_cliente.databasechangelog
+00:51:30 INFO  UPDATE SUMMARY
+00:51:30 INFO  Run:                          0
+00:51:30 INFO  Previously run:               4
+00:51:30 INFO  Filtered out:                 0
+00:51:30 INFO  -------------------------------
+00:51:30 INFO  Total change sets:            4
+00:51:30 INFO  Update summary generated
+00:51:30 INFO  Command execution complete
+00:51:30 WARN  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+00:51:30 DEBUG No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+00:51:30 DEBUG Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, OAuth2ProtectedResourceMetadataFilter, BearerTokenAuthenticationFilter, AuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+00:51:31 INFO  Tomcat started on port 9093 (http) with context path '/'
+00:51:31 INFO  Started ClientesApplication in 7.524 seconds (process running for 8.138)
+00:51:56 INFO  Initializing Spring DispatcherServlet 'dispatcherServlet'
+00:51:56 INFO  Initializing Servlet 'dispatcherServlet'
+00:51:56 INFO  Completed initialization in 0 ms
+00:51:56 DEBUG Securing GET /api/clientes
+00:51:56 DEBUG Jwt expired at 2026-06-30T04:41:35Z
+00:51:56 DEBUG Failed to authenticate since the JWT was invalid
+00:51:56 DEBUG Authentication failed with provider JwtAuthenticationProvider since An error occurred while attempting to decode the Jwt: Jwt expired at 2026-06-30T04:41:35Z
+00:51:58 DEBUG Securing GET /api/clientes
+00:51:58 DEBUG Jwt expired at 2026-06-30T04:41:35Z
+00:51:58 DEBUG Failed to authenticate since the JWT was invalid
+00:51:58 DEBUG Authentication failed with provider JwtAuthenticationProvider since An error occurred while attempting to decode the Jwt: Jwt expired at 2026-06-30T04:41:35Z
+00:52:06 DEBUG Securing GET /api/clientes
+00:52:06 DEBUG Set SecurityContextHolder to anonymous SecurityContext
+00:52:06 DEBUG Saved request http://localhost:9093/api/clientes?continue to session
+00:52:14 DEBUG Securing GET /api/clientes
+00:52:14 DEBUG Jwt expired at 2026-06-30T04:41:35Z
+00:52:14 DEBUG Failed to authenticate since the JWT was invalid
+00:52:14 DEBUG Authentication failed with provider JwtAuthenticationProvider since An error occurred while attempting to decode the Jwt: Jwt expired at 2026-06-30T04:41:35Z
+00:53:59 DEBUG Securing GET /api/clientes
+00:53:59 DEBUG Authenticated token
+00:53:59 DEBUG Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@76977be, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=4A9A0B7E7CD15BD4EB26D00F244B934E], Granted Authorities=[FactorGrantedAuthority [authority=FACTOR_BEARER, issuedAt=2026-06-30T04:53:59.846659100Z]]]
+00:53:59 DEBUG Secured GET /api/clientes
+00:53:59 INFO  GET /api/clientes - Recibida solicitud para listar todos los clientes
+00:53:59 INFO  Consultando todos los clientes en la base de datos...
+00:54:00 INFO  Retornando lista con 10 clientes
+00:59:10 INFO  Starting ClientesApplication using Java 25 with PID 14456 (D:\FinalShit\CasoSemestral-DuocFullStack-I\clientes\clientes\target\classes started by Matt in D:\FinalShit\CasoSemestral-DuocFullStack-I\clientes\clientes)
+00:59:10 INFO  No active profile set, falling back to 1 default profile: "default"
+00:59:11 INFO  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+00:59:11 INFO  Finished Spring Data repository scanning in 109 ms. Found 1 JPA repository interface.
+00:59:11 INFO  Tomcat initialized with port 9093 (http)
+00:59:11 INFO  Starting service [Tomcat]
+00:59:11 INFO  Starting Servlet engine: [Apache Tomcat/11.0.21]
+00:59:11 INFO  Root WebApplicationContext: initialization completed in 1597 ms
+00:59:11 INFO  HHH008540: Processing PersistenceUnitInfo [name: default]
+00:59:12 INFO  HHH000001: Hibernate ORM core version 7.2.12.Final
+00:59:12 INFO  No LoadTimeWeaver setup: ignoring JPA class transformer
+00:59:12 INFO  HikariPool-1 - Starting...
+00:59:12 INFO  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@16cb6f51
+00:59:12 INFO  HikariPool-1 - Start completed.
+00:59:12 WARN  HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+00:59:12 INFO  HHH10001005: Database info:
 	Database JDBC URL [jdbc:mysql://localhost:3306/bd_cliente?createDatabaseIfNotExist=true&serverTimezone=America/Santiago]
 	Database driver: MySQL Connector/J
 	Database dialect: MySQLDialect
-	Database version: 5.5.5
+	Database version: 8.4.3
 	Default catalog/schema: bd_cliente/undefined
 	Autocommit mode: undefined/unknown
 	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
@@ -333,65 +146,47 @@ Caused by: java.net.ConnectException: Connection refused: getsockopt
 	Pool: DataSourceConnectionProvider
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-14:17:01 INFO  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-14:17:01 INFO  Initialized JPA EntityManagerFactory for persistence unit 'default'
-14:17:01 INFO  Hibernate is in classpath; If applicable, HQL parser will be used.
-14:17:04 INFO  Reading resource: db/changelog/changes/001-crear-tablas.sql
-14:17:04 INFO  Creating database changelog table with name: bd_cliente.databasechangelog
-14:17:04 INFO  Reading from bd_cliente.databasechangelog
-14:17:04 INFO  Reading resource: db/changelog/changes/002-insertar-datos.sql
-14:17:04 INFO  Creating snapshot
-14:17:04 INFO  Name 'PK_DATABASECHANGELOGLOCK' ignored for PRIMARY key.
-14:17:04 INFO  Successfully acquired change log lock
-14:17:04 INFO  Using deploymentId: 0683421874
-14:17:04 INFO  Reading from bd_cliente.databasechangelog
-14:17:05 INFO  Running Changeset: db/changelog/changes/001-crear-tablas.sql::1::bravatta
-14:17:05 INFO  Custom SQL executed
-14:17:05 INFO  ChangeSet db/changelog/changes/001-crear-tablas.sql::1::bravatta ran successfully in 86ms
-14:17:05 INFO  Running Changeset: db/changelog/changes/001-crear-tablas.sql::2::bravatta
-14:17:05 INFO  Custom SQL executed
-14:17:05 INFO  ChangeSet db/changelog/changes/001-crear-tablas.sql::2::bravatta ran successfully in 45ms
-14:17:05 INFO  Running Changeset: db/changelog/changes/002-insertar-datos.sql::3::bravatta
-14:17:05 INFO  Custom SQL executed
-14:17:05 INFO  ChangeSet db/changelog/changes/002-insertar-datos.sql::3::bravatta ran successfully in 19ms
-14:17:05 INFO  Running Changeset: db/changelog/changes/002-insertar-datos.sql::4::bravatta
-14:17:05 INFO  Custom SQL executed
-14:17:05 INFO  ChangeSet db/changelog/changes/002-insertar-datos.sql::4::bravatta ran successfully in 12ms
-14:17:05 INFO  UPDATE SUMMARY
-14:17:05 INFO  Run:                          4
-14:17:05 INFO  Previously run:               0
-14:17:05 INFO  Filtered out:                 0
-14:17:05 INFO  -------------------------------
-14:17:05 INFO  Total change sets:            4
-14:17:05 INFO  Update summary generated
-14:17:05 INFO  Update command completed successfully.
-14:17:05 INFO  Liquibase: Update has been successful. Rows affected: 20
-14:17:05 INFO  Successfully released change log lock
-14:17:05 INFO  Command execution complete
-14:17:05 WARN  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-14:17:06 INFO  Tomcat started on port 9093 (http) with context path '/'
-14:17:06 INFO  Started ClientesApplication in 13.711 seconds (process running for 15.325)
-14:54:03 INFO  Starting ClientesApplication using Java 24.0.2 with PID 17692 (C:\Users\av-alumno\Downloads\SCF\CasoSemestral-DuocFullStack-I\clientes\clientes\target\classes started by AV-Alumno in C:\Users\av-alumno\Downloads\SCF\CasoSemestral-DuocFullStack-I\clientes\clientes)
-14:54:03 INFO  No active profile set, falling back to 1 default profile: "default"
-14:54:05 INFO  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-14:54:05 INFO  Finished Spring Data repository scanning in 428 ms. Found 1 JPA repository interface.
-14:54:07 INFO  Tomcat initialized with port 9093 (http)
-14:54:07 INFO  Starting service [Tomcat]
-14:54:07 INFO  Starting Servlet engine: [Apache Tomcat/11.0.21]
-14:54:07 INFO  Root WebApplicationContext: initialization completed in 3567 ms
-14:54:07 INFO  HHH008540: Processing PersistenceUnitInfo [name: default]
-14:54:07 INFO  HHH000001: Hibernate ORM core version 7.2.12.Final
-14:54:08 INFO  No LoadTimeWeaver setup: ignoring JPA class transformer
-14:54:08 INFO  HikariPool-1 - Starting...
-14:54:09 INFO  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@18a0721b
-14:54:09 INFO  HikariPool-1 - Start completed.
-14:54:10 WARN  HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
-14:54:10 WARN  HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-14:54:10 INFO  HHH10001005: Database info:
+00:59:13 INFO  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+00:59:13 INFO  Initialized JPA EntityManagerFactory for persistence unit 'default'
+00:59:13 INFO  Hibernate is in classpath; If applicable, HQL parser will be used.
+00:59:15 INFO  Reading resource: db/changelog/changes/001-crear-tablas.sql
+00:59:15 INFO  Reading from bd_cliente.databasechangelog
+00:59:15 INFO  Reading resource: db/changelog/changes/002-insertar-datos.sql
+00:59:15 INFO  Database is up to date, no changesets to execute
+00:59:15 INFO  Reading from bd_cliente.databasechangelog
+00:59:15 INFO  UPDATE SUMMARY
+00:59:15 INFO  Run:                          0
+00:59:15 INFO  Previously run:               4
+00:59:15 INFO  Filtered out:                 0
+00:59:15 INFO  -------------------------------
+00:59:15 INFO  Total change sets:            4
+00:59:15 INFO  Update summary generated
+00:59:15 INFO  Command execution complete
+00:59:16 WARN  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+00:59:16 DEBUG No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+00:59:16 DEBUG Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, OAuth2ProtectedResourceMetadataFilter, BearerTokenAuthenticationFilter, AuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+00:59:17 INFO  Tomcat started on port 9093 (http) with context path '/'
+00:59:17 INFO  Started ClientesApplication in 7.604 seconds (process running for 8.279)
+01:33:56 INFO  Starting ClientesApplication using Java 25 with PID 33084 (D:\FinalShit\CasoSemestral-DuocFullStack-I\clientes\clientes\target\classes started by Matt in D:\FinalShit\CasoSemestral-DuocFullStack-I\clientes\clientes)
+01:33:56 INFO  No active profile set, falling back to 1 default profile: "default"
+01:33:57 INFO  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+01:33:57 INFO  Finished Spring Data repository scanning in 127 ms. Found 1 JPA repository interface.
+01:33:57 INFO  Tomcat initialized with port 9093 (http)
+01:33:57 INFO  Starting service [Tomcat]
+01:33:57 INFO  Starting Servlet engine: [Apache Tomcat/11.0.21]
+01:33:57 INFO  Root WebApplicationContext: initialization completed in 1678 ms
+01:33:58 INFO  HHH008540: Processing PersistenceUnitInfo [name: default]
+01:33:58 INFO  HHH000001: Hibernate ORM core version 7.2.12.Final
+01:33:58 INFO  No LoadTimeWeaver setup: ignoring JPA class transformer
+01:33:58 INFO  HikariPool-1 - Starting...
+01:33:58 INFO  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@16cb6f51
+01:33:58 INFO  HikariPool-1 - Start completed.
+01:33:59 WARN  HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+01:33:59 INFO  HHH10001005: Database info:
 	Database JDBC URL [jdbc:mysql://localhost:3306/bd_cliente?createDatabaseIfNotExist=true&serverTimezone=America/Santiago]
 	Database driver: MySQL Connector/J
 	Database dialect: MySQLDialect
-	Database version: 5.5.5
+	Database version: 8.4.3
 	Default catalog/schema: bd_cliente/undefined
 	Autocommit mode: undefined/unknown
 	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
@@ -399,65 +194,47 @@ Caused by: java.net.ConnectException: Connection refused: getsockopt
 	Pool: DataSourceConnectionProvider
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-14:54:12 INFO  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-14:54:12 INFO  Initialized JPA EntityManagerFactory for persistence unit 'default'
-14:54:12 INFO  Hibernate is in classpath; If applicable, HQL parser will be used.
-14:54:14 INFO  Reading resource: db/changelog/changes/001-crear-tablas.sql
-14:54:14 INFO  Creating database changelog table with name: bd_cliente.databasechangelog
-14:54:15 INFO  Reading from bd_cliente.databasechangelog
-14:54:15 INFO  Reading resource: db/changelog/changes/002-insertar-datos.sql
-14:54:15 INFO  Creating snapshot
-14:54:15 INFO  Name 'PK_DATABASECHANGELOGLOCK' ignored for PRIMARY key.
-14:54:15 INFO  Successfully acquired change log lock
-14:54:15 INFO  Using deploymentId: 0685652849
-14:54:15 INFO  Reading from bd_cliente.databasechangelog
-14:54:15 INFO  Running Changeset: db/changelog/changes/001-crear-tablas.sql::1::bravatta
-14:54:15 INFO  Custom SQL executed
-14:54:15 INFO  ChangeSet db/changelog/changes/001-crear-tablas.sql::1::bravatta ran successfully in 47ms
-14:54:15 INFO  Running Changeset: db/changelog/changes/001-crear-tablas.sql::2::bravatta
-14:54:15 INFO  Custom SQL executed
-14:54:15 INFO  ChangeSet db/changelog/changes/001-crear-tablas.sql::2::bravatta ran successfully in 23ms
-14:54:15 INFO  Running Changeset: db/changelog/changes/002-insertar-datos.sql::3::bravatta
-14:54:15 INFO  Custom SQL executed
-14:54:15 INFO  ChangeSet db/changelog/changes/002-insertar-datos.sql::3::bravatta ran successfully in 12ms
-14:54:15 INFO  Running Changeset: db/changelog/changes/002-insertar-datos.sql::4::bravatta
-14:54:15 INFO  Custom SQL executed
-14:54:15 INFO  ChangeSet db/changelog/changes/002-insertar-datos.sql::4::bravatta ran successfully in 14ms
-14:54:15 INFO  UPDATE SUMMARY
-14:54:15 INFO  Run:                          4
-14:54:15 INFO  Previously run:               0
-14:54:15 INFO  Filtered out:                 0
-14:54:15 INFO  -------------------------------
-14:54:15 INFO  Total change sets:            4
-14:54:15 INFO  Update summary generated
-14:54:15 INFO  Update command completed successfully.
-14:54:15 INFO  Liquibase: Update has been successful. Rows affected: 20
-14:54:15 INFO  Successfully released change log lock
-14:54:15 INFO  Command execution complete
-14:54:15 WARN  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-14:54:16 INFO  Tomcat started on port 9093 (http) with context path '/'
-14:54:16 INFO  Started ClientesApplication in 13.975 seconds (process running for 15.539)
-14:57:04 INFO  Starting ClientesApplication using Java 24.0.2 with PID 17560 (C:\Users\av-alumno\Downloads\SCF\CasoSemestral-DuocFullStack-I\clientes\clientes\target\classes started by AV-Alumno in C:\Users\av-alumno\Downloads\SCF\CasoSemestral-DuocFullStack-I\clientes\clientes)
-14:57:04 INFO  No active profile set, falling back to 1 default profile: "default"
-14:57:07 INFO  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-14:57:07 INFO  Finished Spring Data repository scanning in 350 ms. Found 1 JPA repository interface.
-14:57:08 INFO  Tomcat initialized with port 9093 (http)
-14:57:08 INFO  Starting service [Tomcat]
-14:57:08 INFO  Starting Servlet engine: [Apache Tomcat/11.0.21]
-14:57:09 INFO  Root WebApplicationContext: initialization completed in 4026 ms
-14:57:09 INFO  HHH008540: Processing PersistenceUnitInfo [name: default]
-14:57:09 INFO  HHH000001: Hibernate ORM core version 7.2.12.Final
-14:57:10 INFO  No LoadTimeWeaver setup: ignoring JPA class transformer
-14:57:10 INFO  HikariPool-1 - Starting...
-14:57:11 INFO  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@773f3360
-14:57:11 INFO  HikariPool-1 - Start completed.
-14:57:11 WARN  HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
-14:57:11 WARN  HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-14:57:11 INFO  HHH10001005: Database info:
+01:34:00 INFO  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+01:34:00 INFO  Initialized JPA EntityManagerFactory for persistence unit 'default'
+01:34:00 INFO  Hibernate is in classpath; If applicable, HQL parser will be used.
+01:34:01 INFO  Reading resource: db/changelog/changes/001-crear-tablas.sql
+01:34:02 INFO  Reading from bd_cliente.databasechangelog
+01:34:02 INFO  Reading resource: db/changelog/changes/002-insertar-datos.sql
+01:34:02 INFO  Database is up to date, no changesets to execute
+01:34:02 INFO  Reading from bd_cliente.databasechangelog
+01:34:02 INFO  UPDATE SUMMARY
+01:34:02 INFO  Run:                          0
+01:34:02 INFO  Previously run:               4
+01:34:02 INFO  Filtered out:                 0
+01:34:02 INFO  -------------------------------
+01:34:02 INFO  Total change sets:            4
+01:34:02 INFO  Update summary generated
+01:34:02 INFO  Command execution complete
+01:34:02 WARN  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+01:34:02 DEBUG No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+01:34:02 DEBUG Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, OAuth2ProtectedResourceMetadataFilter, BearerTokenAuthenticationFilter, AuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+01:34:03 INFO  Tomcat started on port 9093 (http) with context path '/'
+01:34:03 INFO  Started ClientesApplication in 7.84 seconds (process running for 8.388)
+01:38:34 INFO  Starting ClientesApplication using Java 25 with PID 38976 (D:\FinalShit\CasoSemestral-DuocFullStack-I\clientes\clientes\target\classes started by Matt in D:\FinalShit\CasoSemestral-DuocFullStack-I\clientes\clientes)
+01:38:34 INFO  No active profile set, falling back to 1 default profile: "default"
+01:38:36 INFO  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+01:38:36 INFO  Finished Spring Data repository scanning in 171 ms. Found 1 JPA repository interface.
+01:38:36 INFO  Tomcat initialized with port 9093 (http)
+01:38:36 INFO  Starting service [Tomcat]
+01:38:36 INFO  Starting Servlet engine: [Apache Tomcat/11.0.21]
+01:38:37 INFO  Root WebApplicationContext: initialization completed in 2177 ms
+01:38:37 INFO  HHH008540: Processing PersistenceUnitInfo [name: default]
+01:38:37 INFO  HHH000001: Hibernate ORM core version 7.2.12.Final
+01:38:37 INFO  No LoadTimeWeaver setup: ignoring JPA class transformer
+01:38:38 INFO  HikariPool-1 - Starting...
+01:38:38 INFO  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@16cb6f51
+01:38:38 INFO  HikariPool-1 - Start completed.
+01:38:38 WARN  HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+01:38:38 INFO  HHH10001005: Database info:
 	Database JDBC URL [jdbc:mysql://localhost:3306/bd_cliente?createDatabaseIfNotExist=true&serverTimezone=America/Santiago]
 	Database driver: MySQL Connector/J
 	Database dialect: MySQLDialect
-	Database version: 5.5.5
+	Database version: 8.4.3
 	Default catalog/schema: bd_cliente/undefined
 	Autocommit mode: undefined/unknown
 	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
@@ -465,51 +242,47 @@ Caused by: java.net.ConnectException: Connection refused: getsockopt
 	Pool: DataSourceConnectionProvider
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-14:57:13 INFO  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-14:57:13 INFO  Initialized JPA EntityManagerFactory for persistence unit 'default'
-14:57:13 INFO  Hibernate is in classpath; If applicable, HQL parser will be used.
-14:57:16 INFO  Reading resource: db/changelog/changes/001-crear-tablas.sql
-14:57:16 INFO  Reading from bd_cliente.databasechangelog
-14:57:16 INFO  Reading resource: db/changelog/changes/002-insertar-datos.sql
-14:57:16 INFO  Database is up to date, no changesets to execute
-14:57:16 INFO  Reading from bd_cliente.databasechangelog
-14:57:16 INFO  UPDATE SUMMARY
-14:57:16 INFO  Run:                          0
-14:57:16 INFO  Previously run:               4
-14:57:16 INFO  Filtered out:                 0
-14:57:16 INFO  -------------------------------
-14:57:16 INFO  Total change sets:            4
-14:57:16 INFO  Update summary generated
-14:57:16 INFO  Command execution complete
-14:57:16 WARN  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-14:57:17 INFO  Tomcat started on port 9093 (http) with context path '/'
-14:57:17 INFO  Started ClientesApplication in 13.642 seconds (process running for 15.232)
-15:15:54 INFO  Initializing Spring DispatcherServlet 'dispatcherServlet'
-15:15:54 INFO  Initializing Servlet 'dispatcherServlet'
-15:15:54 INFO  Completed initialization in 1 ms
-15:15:54 INFO  GET /api/clientes/3/exists - Comprobando existencia de cliente
-15:15:54 INFO  Verificando existencia del cliente con ID: 3
-15:33:37 INFO  Starting ClientesApplication using Java 24.0.2 with PID 19956 (C:\Users\av-alumno\Downloads\SCF\CasoSemestral-DuocFullStack-I\clientes\clientes\target\classes started by AV-Alumno in C:\Users\av-alumno\Downloads\SCF\CasoSemestral-DuocFullStack-I\clientes\clientes)
-15:33:37 INFO  No active profile set, falling back to 1 default profile: "default"
-15:33:39 INFO  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-15:33:40 INFO  Finished Spring Data repository scanning in 524 ms. Found 1 JPA repository interface.
-15:33:41 INFO  Tomcat initialized with port 9093 (http)
-15:33:41 INFO  Starting service [Tomcat]
-15:33:41 INFO  Starting Servlet engine: [Apache Tomcat/11.0.21]
-15:33:41 INFO  Root WebApplicationContext: initialization completed in 4333 ms
-15:33:42 INFO  HHH008540: Processing PersistenceUnitInfo [name: default]
-15:33:42 INFO  HHH000001: Hibernate ORM core version 7.2.12.Final
-15:33:43 INFO  No LoadTimeWeaver setup: ignoring JPA class transformer
-15:33:43 INFO  HikariPool-1 - Starting...
-15:33:44 INFO  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@18a0721b
-15:33:44 INFO  HikariPool-1 - Start completed.
-15:33:44 WARN  HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
-15:33:44 WARN  HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-15:33:44 INFO  HHH10001005: Database info:
+01:38:40 INFO  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+01:38:40 INFO  Initialized JPA EntityManagerFactory for persistence unit 'default'
+01:38:40 INFO  Hibernate is in classpath; If applicable, HQL parser will be used.
+01:38:42 INFO  Reading resource: db/changelog/changes/001-crear-tablas.sql
+01:38:42 INFO  Reading from bd_cliente.databasechangelog
+01:38:42 INFO  Reading resource: db/changelog/changes/002-insertar-datos.sql
+01:38:42 INFO  Database is up to date, no changesets to execute
+01:38:42 INFO  Reading from bd_cliente.databasechangelog
+01:38:43 INFO  UPDATE SUMMARY
+01:38:43 INFO  Run:                          0
+01:38:43 INFO  Previously run:               4
+01:38:43 INFO  Filtered out:                 0
+01:38:43 INFO  -------------------------------
+01:38:43 INFO  Total change sets:            4
+01:38:43 INFO  Update summary generated
+01:38:43 INFO  Command execution complete
+01:38:43 WARN  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+01:38:43 DEBUG No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+01:38:43 DEBUG Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, OAuth2ProtectedResourceMetadataFilter, BearerTokenAuthenticationFilter, AuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+01:38:44 INFO  Tomcat started on port 9093 (http) with context path '/'
+01:38:44 INFO  Started ClientesApplication in 10.227 seconds (process running for 11.002)
+01:47:31 INFO  Starting ClientesApplication using Java 25 with PID 37484 (D:\FinalShit\CasoSemestral-DuocFullStack-I\clientes\clientes\target\classes started by Matt in D:\FinalShit\CasoSemestral-DuocFullStack-I\clientes\clientes)
+01:47:31 INFO  No active profile set, falling back to 1 default profile: "default"
+01:47:32 INFO  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+01:47:32 INFO  Finished Spring Data repository scanning in 109 ms. Found 1 JPA repository interface.
+01:47:33 INFO  Tomcat initialized with port 9093 (http)
+01:47:33 INFO  Starting service [Tomcat]
+01:47:33 INFO  Starting Servlet engine: [Apache Tomcat/11.0.21]
+01:47:33 INFO  Root WebApplicationContext: initialization completed in 1494 ms
+01:47:33 INFO  HHH008540: Processing PersistenceUnitInfo [name: default]
+01:47:33 INFO  HHH000001: Hibernate ORM core version 7.2.12.Final
+01:47:33 INFO  No LoadTimeWeaver setup: ignoring JPA class transformer
+01:47:33 INFO  HikariPool-1 - Starting...
+01:47:33 INFO  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@16cb6f51
+01:47:33 INFO  HikariPool-1 - Start completed.
+01:47:34 WARN  HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+01:47:34 INFO  HHH10001005: Database info:
 	Database JDBC URL [jdbc:mysql://localhost:3306/bd_cliente?createDatabaseIfNotExist=true&serverTimezone=America/Santiago]
 	Database driver: MySQL Connector/J
 	Database dialect: MySQLDialect
-	Database version: 5.5.5
+	Database version: 8.4.3
 	Default catalog/schema: bd_cliente/undefined
 	Autocommit mode: undefined/unknown
 	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
@@ -517,74 +290,59 @@ Caused by: java.net.ConnectException: Connection refused: getsockopt
 	Pool: DataSourceConnectionProvider
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-15:33:46 INFO  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-15:33:46 INFO  Initialized JPA EntityManagerFactory for persistence unit 'default'
-15:33:47 INFO  Hibernate is in classpath; If applicable, HQL parser will be used.
-15:33:49 INFO  Reading resource: db/changelog/changes/001-crear-tablas.sql
-15:33:49 INFO  Creating database changelog table with name: bd_cliente.databasechangelog
-15:33:50 INFO  Reading from bd_cliente.databasechangelog
-15:33:50 INFO  Reading resource: db/changelog/changes/002-insertar-datos.sql
-15:33:50 INFO  Creating snapshot
-15:33:50 INFO  Name 'PK_DATABASECHANGELOGLOCK' ignored for PRIMARY key.
-15:33:50 INFO  Successfully acquired change log lock
-15:33:50 INFO  Using deploymentId: 0688027778
-15:33:50 INFO  Reading from bd_cliente.databasechangelog
-15:33:50 INFO  Running Changeset: db/changelog/changes/001-crear-tablas.sql::1::bravatta
-15:33:50 INFO  Custom SQL executed
-15:33:50 INFO  ChangeSet db/changelog/changes/001-crear-tablas.sql::1::bravatta ran successfully in 62ms
-15:33:50 INFO  Running Changeset: db/changelog/changes/001-crear-tablas.sql::2::bravatta
-15:33:50 INFO  Custom SQL executed
-15:33:50 INFO  ChangeSet db/changelog/changes/001-crear-tablas.sql::2::bravatta ran successfully in 26ms
-15:33:50 INFO  Running Changeset: db/changelog/changes/002-insertar-datos.sql::3::bravatta
-15:33:50 INFO  Custom SQL executed
-15:33:50 INFO  ChangeSet db/changelog/changes/002-insertar-datos.sql::3::bravatta ran successfully in 17ms
-15:33:50 INFO  Running Changeset: db/changelog/changes/002-insertar-datos.sql::4::bravatta
-15:33:50 INFO  Custom SQL executed
-15:33:50 INFO  ChangeSet db/changelog/changes/002-insertar-datos.sql::4::bravatta ran successfully in 19ms
-15:33:50 INFO  UPDATE SUMMARY
-15:33:50 INFO  Run:                          4
-15:33:50 INFO  Previously run:               0
-15:33:50 INFO  Filtered out:                 0
-15:33:50 INFO  -------------------------------
-15:33:50 INFO  Total change sets:            4
-15:33:50 INFO  Update summary generated
-15:33:50 INFO  Update command completed successfully.
-15:33:50 INFO  Liquibase: Update has been successful. Rows affected: 20
-15:33:50 INFO  Successfully released change log lock
-15:33:50 INFO  Command execution complete
-15:33:50 WARN  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-15:33:51 INFO  Tomcat started on port 9093 (http) with context path '/'
-15:33:51 INFO  Started ClientesApplication in 15.78 seconds (process running for 17.529)
-15:35:49 INFO  Initializing Spring DispatcherServlet 'dispatcherServlet'
-15:35:49 INFO  Initializing Servlet 'dispatcherServlet'
-15:35:49 INFO  Completed initialization in 1 ms
-15:35:49 INFO  GET /api/clientes/1/exists - Comprobando existencia de cliente
-15:35:49 INFO  Verificando existencia del cliente con ID: 1
-15:37:29 INFO  GET /api/clientes/1/exists - Comprobando existencia de cliente
-15:37:29 INFO  Verificando existencia del cliente con ID: 1
-15:38:54 INFO  GET /api/clientes/4/exists - Comprobando existencia de cliente
-15:38:54 INFO  Verificando existencia del cliente con ID: 4
-15:41:15 INFO  Starting ClientesApplication using Java 24.0.2 with PID 11856 (C:\Users\av-alumno\Downloads\SCF\CasoSemestral-DuocFullStack-I\clientes\clientes\target\classes started by AV-Alumno in C:\Users\av-alumno\Downloads\SCF\CasoSemestral-DuocFullStack-I\clientes\clientes)
-15:41:15 INFO  No active profile set, falling back to 1 default profile: "default"
-15:41:17 INFO  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-15:41:18 INFO  Finished Spring Data repository scanning in 673 ms. Found 1 JPA repository interface.
-15:41:20 INFO  Tomcat initialized with port 9093 (http)
-15:41:20 INFO  Starting service [Tomcat]
-15:41:20 INFO  Starting Servlet engine: [Apache Tomcat/11.0.21]
-15:41:20 INFO  Root WebApplicationContext: initialization completed in 5003 ms
-15:41:21 INFO  HHH008540: Processing PersistenceUnitInfo [name: default]
-15:41:21 INFO  HHH000001: Hibernate ORM core version 7.2.12.Final
-15:41:22 INFO  No LoadTimeWeaver setup: ignoring JPA class transformer
-15:41:22 INFO  HikariPool-1 - Starting...
-15:41:23 INFO  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@352c3d70
-15:41:23 INFO  HikariPool-1 - Start completed.
-15:41:23 WARN  HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
-15:41:23 WARN  HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-15:41:23 INFO  HHH10001005: Database info:
+01:47:34 INFO  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+01:47:34 INFO  Initialized JPA EntityManagerFactory for persistence unit 'default'
+01:47:34 INFO  Hibernate is in classpath; If applicable, HQL parser will be used.
+01:47:36 INFO  Reading resource: db/changelog/changes/001-crear-tablas.sql
+01:47:36 INFO  Reading from bd_cliente.databasechangelog
+01:47:36 INFO  Reading resource: db/changelog/changes/002-insertar-datos.sql
+01:47:36 INFO  Database is up to date, no changesets to execute
+01:47:36 INFO  Reading from bd_cliente.databasechangelog
+01:47:36 INFO  UPDATE SUMMARY
+01:47:36 INFO  Run:                          0
+01:47:36 INFO  Previously run:               4
+01:47:36 INFO  Filtered out:                 0
+01:47:36 INFO  -------------------------------
+01:47:36 INFO  Total change sets:            4
+01:47:36 INFO  Update summary generated
+01:47:36 INFO  Command execution complete
+01:47:36 WARN  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+01:47:37 DEBUG No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+01:47:37 DEBUG Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, OAuth2ProtectedResourceMetadataFilter, BearerTokenAuthenticationFilter, AuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+01:47:37 INFO  Tomcat started on port 9093 (http) with context path '/'
+01:47:37 INFO  Started ClientesApplication in 6.77 seconds (process running for 7.32)
+01:49:43 INFO  Initializing Spring DispatcherServlet 'dispatcherServlet'
+01:49:43 INFO  Initializing Servlet 'dispatcherServlet'
+01:49:43 INFO  Completed initialization in 0 ms
+01:49:43 DEBUG Securing GET /doc/swagger-ui.html
+01:49:43 DEBUG Set SecurityContextHolder to anonymous SecurityContext
+01:49:43 DEBUG Saved request http://localhost:9093/doc/swagger-ui.html?continue to session
+01:49:45 DEBUG Securing GET /doc/swagger-ui.html
+01:49:45 DEBUG Set SecurityContextHolder to anonymous SecurityContext
+01:49:45 DEBUG Saved request http://localhost:9093/doc/swagger-ui.html?continue to session
+01:49:46 DEBUG Securing GET /doc/swagger-ui.html
+01:49:46 DEBUG Set SecurityContextHolder to anonymous SecurityContext
+01:49:46 DEBUG Saved request http://localhost:9093/doc/swagger-ui.html?continue to session
+01:50:39 INFO  Starting ClientesApplication using Java 25 with PID 46564 (D:\FinalShit\CasoSemestral-DuocFullStack-I\clientes\clientes\target\classes started by Matt in D:\FinalShit\CasoSemestral-DuocFullStack-I\clientes\clientes)
+01:50:39 INFO  No active profile set, falling back to 1 default profile: "default"
+01:50:40 INFO  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+01:50:40 INFO  Finished Spring Data repository scanning in 115 ms. Found 1 JPA repository interface.
+01:50:40 INFO  Tomcat initialized with port 9093 (http)
+01:50:40 INFO  Starting service [Tomcat]
+01:50:40 INFO  Starting Servlet engine: [Apache Tomcat/11.0.21]
+01:50:40 INFO  Root WebApplicationContext: initialization completed in 1624 ms
+01:50:41 INFO  HHH008540: Processing PersistenceUnitInfo [name: default]
+01:50:41 INFO  HHH000001: Hibernate ORM core version 7.2.12.Final
+01:50:41 INFO  No LoadTimeWeaver setup: ignoring JPA class transformer
+01:50:41 INFO  HikariPool-1 - Starting...
+01:50:41 INFO  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@16cb6f51
+01:50:41 INFO  HikariPool-1 - Start completed.
+01:50:41 WARN  HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+01:50:41 INFO  HHH10001005: Database info:
 	Database JDBC URL [jdbc:mysql://localhost:3306/bd_cliente?createDatabaseIfNotExist=true&serverTimezone=America/Santiago]
 	Database driver: MySQL Connector/J
 	Database dialect: MySQLDialect
-	Database version: 5.5.5
+	Database version: 8.4.3
 	Default catalog/schema: bd_cliente/undefined
 	Autocommit mode: undefined/unknown
 	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
@@ -592,22 +350,186 @@ Caused by: java.net.ConnectException: Connection refused: getsockopt
 	Pool: DataSourceConnectionProvider
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-15:41:25 INFO  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-15:41:25 INFO  Initialized JPA EntityManagerFactory for persistence unit 'default'
-15:41:26 INFO  Hibernate is in classpath; If applicable, HQL parser will be used.
-15:41:28 INFO  Reading resource: db/changelog/changes/001-crear-tablas.sql
-15:41:29 INFO  Reading from bd_cliente.databasechangelog
-15:41:29 INFO  Reading resource: db/changelog/changes/002-insertar-datos.sql
-15:41:29 INFO  Database is up to date, no changesets to execute
-15:41:29 INFO  Reading from bd_cliente.databasechangelog
-15:41:29 INFO  UPDATE SUMMARY
-15:41:29 INFO  Run:                          0
-15:41:29 INFO  Previously run:               4
-15:41:29 INFO  Filtered out:                 0
-15:41:29 INFO  -------------------------------
-15:41:29 INFO  Total change sets:            4
-15:41:29 INFO  Update summary generated
-15:41:29 INFO  Command execution complete
-15:41:29 WARN  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-15:41:29 INFO  Tomcat started on port 9093 (http) with context path '/'
-15:41:29 INFO  Started ClientesApplication in 15.855 seconds (process running for 17.568)
+01:50:42 INFO  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+01:50:42 INFO  Initialized JPA EntityManagerFactory for persistence unit 'default'
+01:50:43 INFO  Hibernate is in classpath; If applicable, HQL parser will be used.
+01:50:44 INFO  Reading resource: db/changelog/changes/001-crear-tablas.sql
+01:50:45 INFO  Reading from bd_cliente.databasechangelog
+01:50:45 INFO  Reading resource: db/changelog/changes/002-insertar-datos.sql
+01:50:45 INFO  Database is up to date, no changesets to execute
+01:50:45 INFO  Reading from bd_cliente.databasechangelog
+01:50:45 INFO  UPDATE SUMMARY
+01:50:45 INFO  Run:                          0
+01:50:45 INFO  Previously run:               4
+01:50:45 INFO  Filtered out:                 0
+01:50:45 INFO  -------------------------------
+01:50:45 INFO  Total change sets:            4
+01:50:45 INFO  Update summary generated
+01:50:45 INFO  Command execution complete
+01:50:45 WARN  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+01:50:45 DEBUG No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+01:50:45 DEBUG Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, OAuth2ProtectedResourceMetadataFilter, BearerTokenAuthenticationFilter, AuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+01:50:46 INFO  Tomcat started on port 9093 (http) with context path '/'
+01:50:46 INFO  Started ClientesApplication in 7.587 seconds (process running for 8.231)
+01:51:25 INFO  Initializing Spring DispatcherServlet 'dispatcherServlet'
+01:51:25 INFO  Initializing Servlet 'dispatcherServlet'
+01:51:25 INFO  Completed initialization in 6 ms
+01:51:25 DEBUG Securing GET /doc/swagger-ui.html
+01:51:25 DEBUG Set SecurityContextHolder to anonymous SecurityContext
+01:51:25 DEBUG Saved request http://localhost:9093/doc/swagger-ui.html?continue to session
+01:54:00 DEBUG Securing GET /doc/swagger-ui.html
+01:54:00 DEBUG Set SecurityContextHolder to anonymous SecurityContext
+01:54:00 DEBUG Saved request http://localhost:9093/doc/swagger-ui.html?continue to session
+01:54:01 DEBUG Securing GET /doc/swagger-ui.html
+01:54:01 DEBUG Set SecurityContextHolder to anonymous SecurityContext
+01:54:01 DEBUG Saved request http://localhost:9093/doc/swagger-ui.html?continue to session
+01:54:02 DEBUG Securing GET /doc/swagger-ui.html
+01:54:02 DEBUG Set SecurityContextHolder to anonymous SecurityContext
+01:54:02 DEBUG Saved request http://localhost:9093/doc/swagger-ui.html?continue to session
+01:54:03 DEBUG Securing GET /doc/swagger-ui.html
+01:54:03 DEBUG Set SecurityContextHolder to anonymous SecurityContext
+01:54:03 DEBUG Saved request http://localhost:9093/doc/swagger-ui.html?continue to session
+01:54:04 DEBUG Securing GET /doc/swagger-ui.html
+01:54:04 DEBUG Set SecurityContextHolder to anonymous SecurityContext
+01:54:04 DEBUG Saved request http://localhost:9093/doc/swagger-ui.html?continue to session
+02:01:24 INFO  Starting ClientesApplication using Java 25 with PID 35208 (D:\FinalShit\CasoSemestral-DuocFullStack-I\clientes\clientes\target\classes started by Matt in D:\FinalShit\CasoSemestral-DuocFullStack-I\clientes\clientes)
+02:01:24 INFO  No active profile set, falling back to 1 default profile: "default"
+02:01:25 INFO  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+02:01:25 INFO  Finished Spring Data repository scanning in 123 ms. Found 1 JPA repository interface.
+02:01:26 INFO  Tomcat initialized with port 9093 (http)
+02:01:26 INFO  Starting service [Tomcat]
+02:01:26 INFO  Starting Servlet engine: [Apache Tomcat/11.0.21]
+02:01:26 INFO  Root WebApplicationContext: initialization completed in 2010 ms
+02:01:26 INFO  HHH008540: Processing PersistenceUnitInfo [name: default]
+02:01:26 INFO  HHH000001: Hibernate ORM core version 7.2.12.Final
+02:01:27 INFO  No LoadTimeWeaver setup: ignoring JPA class transformer
+02:01:27 INFO  HikariPool-1 - Starting...
+02:01:28 INFO  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@16cb6f51
+02:01:28 INFO  HikariPool-1 - Start completed.
+02:01:28 WARN  HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+02:01:28 INFO  HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/bd_cliente?createDatabaseIfNotExist=true&serverTimezone=America/Santiago]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.4.3
+	Default catalog/schema: bd_cliente/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+02:01:29 INFO  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+02:01:29 INFO  Initialized JPA EntityManagerFactory for persistence unit 'default'
+02:01:29 INFO  Hibernate is in classpath; If applicable, HQL parser will be used.
+02:01:31 INFO  Reading resource: db/changelog/changes/001-crear-tablas.sql
+02:01:31 INFO  Reading from bd_cliente.databasechangelog
+02:01:31 INFO  Reading resource: db/changelog/changes/002-insertar-datos.sql
+02:01:32 INFO  Database is up to date, no changesets to execute
+02:01:32 INFO  Reading from bd_cliente.databasechangelog
+02:01:32 INFO  UPDATE SUMMARY
+02:01:32 INFO  Run:                          0
+02:01:32 INFO  Previously run:               4
+02:01:32 INFO  Filtered out:                 0
+02:01:32 INFO  -------------------------------
+02:01:32 INFO  Total change sets:            4
+02:01:32 INFO  Update summary generated
+02:01:32 INFO  Command execution complete
+02:01:32 WARN  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+02:01:32 DEBUG No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+02:01:32 DEBUG Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, OAuth2ProtectedResourceMetadataFilter, BearerTokenAuthenticationFilter, AuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+02:01:33 INFO  Tomcat started on port 9093 (http) with context path '/'
+02:01:33 INFO  Started ClientesApplication in 9.109 seconds (process running for 9.8)
+02:03:37 INFO  Initializing Spring DispatcherServlet 'dispatcherServlet'
+02:03:37 INFO  Initializing Servlet 'dispatcherServlet'
+02:03:37 INFO  Completed initialization in 0 ms
+02:03:37 DEBUG Securing GET /doc/swagger-ui.html
+02:03:37 DEBUG Secured GET /doc/swagger-ui.html
+02:03:37 DEBUG Set SecurityContextHolder to anonymous SecurityContext
+02:03:37 DEBUG Securing GET /doc/swagger-ui/index.html
+02:03:37 DEBUG Secured GET /doc/swagger-ui/index.html
+02:03:37 DEBUG Set SecurityContextHolder to anonymous SecurityContext
+02:03:37 DEBUG Securing GET /doc/swagger-ui/swagger-ui.css
+02:03:37 DEBUG Securing GET /doc/swagger-ui/index.css
+02:03:37 DEBUG Secured GET /doc/swagger-ui/swagger-ui.css
+02:03:37 DEBUG Secured GET /doc/swagger-ui/index.css
+02:03:37 DEBUG Securing GET /doc/swagger-ui/swagger-ui-standalone-preset.js
+02:03:37 DEBUG Securing GET /doc/swagger-ui/swagger-ui-bundle.js
+02:03:37 DEBUG Secured GET /doc/swagger-ui/swagger-ui-bundle.js
+02:03:37 DEBUG Secured GET /doc/swagger-ui/swagger-ui-standalone-preset.js
+02:03:37 DEBUG Securing GET /doc/swagger-ui/swagger-initializer.js
+02:03:37 DEBUG Secured GET /doc/swagger-ui/swagger-initializer.js
+02:03:37 DEBUG Set SecurityContextHolder to anonymous SecurityContext
+02:03:37 DEBUG Set SecurityContextHolder to anonymous SecurityContext
+02:03:37 DEBUG Set SecurityContextHolder to anonymous SecurityContext
+02:03:37 DEBUG Set SecurityContextHolder to anonymous SecurityContext
+02:03:37 DEBUG Set SecurityContextHolder to anonymous SecurityContext
+02:03:37 DEBUG Securing GET /v3/api-docs/swagger-config
+02:03:37 DEBUG Secured GET /v3/api-docs/swagger-config
+02:03:37 DEBUG Securing GET /doc/swagger-ui/favicon-32x32.png
+02:03:37 DEBUG Secured GET /doc/swagger-ui/favicon-32x32.png
+02:03:37 DEBUG Set SecurityContextHolder to anonymous SecurityContext
+02:03:37 DEBUG Set SecurityContextHolder to anonymous SecurityContext
+02:03:37 DEBUG Securing GET /v3/api-docs
+02:03:37 DEBUG Secured GET /v3/api-docs
+02:03:38 INFO  Init duration for springdoc-openapi is: 243 ms
+02:03:38 DEBUG Set SecurityContextHolder to anonymous SecurityContext
+02:05:43 DEBUG Securing GET /api/clientes/2
+02:05:43 DEBUG Jwt expired at 2026-06-30T05:53:50Z
+02:05:43 DEBUG Failed to authenticate since the JWT was invalid
+02:05:43 DEBUG Authentication failed with provider JwtAuthenticationProvider since An error occurred while attempting to decode the Jwt: Jwt expired at 2026-06-30T05:53:50Z
+02:08:47 DEBUG Securing GET /api/clientes/2
+02:08:47 DEBUG Authenticated token
+02:08:47 DEBUG Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@687099a3, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[FactorGrantedAuthority [authority=FACTOR_BEARER, issuedAt=2026-06-30T06:08:47.192426700Z]]]
+02:08:47 DEBUG Secured GET /api/clientes/2
+02:08:47 INFO  GET /api/clientes/2 - Buscando cliente por ID
+02:08:47 INFO  Buscando cliente con ID: 2
+02:08:47 INFO  Cliente con ID 2 retornado exitosamente
+02:24:20 INFO  Starting ClientesApplication using Java 25 with PID 2616 (D:\FinalShit\CasoSemestral-DuocFullStack-I\clientes\clientes\target\classes started by Matt in D:\FinalShit\CasoSemestral-DuocFullStack-I\clientes\clientes)
+02:24:20 INFO  No active profile set, falling back to 1 default profile: "default"
+02:24:22 INFO  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+02:24:22 INFO  Finished Spring Data repository scanning in 241 ms. Found 1 JPA repository interface.
+02:24:23 INFO  Tomcat initialized with port 9093 (http)
+02:24:23 INFO  Starting service [Tomcat]
+02:24:23 INFO  Starting Servlet engine: [Apache Tomcat/11.0.21]
+02:24:23 INFO  Root WebApplicationContext: initialization completed in 2759 ms
+02:24:23 INFO  HHH008540: Processing PersistenceUnitInfo [name: default]
+02:24:23 INFO  HHH000001: Hibernate ORM core version 7.2.12.Final
+02:24:24 INFO  No LoadTimeWeaver setup: ignoring JPA class transformer
+02:24:24 INFO  HikariPool-1 - Starting...
+02:24:25 INFO  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3fc5d397
+02:24:25 INFO  HikariPool-1 - Start completed.
+02:24:25 WARN  HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+02:24:25 INFO  HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/bd_cliente?createDatabaseIfNotExist=true&serverTimezone=America/Santiago]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.4.3
+	Default catalog/schema: bd_cliente/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+02:24:26 INFO  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+02:24:26 INFO  Initialized JPA EntityManagerFactory for persistence unit 'default'
+02:24:26 INFO  Hibernate is in classpath; If applicable, HQL parser will be used.
+02:24:28 INFO  Reading resource: db/changelog/changes/001-crear-tablas.sql
+02:24:28 INFO  Reading from bd_cliente.databasechangelog
+02:24:28 INFO  Reading resource: db/changelog/changes/002-insertar-datos.sql
+02:24:28 INFO  Database is up to date, no changesets to execute
+02:24:28 INFO  Reading from bd_cliente.databasechangelog
+02:24:28 INFO  UPDATE SUMMARY
+02:24:28 INFO  Run:                          0
+02:24:28 INFO  Previously run:               4
+02:24:28 INFO  Filtered out:                 0
+02:24:28 INFO  -------------------------------
+02:24:28 INFO  Total change sets:            4
+02:24:28 INFO  Update summary generated
+02:24:28 INFO  Command execution complete
+02:24:29 WARN  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+02:24:29 DEBUG No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+02:24:29 DEBUG Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, OAuth2ProtectedResourceMetadataFilter, BearerTokenAuthenticationFilter, AuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+02:24:30 INFO  Tomcat started on port 9093 (http) with context path '/'
+02:24:30 INFO  Started ClientesApplication in 10.302 seconds (process running for 11.086)

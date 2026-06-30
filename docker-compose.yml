@@ -1,0 +1,129 @@
+version: "3.9"
+
+x-common-env: &common-env
+  SPRING_PROFILES_ACTIVE: docker
+  JWT_SECRET: "8d5hg01g8yt91p6tczc5auxkao4u8og9m9e02x7lv64q4ref97ahh2il5sgsfck3h4h94sj9wlardkeh"
+
+services:
+
+  mysql:
+    image: mysql:8.0
+    container_name: bravatta-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ""
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./mysql-init/init.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    networks:
+      - bravatta-net
+
+  auth:
+    build: ./auth
+    container_name: auth
+    ports:
+      - "9096:9096"
+    environment: *common-env
+    depends_on:
+      mysql:
+        condition: service_healthy
+    networks:
+      - bravatta-net
+
+  gateway:
+    build: ./gateway/gateway
+    container_name: gateway
+    ports:
+      - "9090:9090"
+    environment: *common-env
+    depends_on:
+      - auth
+    networks:
+      - bravatta-net
+
+  clientes:
+    build: ./clientes/clientes
+    container_name: clientes
+    ports:
+      - "9093:9093"
+    environment: *common-env
+    depends_on:
+      mysql:
+        condition: service_healthy
+    networks:
+      - bravatta-net
+
+  compra:
+    build: ./compra/compra
+    container_name: compra
+    ports:
+      - "9091:9091"
+    environment: *common-env
+    depends_on:
+      mysql:
+        condition: service_healthy
+    networks:
+      - bravatta-net
+
+  inventario:
+    build: ./inventario/inventario
+    container_name: inventario
+    ports:
+      - "9092:9092"
+    environment: *common-env
+    depends_on:
+      mysql:
+        condition: service_healthy
+    networks:
+      - bravatta-net
+
+  pagos:
+    build: ./pagos/pagos
+    container_name: pagos
+    ports:
+      - "9094:9094"
+    environment: *common-env
+    depends_on:
+      mysql:
+        condition: service_healthy
+    networks:
+      - bravatta-net
+
+  producto:
+    build: ./producto/producto
+    container_name: producto
+    ports:
+      - "9095:9095"
+    environment: *common-env
+    depends_on:
+      mysql:
+        condition: service_healthy
+    networks:
+      - bravatta-net
+
+  recomendaciones:
+    build: ./recomendaciones
+    container_name: recomendaciones
+    ports:
+      - "9098:9098"
+    environment: *common-env
+    depends_on:
+      mysql:
+        condition: service_healthy
+    networks:
+      - bravatta-net
+
+networks:
+  bravatta-net:
+    driver: bridge
+
+volumes:
+  mysql_data:

@@ -1,17 +1,25 @@
 package com.bravatta.compra.controller;
 
+import com.bravatta.compra.assembler.CompraModelAssembler;
 import com.bravatta.compra.dto.CompraDTO;
 import com.bravatta.compra.service.CompraService;
+
 import jakarta.validation.Valid;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.hateoas.CollectionModel;
+import org.springframework.hateoas.EntityModel;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.stream.Collectors;
+
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*;
 
 @RestController
 @RequestMapping("/api/compras")
@@ -20,9 +28,11 @@ public class CompraController {
     private static final Logger log = LoggerFactory.getLogger(CompraController.class);
 
     private final CompraService compraService;
+    private final CompraModelAssembler assembler;
 
-    public CompraController(CompraService compraService) {
+    public CompraController(CompraService compraService, CompraModelAssembler assembler) {
         this.compraService = compraService;
+        this.assembler = assembler;
     }
 
     // POST /api/compras — crear compra
@@ -36,18 +46,27 @@ public class CompraController {
 
     // GET /api/compras — listar todas
     @GetMapping
-    public ResponseEntity<List<CompraDTO>> listarCompras() {
+    public ResponseEntity<CollectionModel<EntityModel<CompraDTO>>> listarCompras() {
         log.info("GET /api/compras — listando todas las compras");
         List<CompraDTO> compras = compraService.listar();
+
+        List<EntityModel<CompraDTO>> comprasModel = compras.stream()
+                .map(assembler::toModel)
+                .collect(Collectors.toList());
+
+        CollectionModel<EntityModel<CompraDTO>> resultado = CollectionModel.of(comprasModel,
+                linkTo(methodOn(CompraController.class).listarCompras()).withSelfRel());
+
         log.info("Se retornaron {} compras.", compras.size());
-        return ResponseEntity.ok(compras);
+        return ResponseEntity.ok(resultado);
     }
 
     // GET /api/compras/{id} — obtener por ID
     @GetMapping("/{id}")
-    public ResponseEntity<CompraDTO> obtenerCompra(@PathVariable Long id) {
+    public ResponseEntity<EntityModel<CompraDTO>> obtenerCompra(@PathVariable Long id) {
         log.info("GET /api/compras/{} — buscando compra", id);
-        return ResponseEntity.ok(compraService.obtenerPorId(id));
+        CompraDTO compra = compraService.obtenerPorId(id);
+        return ResponseEntity.ok(assembler.toModel(compra));
     }
 
     // PUT /api/compras/{id} — actualizar compra
@@ -81,11 +100,20 @@ public class CompraController {
 
     // GET /api/compras/buscar/fechas — filtrar por rango de fechas
     @GetMapping("/buscar/fechas")
-    public ResponseEntity<List<CompraDTO>> buscarPorFechas(
+    public ResponseEntity<CollectionModel<EntityModel<CompraDTO>>> buscarPorFechas(
             @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime inicio,
             @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime fin) {
         log.info("GET /api/compras/buscar/fechas — entre {} y {}", inicio, fin);
-        return ResponseEntity.ok(compraService.buscarPorFechas(inicio, fin));
+        List<CompraDTO> compras = compraService.buscarPorFechas(inicio, fin);
+
+        List<EntityModel<CompraDTO>> comprasModel = compras.stream()
+                .map(assembler::toModel)
+                .collect(Collectors.toList());
+
+        CollectionModel<EntityModel<CompraDTO>> resultado = CollectionModel.of(comprasModel,
+                linkTo(methodOn(CompraController.class).buscarPorFechas(inicio, fin)).withSelfRel());
+
+        return ResponseEntity.ok(resultado);
     }
 
     // GET /api/compras/total-ventas — total acumulado del sistema

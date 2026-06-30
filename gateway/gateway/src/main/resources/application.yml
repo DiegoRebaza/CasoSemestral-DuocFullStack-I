@@ -1,7 +1,6 @@
 server:
   port: 9090
 
-
 spring:
   main:
     web-application-type: reactive
@@ -41,11 +40,20 @@ spring:
           uri: http://localhost:9096
           predicates:
             - Path=/api/auth/**
+          filters:
+            - StripPrefix=1
 
         - id: recomendaciones
           uri: http://localhost:9098
           predicates:
             - Path=/api/recomendaciones/**
+
+logging:
+  file:
+    name: ../../logs/gateway.log
+  pattern:
+    console: "%d{HH:mm:ss} %-5level %msg%n"
+    file: "%d{HH:mm:ss} %-5level %msg%n"
 
 springdoc:
   api-docs:
@@ -53,6 +61,3 @@ springdoc:
   swagger-ui:
     enabled: true
     path: /doc/swagger-ui.html
-
-
-
