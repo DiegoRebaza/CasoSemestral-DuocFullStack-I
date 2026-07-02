@@ -1,7 +1,7 @@
 @echo off
 rem Compila todos los microservicios del Caso Semestral
 
-cd /d D:\FinalShit\CasoSemestral-DuocFullStack-I
+cd ..\CasoSemestral-DuocFullStack-I
 
 cd auth
 call .\mvnw.cmd clean package -DskipTests
