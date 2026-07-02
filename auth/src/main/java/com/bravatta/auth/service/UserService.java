@@ -4,7 +4,6 @@ import com.bravatta.auth.model.User;
 import com.bravatta.auth.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-
 @Service
 @RequiredArgsConstructor
 public class UserService {
@@ -19,7 +18,6 @@ public class UserService {
 
         String hashedInput = hashService.sha1(password);
         if (!hashedInput.equals(user.getPassword())) return null;
-
         return jwtService.generateToken(email);
     }
 
@@ -40,4 +38,6 @@ public class UserService {
 
         return "Usuario creado exitosamente";
     }
+
+
 }
