@@ -38,3 +38,8 @@ spring:
           uri: http://recomendaciones:9098
           predicates:
             - Path=/api/recomendaciones/**
+            
+        - id: posventa
+          uri: http://localhost:9099
+          predicates:
+            - Path=/api/posventa/**

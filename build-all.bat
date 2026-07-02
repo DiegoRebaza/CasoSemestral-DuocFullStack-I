@@ -27,6 +27,9 @@ call .\mvnw.cmd clean package -DskipTests
 cd ..\..\recomendaciones
 call .\mvnw.cmd clean package -DskipTests
 
+cd ..\..\posventa
+call .\mvnw.cmd clean package -DskipTests
+
 echo.
 echo Compilacion finalizada para todos los microservicios.
 pause

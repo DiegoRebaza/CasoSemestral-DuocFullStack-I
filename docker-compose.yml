@@ -121,6 +121,18 @@ services:
     networks:
       - bravatta-net
 
+  posventa:
+    build: ./posventa
+    container_name: posventa
+    ports:
+      - "9099:9099"
+    environment: *common-env
+    depends_on:
+      mysql:
+        condition: service_healthy
+    networks:
+      - bravatta-net
+
 networks:
   bravatta-net:
     driver: bridge
