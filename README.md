@@ -6,10 +6,10 @@ Sistema de gestión y venta de helados desarrollado con arquitectura de microser
 
 ## Integrantes
 
-| Nombre | GitHub |
-|---|---|
+| Nombre |
+|---|
 | Diego Rebaza | 
-| Matias Pavez | — |
+| Matias Pavez |
 
 **Repositorio:** https://github.com/DiegoRebaza/CasoSemestral-DuocFullStack-I
 
@@ -30,18 +30,7 @@ Sistema de gestión y venta de helados desarrollado con arquitectura de microser
    [bd_users] [bd_cliente] [bd_compras][bd_inv] [bd_pagos][bd_prod] [bd_recom.] [bd_posv.]
 ```
 
-### Comunicación entre microservicios
-
-| Origen | Destino(s) | Motivo |
-|---|---|---|
-| `compra` | `clientes`, `producto` | Valida cliente y producto antes de registrar una compra |
-| `inventario` | `producto` | Valida que el producto exista antes de registrar stock |
-| `recomendaciones` | `gateway` | Comunicación vía gateway |
-| `posventa` | `gateway` | Comunicación vía gateway |
-
----
-
-## 📦 Microservicios
+## Microservicios
 
 ### 🔐 auth — Puerto 9096
 Gestión de autenticación de usuarios. Registro, login y generación de tokens JWT.
@@ -216,15 +205,6 @@ Cada microservicio tiene su propia base de datos MySQL.
 
 ---
 
-## ⚙️ Variables de Entorno
-
-| Variable | Descripción | Valor ejemplo |
-|---|---|---|
-| `SPRING_PROFILES_ACTIVE` | Perfil activo | `docker` |
-| `JWT_SECRET` | Clave secreta JWT | `8d5hg01g8yt91p6t...` |
-
----
-
 ## 🐳 Despliegue con Docker
 
 ### Requisitos
@@ -302,143 +282,16 @@ CasoSemestral-DuocFullStack-I/
 │   └── init.sql
 ├── docker-compose.yml
 ├── build-all.bat
+├── iniciar-docker.bat
+├── wachin.jpg
 └── README.md
 ```
 
 ---
 
-## 📎 Anexo — Configuraciones por microservicio
+## 📎 Anexo — Configuracion del gateway
 
-### auth (`application.properties`)
-```properties
-spring.application.name=auth
-server.port=9096
-spring.datasource.url=jdbc:mysql://localhost:3306/bd_users?createDatabaseIfNotExist=true&serverTimezone=America/Santiago
-jwt.secret=8d5hg01g8yt91p6tczc5auxkao4u8og9m9e02x7lv64q4ref97ahh2il5sgsfck3h4h94sj9wlardkeh
-springdoc.api-docs.enabled=true
-springdoc.swagger-ui.enabled=true
-springdoc.swagger-ui.path=/doc/swagger-ui.html
-```
-
-### auth (`application-docker.properties`)
-```properties
-spring.datasource.url=jdbc:mysql://mysql:3306/bd_users?createDatabaseIfNotExist=true&serverTimezone=America/Santiago
-```
-
-### clientes (`application.properties`)
-```properties
-spring.application.name=clientes
-server.port=9093
-spring.datasource.url=jdbc:mysql://localhost:3306/bd_cliente?createDatabaseIfNotExist=true&serverTimezone=America/Santiago
-springdoc.api-docs.enabled=true
-springdoc.swagger-ui.enabled=true
-springdoc.swagger-ui.path=/doc/swagger-ui.html
-```
-
-### clientes (`application-docker.properties`)
-```properties
-spring.datasource.url=jdbc:mysql://mysql:3306/bd_cliente?createDatabaseIfNotExist=true&serverTimezone=America/Santiago
-```
-
-### compra (`application.properties`)
-```properties
-spring.application.name=compra
-server.port=9091
-spring.datasource.url=jdbc:mysql://localhost:3306/bd_compras?createDatabaseIfNotExist=true&serverTimezone=America/Santiago
-gateway.url=http://localhost:9090
-springdoc.api-docs.enabled=true
-springdoc.swagger-ui.enabled=true
-springdoc.swagger-ui.path=/doc/swagger-ui.html
-```
-
-### compra (`application-docker.properties`)
-```properties
-spring.datasource.url=jdbc:mysql://mysql:3306/bd_compras?createDatabaseIfNotExist=true&serverTimezone=America/Santiago
-gateway.url=http://gateway:9090
-```
-
-### inventario (`application.properties`)
-```properties
-spring.application.name=inventario
-server.port=9092
-spring.datasource.url=jdbc:mysql://localhost:3306/bd_inventario?createDatabaseIfNotExist=true&serverTimezone=America/Santiago
-producto.service.url=http://localhost:9090
-springdoc.api-docs.enabled=true
-springdoc.swagger-ui.enabled=true
-springdoc.swagger-ui.path=/doc/swagger-ui.html
-```
-
-### inventario (`application-docker.properties`)
-```properties
-spring.datasource.url=jdbc:mysql://mysql:3306/bd_inventario?createDatabaseIfNotExist=true&serverTimezone=America/Santiago
-producto.service.url=http://producto:9095
-```
-
-### pagos (`application.properties`)
-```properties
-spring.application.name=pagos
-server.port=9094
-spring.datasource.url=jdbc:mysql://localhost:3306/bd_pagos?createDatabaseIfNotExist=true&serverTimezone=America/Santiago
-springdoc.api-docs.enabled=true
-springdoc.swagger-ui.enabled=true
-springdoc.swagger-ui.path=/doc/swagger-ui.html
-```
-
-### pagos (`application-docker.properties`)
-```properties
-spring.datasource.url=jdbc:mysql://mysql:3306/bd_pagos?createDatabaseIfNotExist=true&serverTimezone=America/Santiago
-```
-
-### producto (`application.properties`)
-```properties
-spring.application.name=producto
-server.port=9095
-spring.datasource.url=jdbc:mysql://localhost:3306/bd_producto?createDatabaseIfNotExist=true&serverTimezone=America/Santiago
-springdoc.api-docs.enabled=true
-springdoc.swagger-ui.enabled=true
-springdoc.swagger-ui.path=/doc/swagger-ui.html
-```
-
-### producto (`application-docker.properties`)
-```properties
-spring.datasource.url=jdbc:mysql://mysql:3306/bd_producto?createDatabaseIfNotExist=true&serverTimezone=America/Santiago
-```
-
-### recomendaciones (`application.properties`)
-```properties
-spring.application.name=recomendaciones
-server.port=9098
-spring.datasource.url=jdbc:mysql://localhost:3306/bd_recomendaciones?createDatabaseIfNotExist=true&serverTimezone=America/Santiago
-gateway.url=http://localhost:9090
-springdoc.api-docs.enabled=true
-springdoc.swagger-ui.enabled=true
-springdoc.swagger-ui.path=/doc/swagger-ui.html
-```
-
-### recomendaciones (`application-docker.properties`)
-```properties
-spring.datasource.url=jdbc:mysql://mysql:3306/bd_recomendaciones?createDatabaseIfNotExist=true&serverTimezone=America/Santiago
-gateway.url=http://gateway:9090
-```
-
-### posventa (`application.properties`)
-```properties
-spring.application.name=posventa
-server.port=9099
-spring.datasource.url=jdbc:mysql://localhost:3306/bd_posventa?createDatabaseIfNotExist=true&serverTimezone=America/Santiago
-gateway.url=http://localhost:9090
-springdoc.api-docs.enabled=true
-springdoc.swagger-ui.enabled=true
-springdoc.swagger-ui.path=/doc/swagger-ui.html
-```
-
-### posventa (`application-docker.properties`)
-```properties
-spring.datasource.url=jdbc:mysql://mysql:3306/bd_posventa?createDatabaseIfNotExist=true&serverTimezone=America/Santiago
-gateway.url=http://gateway:9090
-```
-
-### gateway (`application.yml`)
+#### gateway (`application.yml`)
 ```yaml
 server:
   port: 9090
