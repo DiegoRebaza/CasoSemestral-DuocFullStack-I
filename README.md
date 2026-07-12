@@ -1,4 +1,4 @@
-# 🍦 Tienda de Helados Bravatta
+# 🍦 Tienda de Helados Bravatta 🍦
 
 Sistema de gestión y venta de helados desarrollado con arquitectura de microservicios usando Spring Boot.
 
@@ -20,31 +20,31 @@ Sistema de gestión y venta de helados desarrollado con arquitectura de microser
 ```
 [Frontend - HTML/CSS/JS]  ←→          [BFF]
                                         ↓
-                              [API Gateway :9090]
+                              [API Gateway :8080]
                                         ↓
-        ┌──────────┬──────────┬─────────┼─────────┬──────────┬──────────┬──────────┬──────────┐
+        ┌──────────┬──────────┬─────────┼─────────┬──────────┬──────────┬──────────┬──────────┬─────────────┐
+        ↓          ↓          ↓         ↓         ↓          ↓          ↓          ↓          ↓             ↓
+     [auth]   [clientes]  [compra] [inventario] [pagos] [producto] [recomend.] [posventa]  [envios]   [notificacion]
+     :9080     :9081       :9082     :9083       :9084    :9085      :9086       :9087      :9088        :9089
         ↓          ↓          ↓         ↓         ↓          ↓          ↓          ↓          ↓
-     [auth]   [clientes]  [compra] [inventario] [pagos] [producto] [recomend.] [posventa]  [gateway]
-     :9096     :9093       :9091     :9092       :9094    :9095      :9098       :9099
-        ↓          ↓          ↓         ↓         ↓          ↓          ↓          ↓
-   [bd_users] [bd_cliente] [bd_compras][bd_inv] [bd_pagos][bd_prod] [bd_recom.] [bd_posv.]
+   [bd_users] [bd_cliente] [bd_compras][bd_inv] [bd_pagos][bd_prod] [bd_recom.] [bd_posv.] [bd_envios] [bd_notifi.]
 ```
 
 ## Microservicios
 
-### 🔐 auth — Puerto 9096
+### 🔐 auth — Puerto 9080
 Gestión de autenticación de usuarios. Registro, login y generación de tokens JWT.
 
 **Base de datos:** `bd_users`
 
 | Método | Ruta | Descripción |
 |---|---|---|
-| POST | `/api/auth/login` | Iniciar sesión, retorna JWT |
-| POST | `/api/auth/register` | Registrar nuevo usuario |
+| POST | `/auth/login` | Iniciar sesión, retorna JWT |
+| POST | `/auth/register` | Registrar nuevo usuario |
 
 ---
 
-### 👤 clientes — Puerto 9093
+### 👤 clientes — Puerto 9081
 Gestión de clientes y sus direcciones.
 
 **Base de datos:** `bd_cliente`
@@ -60,7 +60,7 @@ Gestión de clientes y sus direcciones.
 
 ---
 
-### 🛒 compra — Puerto 9091
+### 🛒 compra — Puerto 9082
 Gestión de compras y sus detalles. Se comunica con `clientes` y `producto` para validaciones.
 
 **Base de datos:** `bd_compras`
@@ -78,7 +78,7 @@ Gestión de compras y sus detalles. Se comunica con `clientes` y `producto` para
 
 ---
 
-### 📦 inventario — Puerto 9092
+### 📦 inventario — Puerto 9083
 Control de stock de productos. Se comunica con `producto` para validar existencia.
 
 **Base de datos:** `bd_inventario`
@@ -95,7 +95,7 @@ Control de stock de productos. Se comunica con `producto` para validar existenci
 
 ---
 
-### 💳 pagos — Puerto 9094
+### 💳 pagos — Puerto 9084
 Gestión de transacciones de pago.
 
 **Base de datos:** `bd_pagos`
@@ -110,7 +110,7 @@ Gestión de transacciones de pago.
 
 ---
 
-### 🍦 producto — Puerto 9095
+### 🍦 producto — Puerto 9085
 Catálogo de productos (helados).
 
 **Base de datos:** `bd_producto`
@@ -126,7 +126,7 @@ Catálogo de productos (helados).
 
 ---
 
-### ⭐ recomendaciones — Puerto 9098
+### ⭐ recomendaciones — Puerto 9086
 Permite a los usuarios crear y consultar recomendaciones de productos.
 
 **Base de datos:** `bd_recomendaciones`
@@ -141,7 +141,7 @@ Permite a los usuarios crear y consultar recomendaciones de productos.
 
 ---
 
-### 🛠️ posventa — Puerto 9099
+### 🛠️ posventa — Puerto 9087
 Sistema de reportes de fallas o problemas con pedidos.
 
 **Base de datos:** `bd_posventa`
@@ -156,20 +156,36 @@ Sistema de reportes de fallas o problemas con pedidos.
 
 ---
 
-## 🌐 API Gateway — Puerto 9090
+### 🛵 envios — Puerto 9088
+Sistema de lista de envios
+
+**Base de datos:** `bd_envios`
+
+| Método | Ruta | Descripción |
+|---|---|---|
+| GET | `/api/envios` | Listar envios |
+| GET | `/api/envios/{id}` | Obtener envio por ID |
+| POST | `/api/envios` | Crear envio |
+| PUT | `/api/envios/{id}` | Actualizar envios |
+| DELETE | `/api/envios/{id}` | Eliminar envio |
+
+---
+
+## 🌐 API Gateway — Puerto 8080
 
 Punto de entrada único para todos los microservicios.
 
 | Ruta | Microservicio destino |
 |---|---|
-| `/api/auth/**` | auth:9096 |
-| `/api/clientes/**` | clientes:9093 |
-| `/api/compras/**` | compra:9091 |
-| `/api/inventario/**` | inventario:9092 |
-| `/api/pagos/**` | pagos:9094 |
-| `/api/producto/**` | producto:9095 |
-| `/api/recomendaciones/**` | recomendaciones:9098 |
-| `/api/posventa/**` | posventa:9099 |
+| `/auth/**` | auth:9080 |
+| `/api/clientes/**` | clientes:9081 |
+| `/api/compras/**` | compra:9082 |
+| `/api/inventario/**` | inventario:9083 |
+| `/api/pagos/**` | pagos:9084 |
+| `/api/producto/**` | producto:9085 |
+| `/api/recomendaciones/**` | recomendaciones:9086 |
+| `/api/posventa/**` | posventa:9087 |
+| `/api/envios/**` | envios:9088 |
 
 ---
 
@@ -177,14 +193,16 @@ Punto de entrada único para todos los microservicios.
 
 | Microservicio | URL |
 |---|---|
-| auth | http://localhost:9096/doc/swagger-ui.html |
-| clientes | http://localhost:9093/doc/swagger-ui.html |
-| compra | http://localhost:9091/doc/swagger-ui.html |
-| inventario | http://localhost:9092/doc/swagger-ui.html |
-| pagos | http://localhost:9094/doc/swagger-ui.html |
-| producto | http://localhost:9095/doc/swagger-ui.html |
-| recomendaciones | http://localhost:9098/doc/swagger-ui.html |
-| posventa | http://localhost:9099/doc/swagger-ui.html |
+| auth | http://localhost:9080/doc/swagger-ui.html |
+| clientes | http://localhost:9081/doc/swagger-ui.html |
+| compra | http://localhost:9082/doc/swagger-ui.html |
+| inventario | http://localhost:9083/doc/swagger-ui.html |
+| pagos | http://localhost:9084/doc/swagger-ui.html |
+| producto | http://localhost:9085/doc/swagger-ui.html |
+| recomendaciones | http://localhost:9086/doc/swagger-ui.html |
+| posventa | http://localhost:9087/doc/swagger-ui.html |
+| envios | http://localhost:9088/doc/swagger-ui.html |
+
 
 ---
 
@@ -202,6 +220,7 @@ Cada microservicio tiene su propia base de datos MySQL.
 | producto | bd_producto |
 | recomendaciones | bd_recomendaciones |
 | posventa | bd_posventa |
+| envios | bd_envios |
 
 ---
 
@@ -285,94 +304,4 @@ CasoSemestral-DuocFullStack-I/
 ├── iniciar-docker.bat
 ├── wachin.jpg
 └── README.md
-```
-
----
-
-## 📎 Anexo — Configuracion del gateway
-
-#### gateway (`application.yml`)
-```yaml
-server:
-  port: 9090
-spring:
-  application:
-    name: gateway
-  main:
-    web-application-type: reactive
-  cloud:
-    gateway:
-      routes:
-        - id: auth
-          uri: http://localhost:9096
-          predicates:
-            - Path=/api/auth/**
-        - id: clientes
-          uri: http://localhost:9093
-          predicates:
-            - Path=/api/clientes/**
-        - id: compra
-          uri: http://localhost:9091
-          predicates:
-            - Path=/api/compras/**
-        - id: inventario
-          uri: http://localhost:9092
-          predicates:
-            - Path=/api/inventario/**
-        - id: pagos
-          uri: http://localhost:9094
-          predicates:
-            - Path=/api/pagos/**
-        - id: producto
-          uri: http://localhost:9095
-          predicates:
-            - Path=/api/producto/**
-        - id: recomendaciones
-          uri: http://localhost:9098
-          predicates:
-            - Path=/api/recomendaciones/**
-        - id: posventa
-          uri: http://localhost:9099
-          predicates:
-            - Path=/api/posventa/**
-```
-
-### gateway (`application-docker.yml`)
-```yaml
-spring:
-  cloud:
-    gateway:
-      routes:
-        - id: auth
-          uri: http://auth:9096
-          predicates:
-            - Path=/api/auth/**
-        - id: clientes
-          uri: http://clientes:9093
-          predicates:
-            - Path=/api/clientes/**
-        - id: compra
-          uri: http://compra:9091
-          predicates:
-            - Path=/api/compras/**
-        - id: inventario
-          uri: http://inventario:9092
-          predicates:
-            - Path=/api/inventario/**
-        - id: pagos
-          uri: http://pagos:9094
-          predicates:
-            - Path=/api/pagos/**
-        - id: producto
-          uri: http://producto:9095
-          predicates:
-            - Path=/api/producto/**
-        - id: recomendaciones
-          uri: http://recomendaciones:9098
-          predicates:
-            - Path=/api/recomendaciones/**
-        - id: posventa
-          uri: http://posventa:9099
-          predicates:
-            - Path=/api/posventa/**
 ```

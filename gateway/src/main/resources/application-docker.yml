@@ -1,0 +1,55 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: auth
+          uri: http://localhost:9080
+          predicates:
+            - Path=/auth/**
+          filters:
+            - StripPrefix=1
+
+        - id: clientes
+          uri: http://localhost:9081
+          predicates:
+            - Path=/api/clientes/**
+
+        - id: compra
+          uri: http://localhost:9082
+          predicates:
+            - Path=/api/compras/**
+
+        - id: inventario
+          uri: http://localhost:9083
+          predicates:
+            - Path=/api/inventario/**
+
+        - id: pagos
+          uri: http://localhost:9084
+          predicates:
+            - Path=/api/pagos/**
+
+        - id: producto
+          uri: http://localhost:9085
+          predicates:
+            - Path=/api/producto/**
+
+        - id: recomendaciones
+          uri: http://localhost:9086
+          predicates:
+            - Path=/api/recomendaciones/**
+
+        - id: posventa
+          uri: http://localhost:9087
+          predicates:
+            - Path=/api/posventa/**
+
+        - id: envios
+          uri: http://localhost:9088
+          predicates:
+            - Path=/api/envios/**
+
+        - id: notificacion
+          uri: http://localhost:9089
+          predicates:
+            - Path=/api/notificacion/**
