@@ -31,7 +31,8 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @ExtendWith(MockitoExtension.class)
-@DisplayName("FidelizacionController — Pruebas Unitarias")
+
+@DisplayName("FidelizacionController — PruebaUnitaria")
 class FidelizacionControllerTest {
 
     private MockMvc mockMvc;

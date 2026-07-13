@@ -1,6 +1,6 @@
 package com.bravatta.compra.assembler;
 
-import com.bravatta.compra.controller.CompraController;
+import com.bravatta.compra.controller.CompraControllerV2;
 import com.bravatta.compra.dto.CompraDTO;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.server.RepresentationModelAssembler;
@@ -14,7 +14,7 @@ public class CompraModelAssembler implements RepresentationModelAssembler<Compra
     @Override
     public EntityModel<CompraDTO> toModel(CompraDTO compra) {
         return EntityModel.of(compra,
-                linkTo(methodOn(CompraController.class).obtenerCompra(compra.getId_compra())).withSelfRel(),
-                linkTo(methodOn(CompraController.class).listarCompras()).withRel("compras"));
+                linkTo(methodOn(CompraControllerV2.class).obtenerCompra(compra.getId_compra())).withSelfRel(),
+                linkTo(methodOn(CompraControllerV2.class).listarCompras()).withRel("compras"));
     }
 }

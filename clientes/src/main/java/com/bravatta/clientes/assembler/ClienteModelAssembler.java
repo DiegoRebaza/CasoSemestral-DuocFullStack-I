@@ -1,6 +1,6 @@
 package com.bravatta.clientes.assembler;
 
-import com.bravatta.clientes.controller.ClientesController;
+import com.bravatta.clientes.controller.ClientesControllerV2; 
 import com.bravatta.clientes.dto.ClienteDTO;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.server.RepresentationModelAssembler;
@@ -14,7 +14,7 @@ public class ClienteModelAssembler implements RepresentationModelAssembler<Clien
     @Override
     public EntityModel<ClienteDTO> toModel(ClienteDTO cliente) {
         return EntityModel.of(cliente,
-                linkTo(methodOn(ClientesController.class).obtenerCliente(cliente.getId_cliente())).withSelfRel(),
-                linkTo(methodOn(ClientesController.class).listarClientes()).withRel("clientes"));
+                linkTo(methodOn(ClientesControllerV2.class).obtenerCliente(cliente.getId_cliente())).withSelfRel(),
+                linkTo(methodOn(ClientesControllerV2.class).listarClientes()).withRel("clientes"));
     }
 }

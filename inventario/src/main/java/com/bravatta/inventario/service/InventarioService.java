@@ -1,6 +1,6 @@
 package com.bravatta.inventario.service;
 
-import com.bravatta.inventario.client.ProductoClientService;
+import com.bravatta.inventario.client.ProductoClient;
 import com.bravatta.inventario.dto.InventarioDTO;
 import com.bravatta.inventario.exception.BadRequestException;
 import com.bravatta.inventario.exception.ResourceNotFoundException;
@@ -20,9 +20,9 @@ public class InventarioService {
     private static final Logger log = LoggerFactory.getLogger(InventarioService.class);
 
     private final InventarioRepository inventarioRepository;
-    private final ProductoClientService productoClientService;
+    private final ProductoClient productoClientService;
 
-    public InventarioService(InventarioRepository inventarioRepository, ProductoClientService productoClientService) {
+    public InventarioService(InventarioRepository inventarioRepository, ProductoClient productoClientService) {
         this.inventarioRepository = inventarioRepository;
         this.productoClientService = productoClientService;
     }

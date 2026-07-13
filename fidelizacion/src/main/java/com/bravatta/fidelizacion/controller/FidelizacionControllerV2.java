@@ -16,7 +16,7 @@ import java.util.stream.Collectors;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*;
 
 @RestController
-@RequestMapping("/api/v2/fidelizacion")
+@RequestMapping("/api/fidelizacion/v2")
 public class FidelizacionControllerV2 {
 
     private static final Logger log = LoggerFactory.getLogger(FidelizacionControllerV2.class);

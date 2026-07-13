@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1/fidelizacion")
+@RequestMapping("/api/fidelizacion/v1")
 public class FidelizacionController {
 
     private static final Logger log = LoggerFactory.getLogger(FidelizacionController.class);
