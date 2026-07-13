@@ -1,4 +1,4 @@
 databaseChangeLog:
   - includeAll:
-      path: db/changelog/changes/
-      relativeToChangelogFile: false
+      path: changes/
+      relativeToChangelogFile: true
