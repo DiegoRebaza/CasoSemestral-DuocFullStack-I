@@ -22,12 +22,12 @@ Sistema de gestión y venta de helados desarrollado con arquitectura de microser
                                         ↓
                               [API Gateway :8080]
                                         ↓
-        ┌──────────┬──────────┬─────────┼─────────┬──────────┬──────────┬──────────┬──────────┬─────────────┐
-        ↓          ↓          ↓         ↓         ↓          ↓          ↓          ↓          ↓             ↓
-     [auth]   [clientes]  [compra] [inventario] [pagos] [producto] [recomend.] [posventa]  [envios]   [notificacion]
-     :9080     :9081       :9082     :9083       :9084    :9085      :9086       :9087      :9088        :9089
-        ↓          ↓          ↓         ↓         ↓          ↓          ↓          ↓          ↓
-   [bd_users] [bd_cliente] [bd_compras][bd_inv] [bd_pagos][bd_prod] [bd_recom.] [bd_posv.] [bd_envios] [bd_notifi.]
+        ┌──────────┬──────────┬─────────┼─────────┬──────────┬──────────┬──────────┬──────────┬─────────────┬──────────────┐
+        ↓          ↓          ↓         ↓         ↓          ↓          ↓          ↓          ↓             ↓              ↓
+     [auth]   [clientes]  [compra] [inventario] [pagos] [producto] [recomend.] [posventa]  [envios]   [notificacion] [fidelizacion]
+     :9080     :9081       :9082     :9083       :9084    :9085      :9086       :9087      :9088         :9089          :9090
+        ↓          ↓          ↓         ↓         ↓          ↓          ↓          ↓          ↓             ↓              ↓
+   [bd_users] [bd_cliente] [bd_compras][bd_inv] [bd_pagos][bd_prod] [bd_recom.] [bd_posv.] [bd_envios] [bd_notifi.]   [bd_fideli.]
 ```
 
 ## Microservicios
@@ -186,6 +186,8 @@ Punto de entrada único para todos los microservicios.
 | `/api/recomendaciones/**` | recomendaciones:9086 |
 | `/api/posventa/**` | posventa:9087 |
 | `/api/envios/**` | envios:9088 |
+| `/api/notificaciones/**` | notificaciones:9089 |
+| `/api/fidelizacion/**` | fidelizacion:9090 |
 
 ---
 
@@ -202,7 +204,8 @@ Punto de entrada único para todos los microservicios.
 | recomendaciones | http://localhost:9086/doc/swagger-ui.html |
 | posventa | http://localhost:9087/doc/swagger-ui.html |
 | envios | http://localhost:9088/doc/swagger-ui.html |
-
+| notificaciones | http://localhost:9089/doc/swagger-ui.html |
+| fidelizacion | http://localhost:9090/doc/swagger-ui.html |
 
 ---
 
@@ -221,6 +224,8 @@ Cada microservicio tiene su propia base de datos MySQL.
 | recomendaciones | bd_recomendaciones |
 | posventa | bd_posventa |
 | envios | bd_envios |
+| notificaciones | bd_notificaciones |
+| fidelizacion | bd_fidelizacion |
 
 ---
 
@@ -262,19 +267,6 @@ docker-compose down
 - Java 17
 - Maven
 - MySQL corriendo en `localhost:3306`
-
-### Orden de arranque recomendado
-
-1. MySQL
-2. `auth`
-3. `gateway`
-4. `producto`
-5. `clientes`
-6. `inventario`
-7. `pagos`
-8. `compra`
-9. `recomendaciones`
-10. `posventa`
 
 ### Ejecutar un microservicio
 ```bash
