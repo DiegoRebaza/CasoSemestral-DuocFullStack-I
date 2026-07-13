@@ -9,34 +9,34 @@ call .\mvnw.cmd clean package -DskipTests
 cd ..\clientes
 call .\mvnw.cmd clean package -DskipTests
 
-cd ..\..\compra
+cd ..\compra
 call .\mvnw.cmd clean package -DskipTests
 
-cd ..\..\gateway
+cd ..\gateway
 call .\mvnw.cmd clean package -DskipTests
 
-cd ..\..\inventario
+cd ..\inventario
 call .\mvnw.cmd clean package -DskipTests
 
-cd ..\..\pagos
+cd ..\pagos
 call .\mvnw.cmd clean package -DskipTests
 
-cd ..\..\producto
+cd ..\producto
 call .\mvnw.cmd clean package -DskipTests
 
-cd ..\..\recomendaciones
+cd ..\recomendaciones
 call .\mvnw.cmd clean package -DskipTests
 
-cd ..\..\posventa
+cd ..\posventa
 call .\mvnw.cmd clean package -DskipTests
 
-cd ..\..\envios
+cd ..\envios
 call .\mvnw.cmd clean package -DskipTests
 
-cd ..\..\notificacion
+cd ..\notificacion
 call .\mvnw.cmd clean package -DskipTests
 
-cd ..\..\fidelizacion
+cd ..\fidelizacion
 call .\mvnw.cmd clean package -DskipTests
 
 echo.
