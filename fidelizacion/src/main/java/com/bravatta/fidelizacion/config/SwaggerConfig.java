@@ -1,4 +1,4 @@
-package com.example.posventa.config;
+package com.bravatta.fidelizacion.config;
 
 import io.swagger.v3.oas.models.Components;
 import io.swagger.v3.oas.models.OpenAPI;
@@ -17,9 +17,9 @@ public class SwaggerConfig {
 
         return new OpenAPI()
                 .info(new Info()
-                        .title("API 2026 - Microservicio de Posventa")
+                        .title("API 2026 - Microservicio de Fidelizacion")
                         .version("1.0")
-                        .description("Documentación automatizada de endpoints de posventa"))
+                        .description("Documentacion automatizada de endpoints de fidelizacion"))
                 .addSecurityItem(new SecurityRequirement().addList(securitySchemeName))
                 .components(new Components()
                         .addSecuritySchemes(securitySchemeName,

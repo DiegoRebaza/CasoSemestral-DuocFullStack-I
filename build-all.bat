@@ -6,28 +6,37 @@ cd ..\CasoSemestral-DuocFullStack-I
 cd auth
 call .\mvnw.cmd clean package -DskipTests
 
-cd ..\clientes\clientes
+cd ..\clientes
 call .\mvnw.cmd clean package -DskipTests
 
-cd ..\..\compra\compra
+cd ..\..\compra
 call .\mvnw.cmd clean package -DskipTests
 
-cd ..\..\gateway\gateway
+cd ..\..\gateway
 call .\mvnw.cmd clean package -DskipTests
 
-cd ..\..\inventario\inventario
+cd ..\..\inventario
 call .\mvnw.cmd clean package -DskipTests
 
-cd ..\..\pagos\pagos
+cd ..\..\pagos
 call .\mvnw.cmd clean package -DskipTests
 
-cd ..\..\producto\producto
+cd ..\..\producto
 call .\mvnw.cmd clean package -DskipTests
 
 cd ..\..\recomendaciones
 call .\mvnw.cmd clean package -DskipTests
 
 cd ..\..\posventa
+call .\mvnw.cmd clean package -DskipTests
+
+cd ..\..\envios
+call .\mvnw.cmd clean package -DskipTests
+
+cd ..\..\notificacion
+call .\mvnw.cmd clean package -DskipTests
+
+cd ..\..\fidelizacion
 call .\mvnw.cmd clean package -DskipTests
 
 echo.
