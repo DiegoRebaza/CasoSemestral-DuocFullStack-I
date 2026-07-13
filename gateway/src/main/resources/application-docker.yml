@@ -53,3 +53,8 @@ spring:
           uri: http://localhost:9089
           predicates:
             - Path=/api/notificacion/**
+
+        - id: fidelizacion
+          uri: http://localhost:9090
+          predicates:
+            - Path=/api/fidelizacion/**

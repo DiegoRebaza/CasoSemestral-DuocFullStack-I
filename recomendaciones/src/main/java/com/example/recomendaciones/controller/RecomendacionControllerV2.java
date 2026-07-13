@@ -5,7 +5,6 @@ import com.example.recomendaciones.model.Recomendacion;
 import com.example.recomendaciones.service.RecomendacionService;
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.EntityModel;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

@@ -25,7 +25,7 @@ public class DataLoader implements CommandLineRunner {
             log.info("DataLoader: Base de datos vacía. Generando registros semilla con DataFaker...");
             Faker faker = new Faker();
             
-            for (int i = 0; i < 5; i++) {
+            for (int i = 0; i < 10; i++) {
                 Recomendacion rec = Recomendacion.builder()
                         .idCliente(faker.number().numberBetween(1L, 100L))
                         .idProducto(faker.number().numberBetween(1L, 500L))
@@ -36,7 +36,7 @@ public class DataLoader implements CommandLineRunner {
                         .build();
                 repository.save(rec);
             }
-            log.info("DataLoader: ¡5 recomendaciones de prueba insertadas con éxito!");
+            log.info("DataLoader: ¡10 recomendaciones de prueba insertadas con éxito!");
         }
     }
 }

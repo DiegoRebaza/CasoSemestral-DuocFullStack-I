@@ -30,7 +30,7 @@ services:
     build: ./auth
     container_name: auth
     ports:
-      - "9096:9096"
+      - "9080:9080"
     environment: *common-env
     depends_on:
       mysql:
@@ -39,10 +39,10 @@ services:
       - bravatta-net
 
   gateway:
-    build: ./gateway/gateway
+    build: ./gateway
     container_name: gateway
     ports:
-      - "9090:9090"
+      - "8080:8080"
     environment: *common-env
     depends_on:
       - auth
@@ -50,10 +50,10 @@ services:
       - bravatta-net
 
   clientes:
-    build: ./clientes/clientes
+    build: ./clientes
     container_name: clientes
     ports:
-      - "9093:9093"
+      - "9081:9081"
     environment: *common-env
     depends_on:
       mysql:
@@ -62,10 +62,10 @@ services:
       - bravatta-net
 
   compra:
-    build: ./compra/compra
+    build: ./compra
     container_name: compra
     ports:
-      - "9091:9091"
+      - "9082:9082"
     environment: *common-env
     depends_on:
       mysql:
@@ -74,10 +74,10 @@ services:
       - bravatta-net
 
   inventario:
-    build: ./inventario/inventario
+    build: ./inventario
     container_name: inventario
     ports:
-      - "9092:9092"
+      - "9083:9083"
     environment: *common-env
     depends_on:
       mysql:
@@ -86,10 +86,10 @@ services:
       - bravatta-net
 
   pagos:
-    build: ./pagos/pagos
+    build: ./pagos
     container_name: pagos
     ports:
-      - "9094:9094"
+      - "9084:9084"
     environment: *common-env
     depends_on:
       mysql:
@@ -98,10 +98,10 @@ services:
       - bravatta-net
 
   producto:
-    build: ./producto/producto
+    build: ./producto
     container_name: producto
     ports:
-      - "9095:9095"
+      - "9085:9085"
     environment: *common-env
     depends_on:
       mysql:
@@ -113,7 +113,7 @@ services:
     build: ./recomendaciones
     container_name: recomendaciones
     ports:
-      - "9098:9098"
+      - "9086:9086"
     environment: *common-env
     depends_on:
       mysql:
@@ -125,7 +125,43 @@ services:
     build: ./posventa
     container_name: posventa
     ports:
-      - "9099:9099"
+      - "9087:9087"
+    environment: *common-env
+    depends_on:
+      mysql:
+        condition: service_healthy
+    networks:
+      - bravatta-net
+
+  envios:
+    build: ./envios
+    container_name: envios
+    ports:
+      - "9088:9088"
+    environment: *common-env
+    depends_on:
+      mysql:
+        condition: service_healthy
+    networks:
+      - bravatta-net
+
+  notificacion:
+    build: ./notificacion
+    container_name: notificacion
+    ports:
+      - "9089:9089"
+    environment: *common-env
+    depends_on:
+      mysql:
+        condition: service_healthy
+    networks:
+      - bravatta-net
+
+  puntos:
+    build: ./fidelizacion
+    container_name: fidelizacion
+    ports:
+      - "9090:9090"
     environment: *common-env
     depends_on:
       mysql:

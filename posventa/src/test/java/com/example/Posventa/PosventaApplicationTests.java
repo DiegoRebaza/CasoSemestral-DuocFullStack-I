@@ -1,4 +1,4 @@
-package com.example.recomendaciones;
+package com.example.Posventa;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

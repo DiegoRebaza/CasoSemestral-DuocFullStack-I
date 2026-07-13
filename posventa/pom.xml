@@ -13,8 +13,8 @@
     <groupId>com.example</groupId>
     <artifactId>posventa</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name></name>
-    <description></description>
+    <name>posventa</name>
+    <description>Microservicio de Posventa de Bravatta</description>
 
     <properties>
         <java.version>17</java.version>
@@ -79,11 +79,6 @@
             <optional>true</optional>
         </dependency>
 
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
     </dependencies>
 
     <dependencyManagement>
@@ -122,21 +117,6 @@
                         <phase>compile</phase>
                         <goals>
                             <goal>compile</goal>
-                        </goals>
-                        <configuration>
-                            <annotationProcessorPaths>
-                                <path>
-                                    <groupId>org.projectlombok</groupId>
-                                    <artifactId>lombok</artifactId>
-                                </path>
-                            </annotationProcessorPaths>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>default-testCompile</id>
-                        <phase>test-compile</phase>
-                        <goals>
-                            <goal>testCompile</goal>
                         </goals>
                         <configuration>
                             <annotationProcessorPaths>
