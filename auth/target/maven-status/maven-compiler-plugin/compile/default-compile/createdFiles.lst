@@ -1,0 +1,8 @@
+com\bravatta\auth\service\UserService.class
+com\bravatta\auth\controller\AuthController.class
+com\bravatta\auth\model\User.class
+com\bravatta\auth\service\HashService.class
+com\bravatta\auth\config\LiquibaseConfig.class
+com\bravatta\auth\service\JwtService.class
+com\bravatta\auth\AuthApplication.class
+com\bravatta\auth\repository\UserRepository.class

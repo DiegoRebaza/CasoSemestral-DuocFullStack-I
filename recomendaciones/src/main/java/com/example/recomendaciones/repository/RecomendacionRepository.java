@@ -1,11 +1,10 @@
 package com.example.recomendaciones.repository;
 
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
-
 import com.example.recomendaciones.model.Recomendacion;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-@Repository
+import java.util.List;
+
 public interface RecomendacionRepository extends JpaRepository<Recomendacion, Long> {
-
+    List<Recomendacion> findByIdCliente(Long idCliente);
 }

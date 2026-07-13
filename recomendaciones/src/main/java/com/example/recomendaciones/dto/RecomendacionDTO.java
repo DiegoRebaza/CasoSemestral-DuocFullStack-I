@@ -48,6 +48,7 @@ public class RecomendacionDTO {
         .idProducto(this.id_producto)
         .idCompra(this.id_compra)
         .opinionUsuario(this.opnion_usuario)
+        .puntuacionAfinidad(this.puntacion)
         .build();
     }
 
@@ -62,8 +63,8 @@ public class RecomendacionDTO {
         .id_compra(c.getIdCompra())
         .id_producto(c.getIdProducto())
         .opnion_usuario(c.getOpinionUsuario())
+        .puntacion(c.getPuntuacionAfinidad())
         .fecha_calculo(c.getFechaCalculo())
         .build();
     }
 }
-

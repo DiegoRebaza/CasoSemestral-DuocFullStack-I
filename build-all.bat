@@ -1,42 +1,36 @@
 @echo off
 rem Compila todos los microservicios del Caso Semestral
 
-cd ..\CasoSemestral-DuocFullStack-I
+D:\FinalShitAntesPostVenta\CasoSemestral-DuocFullStack-I
 
 cd auth
 call .\mvnw.cmd clean package -DskipTests
 
-cd ..\clientes
+cd ..\clientes\clientes
 call .\mvnw.cmd clean package -DskipTests
 
-cd ..\..\compra
+cd ..\..\compra\compra
 call .\mvnw.cmd clean package -DskipTests
 
-cd ..\..\gateway
+cd ..\..\gateway\gateway
 call .\mvnw.cmd clean package -DskipTests
 
-cd ..\..\inventario
+cd ..\..\inventario\inventario
 call .\mvnw.cmd clean package -DskipTests
 
-cd ..\..\pagos
+cd ..\..\pagos\pagos
 call .\mvnw.cmd clean package -DskipTests
 
-cd ..\..\producto
+cd ..\..\producto\producto
 call .\mvnw.cmd clean package -DskipTests
 
 cd ..\..\recomendaciones
 call .\mvnw.cmd clean package -DskipTests
 
-cd ..\..\posventa
+cd ..\posventa
 call .\mvnw.cmd clean package -DskipTests
 
-cd ..\..\envios
-call .\mvnw.cmd clean package -DskipTests
-
-cd ..\..\notificacion
-call .\mvnw.cmd clean package -DskipTests
-
-cd ..\..\fidelizacion
+cd ..\delivery
 call .\mvnw.cmd clean package -DskipTests
 
 echo.

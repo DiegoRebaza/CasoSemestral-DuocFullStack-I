@@ -169,6 +169,18 @@ services:
     networks:
       - bravatta-net
 
+  delivery:
+    build: ./delivery
+    container_name: delivery
+    ports:
+      - "9100:9100"
+    environment: *common-env
+    depends_on:
+      mysql:
+        condition: service_healthy
+    networks:
+      - bravatta-net
+
 networks:
   bravatta-net:
     driver: bridge

@@ -30,7 +30,6 @@ public class RecomendacionService {
     public RecomendacionDTO guardar(RecomendacionDTO dto) {
         log.info("Iniciando validación remota para registrar recomendación. Cliente: {}, Producto: {}", dto.getId_cliente(), dto.getId_producto());
 
-        // 1. Validar existencia del Cliente vía WebClient a través del Gateway
         Boolean existeCliente = webClient.get()
                 .uri("/clientes/" + dto.getId_cliente() + "/exists")
                 .retrieve()
@@ -42,7 +41,6 @@ public class RecomendacionService {
             throw new BadRequestException("No se puede generar recomendación: El cliente no existe.");
         }
 
-        // 2. Validar existencia del Producto vía WebClient
         Boolean existeProducto = webClient.get()
                 .uri("/productos/" + dto.getId_producto() + "/exists")
                 .retrieve()
@@ -54,7 +52,6 @@ public class RecomendacionService {
             throw new BadRequestException("No se puede generar recomendación: El producto no existe.");
         }
 
-        // Regla de negocio adicional: Validación particular del score de afinidad
         if (dto.getPuntacion() < 1.0 || dto.getPuntacion() > 5.0) {
             throw new BadRequestException("La puntuación de afinidad debe estar en el rango de 1 a 5.");
         }
@@ -64,6 +61,26 @@ public class RecomendacionService {
         log.info("Recomendación registrada exitosamente con ID: {}", guardada.getIdRecomendacion());
 
         return RecomendacionDTO.fromModel(guardada);
+    }
+
+    @Transactional
+    public RecomendacionDTO actualizar(Long id, RecomendacionDTO dto) {
+        Recomendacion recomendacion = recomendacionRepository.findById(id)
+                .orElseThrow(() -> {
+                    log.error("ResourceNotFound: No se encontró la recomendación con ID: {}", id);
+                    return new ResourceNotFoundException("No se puede actualizar: recomendación no encontrada con ID: " + id);
+                });
+
+        if (dto.getPuntacion() < 1.0 || dto.getPuntacion() > 5.0) {
+            throw new BadRequestException("La puntuación de afinidad debe estar en el rango de 1 a 5.");
+        }
+
+        recomendacion.setOpinionUsuario(dto.getOpnion_usuario());
+        recomendacion.setPuntuacionAfinidad(dto.getPuntacion());
+
+        Recomendacion actualizada = recomendacionRepository.save(recomendacion);
+        log.info("Recomendación actualizada con ID: {}", actualizada.getIdRecomendacion());
+        return RecomendacionDTO.fromModel(actualizada);
     }
 
     @Transactional(readOnly = true)
@@ -80,6 +97,21 @@ public class RecomendacionService {
                     log.error("ResourceNotFound: No se encontró la recomendación {}", id);
                     return new ResourceNotFoundException("Recomendación no encontrada con ID: " + id);
                 });
+    }
+
+    @Transactional(readOnly = true)
+    public boolean existePorId(Long id) {
+        return recomendacionRepository.existsById(id);
+    }
+
+    @Transactional(readOnly = true)
+    public List<Recomendacion> buscarPorCliente(Long idCliente) {
+        List<Recomendacion> resultado = recomendacionRepository.findByIdCliente(idCliente);
+        if (resultado.isEmpty()) {
+            log.warn("No hay recomendaciones para el cliente {}", idCliente);
+            throw new ResourceNotFoundException("No hay recomendaciones para el cliente " + idCliente);
+        }
+        return resultado;
     }
 
     @Transactional
