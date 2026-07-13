@@ -1,5 +1,5 @@
 @echo off
 echo ===================================
-echo  Levantando Bravatta con Docker Compose
+echo  Creando preimagenes de los contenedores 
 echo ===================================
 docker compose build --parallel=false
